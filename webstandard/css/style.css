@@ -157,43 +157,14 @@
 }
 
 /* 전체 메뉴 */
-.nav {
-    overflow: hidden;
-    padding: 30px 30px 30px 30px;
-}
-
-.nav>div {
-    float: left;
-    width: 40%;
-}
-
-.nav>div:last-child {
-    width: 20%;
-}
-
-.nav>div h3 {
-    font-size: 18px;
-    color: #25a2d0;
-    margin-bottom: 4px;
-}
-
-.nav>div ul {
-    overflow: hidden;
-}
-
-.nav>div ul li {
-    float: left;
-    width: 50%;
-}
-
-.nav>div:last-child ul li {
-    width: 100%;
-}
-
-.nav>div ul li a:hover {
-    text-decoration: underline;
-}
-
+.nav {overflow: hidden; padding: 30px 30px 30px 30px;}
+.nav>div {float: left; width: 40%;}
+.nav>div:last-child {width: 20%;}
+.nav>div h3 {font-size: 18px;color: #25a2d0; margin-bottom: 4px;}
+.nav>div ul {overflow: hidden;}
+.nav>div ul li {float: left; width: 50%;}
+.nav>div:last-child ul li {width: 100%;}
+.nav>div ul li a:hover {text-decoration: underline;}
 /* 타이틀 */
 .tit {
     position: relative;
