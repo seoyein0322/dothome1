@@ -485,7 +485,6 @@
 .notice_hover li a span:hover em {visibility: visible;}
 .notice_hover li a strong { font-size: 12px; display: inline-block; padding-top: 3px;}
 
-.notice_hover2 {}
 .notice_hover2 ul {overflow: hidden;}
 .notice_hover2 ul li {float: left; width: 93px; margin-right: 5px; text-align:center;}
 .notice_hover2 ul li:last-child {margin-right: 0px; }
