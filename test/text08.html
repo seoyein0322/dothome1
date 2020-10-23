@@ -4,41 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        $(function(){
-            var $txt1 = $(".txt_1 span");
-                $txt2 = $(".txt_2 span");
-                $box = $(".box");
-            
-            var off_t = $box.offset().top;
-            var pos_t = $box.position().top;
-
-            $txt1.text(off_t);
-            $txt2.text(pos_t);
-        });
-    </script>
     <style>
         *{margin: 0; padding: 0;}
-        #box_wrap{
-            width: 300px;
-            height: 200px;
-            margin: 50px auto 0;
-            position: relative;
-            background-color: #ccc;
-        }
-        .box {
-            width: 50px; height: 50px;
-            position: absolute;
-            left: 100px; top: 50px;
-            background-color: #f00;
-        }
-    </style> 
+        ul{list-style: none;}
+        a{text-decoration: none; color:#000;}
+
+        #wrap {width: 100%;}
+        #header {width: 100%; height: 73px;}
+        #banner {width: 100%; height: 403px; background-color: #333;}
+        #content {width: 100%; height: 700px; background-color: #999;}
+        #cont1 {width: 100%; height: 371px; background-color: #000;}
+        #cont2 {width: 100%; height: 395px; background-color: #333;}
+        #cont3 {width: 100%; height: 537px;background-color: #999;}
+        #footer {width: 100%;height: 311px;background-color: #fff;}
+
+        .container {width: 1140px; height: inherit; margin: 0 auto; background-color: rgba(255,255,255,0.3);}
+        .header {overflow: hidden; }
+        .header h1 {float: left; margin-top: 10px;}
+        .header ul {float: right; margin-top: 15px;}
+        .header li {margin: 0 20px; font-size: 17px; display: inline-block;}
+
+        .banner {}
+        .banner img {}
+        .banner p {}
+    </style>
 </head>
 <body>
-   <div id="box_wrap">
-       <p class="box">박스</p>
-   </div>
-    <p class="txt_1">절대 top위칫값; <span></span></p>
-    <p class="txt_2">상대 top위칫값; <span></span></p>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="header">
+                    <h1><img src="img/로고.png" alt="카카오페이증권 로고"></h1>
+                    <ul>
+                        <li>
+                            <a href="#">회사소개</a>
+                            <a href="#">비즈니스</a>
+                            <a href="#">경영정보</a>
+                            <a href="#">고객센터</a>
+                            <a href="#">채용정보</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="container">
+                <div class="banner">
+                    <img src="img/top-visual-retailfinance.jpg" alt="이미지1">
+                    <p>개인금융 서비스</p>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="cont1">
+                <div class="container"></div>
+            </div>
+            <div id="cont2">
+                <div class="container"></div>
+            </div>
+            <div id="cont3">
+                <div class="container"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+    </div>
 </body>
 </html>
