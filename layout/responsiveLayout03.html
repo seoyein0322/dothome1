@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .container {width: 1200px; margin: 0 auto;}
+        header {width: 100%; height: 100px; background: #f1f8e9;}
+        aside {width: 30%; height: 700px; background: #dcedc8; float: left;}
+        article {width: 70%; float: left;}
+        article:nth-of-type(1) {background: #c5e1a5;float: left;height: 250px;}
+        article:nth-of-type(2) {background: #aed581;float: left;height: 200px;}
+        article:nth-of-type(3) {background: #9ccc65;float: left;height: 250px;}
+        footer {width: 100%; height: 100px; background: #8bc34a; clear:both}
+
+        @media (max-width:1290px){
+            .container {width: 100%;}
+            article:nth-of-type(1) {height: 350px;}
+            article:nth-of-type(2) {height: 350px;}
+            article:nth-of-type(3) {width: 100%;}
+        }
+        @media (max-width:900px){
+            aside{width: 100%; height: 100px;}
+            article:nth-of-type(1) {width: 50%; height: 350px;}
+            article:nth-of-type(2) {width: 50%; height: 350px;}
+            article:nth-of-type(3) {width: 100%;}
+        }
+        @media (max-width:480px){
+            aside{width: 100%; height: 200px;}
+            article:nth-of-type(1) {width: 100%; height: 300px;}
+            article:nth-of-type(2) {width: 100%; height: 300px;}
+            article:nth-of-type(3) {width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header></header>
+            <aside></aside>
+            <article></article>
+            <article></article>
+            <article></article>
+            <footer></footer>
+        </div>
+    </div>
+</body>
+</html>
