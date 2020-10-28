@@ -43,6 +43,28 @@
         .cont3 h3 {font-size: 25px; padding-bottom: 40px;}
         .cont3 p {font-size: 15px; line-height: 1.2;}
         .cont3 .right {width: 50%; float: left;}
+
+        .footer {padding: 2%}
+        .footer ul {overflow: hidden;}
+        .footer li {float:left; margin-bottom: 10px;}
+        .footer li a { display: inline-block;}
+        .footer ul h4 {margin-top:10px;}
+        .footer p {}
+        .footer address {margin-top: 50px;}
+
+.footer {text-align: center; padding: 25px 0; }
+.footer ul {}
+.footer li {position: relative; display: inline; padding: 0 7px 0 10px;}
+.footer li::before {
+    content: '';
+    width: 1px; height: 12px; background: #ccc;
+    position: absolute; left: 0; top: 2px;
+}
+.footer li:first-child::before {
+    width: 0; height: 0;
+}
+.footer address {margin-top: 20px;}
+
     </style>
 </head>
 
@@ -119,7 +141,27 @@
         </div>
         <!-- //contents -->
         <div id="footer">
-            <div class="container"></div>
+            <div class="container">
+                <div class="footer">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">보호금융상품등록부</a></li>
+                        <li><a href="#">개인정보취급처리방침</a></li>
+                        <li><a href="#">고객권리안내문</a></li>
+                        <li><a href="#">신용정보 활용체제 공시</a></li>
+                        <h4>kakaopay securities</h4>
+                        <p>
+                            경기도 성남시 분당구 판교역로 146번길 20 Office H 12층<br>
+                            강남오피스: 서울시 강남구 테헤란로 512 신안빌딩 3층<br>
+                            여의도오피스: 서울시 영등포구 의사당대로1길 34<br>
+                            고객센터: 1600-8515<br>
+                        </p>
+                        <address>
+                            © 2020 Copyright kakaopay securities corp
+                        </address>
+                    </ul>
+                </div>
+            </div>
         </div>
         <!-- //footer -->
     </div>
