@@ -254,7 +254,7 @@ border: 1px solid #fff;
 .noitce4 h4 {border-bottom: 1px solid #ccc; padding: 8px 10px;}
 .noitce4 h4 em{color: red}
 .noitce4 ul {padding: 10px; }
-.noitce4 ul li {overflow: hidden; background: url(../img/dot.gif) no-repeat 0 8px; padding-left: 8px;}
+.noitce4 ul li {overflow: hidden; background: url(../img/dot.gif) no-repeat 0 8px; padding-left: 8px; padding-bottom: 2px}
 .noitce4 ul li a {float: left; width: 65%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 .noitce4 ul li span {float: right; width: 30%; text-align: right;}
 .noitce4 a.more {position: absolute; right: 9px; top: 9px;}
