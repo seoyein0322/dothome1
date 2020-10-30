@@ -231,7 +231,7 @@ border: 1px solid #fff;
 .notice_hover2 ul {overflow: hidden;}
 .notice_hover2 ul li {float: left; width: 93px; margin-right: 5px; text-align:center;}
 .notice_hover2 ul li:last-child {margin-right: 0px; }
-.notice_hover2 li a span {position: relative; display: block; width: 93px; height: 93px;}
+.notice_hover2 li a span {position: relative; display: block; width: 93px; height: 93px; padding-top: 10px;}
 .notice_hover2 li a span img {width: 100%;}
 .notice_hover2 li a span em {visibility: hidden; position: absolute; left: 0; bottom: 0; background: rgba(0,0,0,0.7); color:#fff; width: 100%; height: 20%; text-align: center;}
 .notice_hover2 li a span:hover em {visibility: visible;}
@@ -251,10 +251,10 @@ border: 1px solid #fff;
 
 /* 게시판4 */
 .noitce4 {position: relative; border: 1px solid #ccc; margin-top: 5px;}
-.noitce4 h4 {border-bottom: 1px solid #ccc; padding: 8px 10px;}
+.noitce4 h4 {border: 1px solid #ccc; margin-bottom: 5px; padding: 8px 10px;}
 .noitce4 h4 em{color: red}
 .noitce4 ul {padding: 10px; }
-.noitce4 ul li {overflow: hidden; background: url(../img/dot.gif) no-repeat 0 8px; padding-left: 8px; padding-bottom: 2px}
+.noitce4 ul li {overflow: hidden; background: url(../img/dot.gif) no-repeat 0 8px; padding-left: 8px; padding: 2px;}
 .noitce4 ul li a {float: left; width: 65%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 .noitce4 ul li span {float: right; width: 30%; text-align: right;}
 .noitce4 a.more {position: absolute; right: 9px; top: 9px;}
