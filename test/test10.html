@@ -3,25 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>반응형 레이아웃</title>
+    <title>반응형 레이아웃2</title>
     <style>
+        /* reset */
         *{margin: 0; padding: 0;}
-        .container {width: 100%; margin: 0 auto;}
+
+        /* Layout */
         header {width: 100%; height: 100px; background: #9fa8da}
         aside {width: 30%; height: 700px;background:  #5c6bc0; float:left;}
         section {width: 40%; height: 700px; background: #3949ab; float:left;}
         article {width: 30%;; height: 700px;background: #283593; float:left;}
         footer {width: 100%; height: 100px;background: #1a237e; clear: both;}
 
+        /* container */
+        .container {width: 100%; margin: 0 auto;}
+
+        /* Media queries */
         /* 화면 너비가 0~1290px */
-        @media (max-width: 1280px){
+        @media (max-width: 1290px){
             section {width: 70%;}
             article {width: 100%; height: 300px;}
         }
+        /* 화면 너비가 0~900px */
         @media (max-width: 900px){
             aside {width: 100%;}
             section {width: 100%;}
         }
+        /* 화면 너비가 0~480px */
         @media (max-width: 480px){
             aside {height: 300px;}
             section {height: 300px;}
@@ -34,11 +42,24 @@
     <div id="wrap">
         <main div class="container">
             <header></header>
+            <!-- //header -->
+
             <aside></aside>
+            <!-- //aside -->
+
             <section></section>
+            <!-- //section -->
+
             <article></article>
+            <!-- //article -->
+
             <footer></footer>
+            <!-- //footer -->
+
         </div>
+        <!-- //container -->
+
     </div>
+    <!-- //wrap -->
 </body>
 </html>

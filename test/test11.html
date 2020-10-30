@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>반응형 레이아웃3</title>
     <style>
+        /* reset */
         *{margin: 0; padding: 0;}
-        .container {width: 1200px; margin: 0 auto;}
+
+        /* Layout */
         header {width: 100%; height: 100px; background: #f1f8e9;}
         aside {width: 30%; height: 700px; background: #dcedc8; float: left;}
         article {width: 70%; float: left;}
@@ -15,18 +17,25 @@
         article:nth-of-type(3) {background: #9ccc65;float: left;height: 250px;}
         footer {width: 100%; height: 100px; background: #8bc34a; clear:both}
 
+        /* container */
+        .container {width: 1200px; margin: 0 auto;}
+
+        /* Media queries */
+        /* 화면 너비가 0~1290px */
         @media (max-width:1290px){
             .container {width: 100%;}
             article:nth-of-type(1) {height: 350px;}
             article:nth-of-type(2) {height: 350px;}
             article:nth-of-type(3) {width: 100%;}
         }
+        /* 화면 너비가 0~900px */
         @media (max-width:900px){
             aside{width: 100%; height: 100px;}
             article:nth-of-type(1) {width: 50%; height: 350px;}
             article:nth-of-type(2) {width: 50%; height: 350px;}
             article:nth-of-type(3) {width: 100%;}
         }
+        /* 화면 너비가 0~480px */
         @media (max-width:480px){
             aside{width: 100%; height: 200px;}
             article:nth-of-type(1) {width: 100%; height: 300px;}
@@ -39,12 +48,27 @@
     <div id="wrap">
         <div class="container">
             <header></header>
+            <!-- //header -->
+
             <aside></aside>
+            <!-- //aside -->
+
             <article></article>
+            <!-- //article -->
+
             <article></article>
+            <!-- //article -->
+
             <article></article>
+            <!-- //article -->
+
             <footer></footer>
+            <!-- //footer -->
+
         </div>
+        <!-- //container -->
+
     </div>
+    <!-- //wrap -->
 </body>
 </html>
