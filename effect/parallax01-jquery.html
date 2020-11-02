@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax01-jQuery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-2ExtraLight';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *, *::before, *::after {
+            box-sizing:  border-box;
+            margin: 0; padding: 0;
+        }
+        a {
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        img {
+            width: 100%;
+            vertical-align: top; /* 여백초기화 */
+        }
+
+        /* main */
+        body {
+            --color-h1 : #dc6e25;
+            --color-title : #fff;
+            --color-sub : #999;
+            --color-link : #000;
+            --color-bg : #111;
+            --font-cafe : 'S-CoreDream-2ExtraLight';
+            --font-lato : 'Lato', sans-serif;
+
+            background-color: var(--color-bg);
+            color: var(--color-title);
+            font-family: var(--font-cafe);
+        }
+
+        #parallax-Wrap h1 {
+            color: var(--color-h1);
+            font-family: var(--font-lato);
+            font-size: 8vw;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 10vw 8vw 0 8vw;
+        }
+        #parallax-Wrap h1 em {
+            display: block;
+            font-weight: 100;
+            padding-left: 18vw;
+        }
+
+        .contents {
+            margin: 0 auto 35vh;
+            width: 100%;
+        }
+        .contents-item {
+            position: relative;
+            width: 1200px;
+            max-width: 90vw;
+            margin: 60vh 0 60vh;
+        }
+        .contents-item:nth-child(even) {
+            margin-left: auto;
+        }
+        .contents-item-num {
+            font-size:25vw;
+            font-weight: 100;
+            font-family: var(--font-lato);
+            position: absolute;
+            right: -5vw;
+            top: -20vw;
+            opacity: 0.2;
+        }
+        .contents-item:nth-child(even) .contents-item-num {
+            right: auto;
+            left: -5vw;
+        }
+        .content-item-imgWrap {
+            position: relative;
+            width: 100%; 
+            padding-bottom: 50%;
+            
+        }
+        .content-item-img {
+            width: 100%;
+            position: absolute;
+            left: 0; top: 0;
+            height: 100%;
+        }
+        
+        .contents-item-title {
+            text-align: right;
+            padding-bottom: 5px;
+        }
+        .contents-item:nth-child(even) .contents-item-title {
+            text-align: left;
+
+        }
+        .content-item-desc {
+            font-size: 5vw;
+            line-height: 1.4;
+            text-align: right;
+            word-break: keep-all;
+            margin-right: -4vw;
+            margin-top: -6vw;
+            padding-left: 8vw;
+            z-index: 100;
+            position: relative;
+        }
+        /* position: relative;
+            1.position : absolute 기준점 역할
+            2.position : absolute를 사용하지 않고 z-index를 사용할 경우
+            3.position : absolute를 사용하지 않고 left,top을 통해서 위치를 설정할 경우
+         */
+         .contents-item:nth-child(even) .content-item-desc {
+             text-align: left;
+             margin-right: auto;
+             padding-left: 0;
+             padding-right: 10vw;
+             margin-left: -4vw;
+         }
+         .contents-item:nth-child(1) .content-item-img {
+            background: url(img/images01.jpg);
+            background-size: cover;
+        }
+        .contents-item:nth-child(2) .content-item-img {
+            background: url(img/images02.jpg);
+            background-size: cover;
+        }
+        .contents-item:nth-child(3) .content-item-img {
+            background: url(img/images03.jpg);
+            background-size: cover;
+        }
+        .contents-item:nth-child(4) .content-item-img {
+            background: url(img/images04.jpg);
+            background-size: cover;
+        }
+        .contents-item:nth-child(5) .content-item-img {
+            background: url(img/images05.jpg);
+            background-size: cover;
+        }
+        .contents-item:nth-child(6) .content-item-img {
+            background: url(img/images06.jpg);
+            background-size: cover;        
+        }
+        .contents-item:nth-child(7) .content-item-img {
+            background: url(img/images07.jpg);
+            background-size: cover;
+        }
+        .contents-item:nth-child(8) .content-item-img {
+            background: url(img/images08.jpg);
+            background-size: cover;
+        }
+        .contents-item:nth-child(9) .content-item-img {
+            background: url(img/images09.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <section id="parallax-Wrap">
+            <h1>Parallax <em>Scrolling</em></h1>
+            <div class="contents">
+                <section id="section1" class="contents-item">
+                    <span class="contents-item-num">01</span>
+                    <h2 class="contents-item-title">Section1</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">높은 목표를 세우고, 스스로 채찍질 한다.</p>
+                </section>
+
+                <section id="section2" class="contents-item">
+                    <span class="contents-item-num">02</span>
+                    <h2 class="contents-item-title">Section2</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">자기 신뢰는 성공의 첫 번째 비결이다.</p>
+                </section>
+
+                <section id="section3" class="contents-item">
+                    <span class="contents-item-num">03</span>
+                    <h2 class="contents-item-title">Section3</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">실패는 선택지가 아니다. 모두가 성공해야 한다.</p>
+                </section>
+                <section id="section4" class="contents-item">
+                    <span class="contents-item-num">04</span>
+                    <h2 class="contents-item-title">Section4</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">모든 성취의 시작점은 갈망이다.</p>
+                </section>
+
+                <section id="section5" class="contents-item">
+                    <span class="contents-item-num">05</span>
+                    <h2 class="contents-item-title">Section5</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">우리가 실패에서 배우면, 실패는 성공이 된다.</p>
+                </section>
+                <section id="section6" class="contents-item">
+                    <span class="contents-item-num">06</span>
+                    <h2 class="contents-item-title">Section6</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">기운과 끈기는 모든 것을 이겨낸다.</p>
+                </section>
+                <section id="section7" class="contents-item">
+                    <span class="contents-item-num">07</span>
+                    <h2 class="contents-item-title">Section7</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">미래는 현재 우리가 무엇을 하는가에 달려있다.</p>
+                </section>
+                <section id="section8" class="contents-item">
+                    <span class="contents-item-num">08</span>
+                    <h2 class="contents-item-title">Section8</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">탐험되지 않은 삶은 가치가 없다.</p>
+                </section>
+                <section id="section9" class="contents-item">
+                    <span class="contents-item-num">09</span>
+                    <h2 class="contents-item-title">Section9</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">성공의 80%가 서서히 나타나고 있다.</p>
+                </section>
+            </div>
+        </section>
+    </main>
+    
+
+     <!-- script -->
+     <script src="jquery.min_1.12.14.js"></script>
+</body>
+</html>
