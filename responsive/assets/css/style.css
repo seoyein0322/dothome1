@@ -3,9 +3,9 @@
 #nav {background-color: #f6fdff;}
 #title {background-color: #eaf7fd;}
 #contents .container {border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb;}
-#cont_left { float: left; width: 250px; height: 1000px; }
-#cont_center {border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb; overflow: hidden; height: 1000px; margin-right: 250px;}
-#cont_right { position: absolute; right: 0; top: 0; width: 250px; height: 1000px; }
+#cont_left { float: left; width: 250px; }
+#cont_center {border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb; overflow: hidden; margin-right: 250px; min-height: 1200px;}
+#cont_right { position: absolute; right: 0; top: 0; width: 250px;  }
 #footer {border-top: 1px solid #dbdbdb; }
 
 /* 컨테이너 */
@@ -35,7 +35,7 @@
 .nav > div h3 {font-size: 18px; margin-bottom: 4px;}
 .nav > div ol {overflow: hidden;}
 .nav > div li {float: left; width: 50%; position: relative;padding-left: 8px; box-sizing: border-box;}
-.nav > div:last-child ol li {width: 100%;}
+.nav > div:last-child li {width: 100%;}
 .nav > div h3 {font-size: 18px; color: #25a2d0; font-weight: bold; margin-bottom: 4px;}
 .nav > div li:before {content: ''; height: 3px; width: 3px; background-color: #25a2d0; border-radius: 50%; position: absolute; top: 6px; left: 0; }
 .nav > div li a {position: relative;transition: all 0.3s ease-out;}
@@ -58,6 +58,13 @@
 .column.col8 {}
 .column.col9 {border-bottom: 0;}
 
+/* 메뉴 */
+.menu {}
+.menu li {position: relative;}
+.menu li a { font-size: 16px; text-transform: uppercase; color: #878787; border-bottom: 1px solid #dbdbdb; padding: 10px; display: block; transition:box-shadow 0.3,3s ease,background 0.33s ease;}
+.menu li a i {position: absolute; right: 10px; top:15px;}
+.menu li a:hover {box-shadow: inset 180px 0 0 0 rgba(36,130,174,0.7); color: #fff; background: rgba(36,130,174,0.9);}
+
 /* 타이틀 */
 /* .title {position: relative; text-align: center;}
 .title h2 {font-size: 39px; color: #0093bd; padding: 5px 0;font-family: 'Nanum Brush Script';}
@@ -79,7 +86,7 @@
 } */
 
 .title { position: relative; text-align: center;}
-.title h2 {font-size: 39px; color: #0093bd; padding: 5px;font-family: 'Nanum Brush Script';}
+.title h2 {font-size: 39px; color: #0093bd; padding: 5px; font-family: 'Nanum Brush Script';}
 .title .btn {position: absolute; right: 0; top: 5px; width: 60px; height: 60px; background: #3192bf; line-height: 60px; border-radius: 50%; font-size: 35px; color: #fff;}
 .title .btn:hover {box-shadow: 0 0 0 3px rgba(71,154,191,0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;}
 
@@ -88,14 +95,27 @@
 /* 미디어쿼리 */
 @media (max-width: 1220px){
     .container {width: 100%;}
+    .row {padding: 0 15px;}
 }
 
 @media (max-width: 960px){
     #cont_center {margin-right: 0;}
-    #cont_right  {position: static; width: 100%; height: 400px;}
+    .nav > div {float: none; width: 100%;}
+    .nav > div:last-child {width: 100%; }
+    .nav > div ol {margin-bottom: 10px;}
+    .nav > div li {width: 33.3333%; }
+    .nav > div:last-child li {width: 33.333%; }
+    #cont_right  {position: static; width: 100%;}
 }
 
 @media (max-width: 768px){
-    #cont_left { float: none; width: 100%; height: 400px;}
+    #cont_left { float: none; width: 100%;}
     #cont_center {height: 400px;}
+}
+
+@media (max-width: 600px){
+    #header {height: auto;}
+    .header .header_tit {display: none;} 
+    .header .header_icon {display: none;}
+    .title .btn {display: none;}
 }
