@@ -124,6 +124,12 @@
     .header .header_icon {display: none;}
     .title .btn {display: none;}
     .nav {display: none;}
-    .col1.column .col_tit {display: none;}
-    .col1.column .col_desc {display: none;}
+    .column.col1 .col_tit {display: none;}
+    .column.col1 .col_desc {display: none;}
+    .column.col1 {padding: 0; border-bottom: 0;}
+    .column.col1 .menu ul {overflow: hidden;}
+    .column.col1 .menu li {float: left; width: 33.3333%; text-align: center; border-right: 1px solid #dbdbdb; box-sizing: border-box;}
+    .column.col1 .menu li:nth-child(3n){border-right: 0;}
+    .column.col1 .menu li a i {display: none;}
+    
 }
