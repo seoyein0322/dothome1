@@ -96,10 +96,15 @@
 @media (max-width: 1220px){
     .container {width: 100%;}
     .row {padding: 0 15px;}
+
+    #contents .container {border:0;}
+    .title .btn {right: 5px}
 }
 
 @media (max-width: 960px){
-    #cont_center {margin-right: 0;}
+    #cont_center {margin-right: 0; border-right: 0;}
+    #cont_right {position: static; width: 100%;}
+
     .nav > div {float: none; width: 100%;}
     .nav > div:last-child {width: 100%; }
     .nav > div ol {margin-bottom: 10px;}
@@ -110,7 +115,7 @@
 
 @media (max-width: 768px){
     #cont_left { float: none; width: 100%;}
-    #cont_center {height: 400px;}
+    #cont_center {height: 400px; border-left: 0;}
 }
 
 @media (max-width: 600px){
@@ -118,4 +123,7 @@
     .header .header_tit {display: none;} 
     .header .header_icon {display: none;}
     .title .btn {display: none;}
+    .nav {display: none;}
+    .col1.column .col_tit {display: none;}
+    .col1.column .col_desc {display: none;}
 }
