@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    .nanumsquare {
+        font-family: 'NanumSquare', sans-serif !important;
+    }
+    <style>
+        *{margin: 0; padding: 0;}
+        a {text-decoration: none;}
+        ul {list-style: none;}
+
+        #wrap {font-family: 'NanumSquare', sans-serif !important;}
+        #header {height: 88px;background: #000;}
+        #banner {height: 660px; background: url(img/배경.PNG); background-size: cover; background-position: center top;}
+        #contents {}
+        #cont1 {height: 200px;background: #222;}
+        #cont2 {height: 200px;background: #333;}
+        #cont3 {height: 200px;background: #444;}
+        #cont4 {height: 200px;background: #555;}
+        #cont5 {height: 200px;background: #666;}
+        #cont6 {height: 200px;background: #777;}
+        #footer {height: 200px;background: #888;}
+
+        .container {position:relative; width: 1200px; height: inherit; margin: 0 auto; /* background: rgba(255,255,255,0.3); */}
+
+        .header {width: 100%; z-index: 1000px; overflow: hidden;}
+        .header .logo { margin-top:30px; width: 150px; height: 30px; background: url(https://static-clova.pstatic.net/static/468c453/img/sprite/sp_svg_icon.svg);position: absolute; left: 0; top:0;}
+        .header .menu { display: inline-block;position: absolute; left: 50%; top: 35%; transform: translate(-50%,-50%);}
+        .header .menu li {float: left; margin-top: 35px; }
+        .header .menu li a {font-size: 16px; color:#878787;padding: 20px 25px;}
+        .header .quick {position: absolute; right: 0px; top: 30px;}
+        .header .quick li { display: inline-block; padding: 5px;}
+        .header .quick li a { font-size: 11px; color: #878787; border: 2px solid #878787; margin: 5px; padding: 10px; border-radius: 5px;}
+
+        .banner {position: absolute; left: 50%; top: 50%; transform:translate(-50%,-50%); text-align: center;}
+        .banner h2 {font-size: 45px; color: #fff; margin-bottom: 20px;}
+        .banner a {border: 2px solid #fff; display: inline-block; text-decoration: none; padding: 10px; font-size: 15px; color: #fff; margin-bottom: 20px; border-radius: 30px; padding: 15px 25px;}
+        .banner a:hover {background: green; background-color: green; line-height: 1.2; border: 2px solid green;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="header">
+                    <h1 class="logo"></h1>
+                    <ul class="menu">
+                        <li><a href="#">기술 솔루션</a></li>
+                        <li><a href="#">제품</a></li>
+                        <li><a href="#">플랫폼</a></li>
+                        <li><a href="#">파트너</a></li>
+                        <li><a href="#">리서치</a></li>
+                    </ul>
+                    <ul class="quick">
+                        <li><a href="#">Biz Start</a></li>
+                        <li><a href="#">비즈니스 문의</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <aside id="banner">
+            <div class="container">
+                <div class="banner">
+                    <h2>클로바 램프로 시작하는 <br> 책상 앞이 좋은 아이 프로젝트</h2>
+                    <a href="#">자세히 보기</a>
+                </div>
+            </div>
+        </aside>
+        <section id="contents">
+            <section id="cont1">
+                <div class="container"></div>
+            </section>
+            <section id="cont2">
+                <div class="container"></div>
+            </section>
+            <section id="cont3">
+                <div class="container"></div>
+            </section>
+            <section id="cont4">
+                <div class="container"></div>
+            </section>
+            <section id="cont5">
+                <div class="container"></div>
+            </section>
+            <section id="cont6">
+                <div class="container"></div>
+            </section>
+        </section>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        $(function (){
-            let obj = [{
+        $(function() {
+            var obj = [{
                 "area" : "서울"
             },{
                 "area" : "부산"
@@ -15,12 +15,12 @@
             }]
 
             $(obj).each(function(i,o){
-                console.log(i+":",o);
+                console.log(i + ":",o);
             });
             console.log("====The End1====");
 
             $.each($("#menu2 li"), function(i,o) {
-                console.log(i +":",o);
+                console.log(i + ":",o);
             });
             console.log("====The End2====");
 
