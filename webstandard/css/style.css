@@ -157,6 +157,10 @@ border: 1px solid #fff;
 .ban a.next {position: absolute;right: -80px;top: 60px;width: 43px;height: 43px;background-image: url(../img/icon.png);background-position: -150px -43px;}
 .ban a.prev:hover {background-position: -193px 0;}
 .ban a.next:hover {background-position: -193px -43px;}
+
+.ban a.prev:hover {background-position: -193px 0;}
+.ban a.next:hover {background-position: -193px -43px;}
+
 .ban ul {overflow: hidden;}
 .ban ul li {float: left;width: 330px;}
 .ban ul li img {border: 4px solid #dcdcdc;}
