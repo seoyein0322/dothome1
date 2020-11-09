@@ -28,6 +28,11 @@ img {vertical-align: top; /* 이미지 여백 제거 */}
 /* 폰트 스타일 초기화 */
 em, address{font-style: normal;}
 
+/* clearfix */
+.clearfix {*zoom: 1;}
+.clearfix:before, .clearfix:after {content: ''; display: block; line-height: 0;}
+.clearfix:after {clear: both;}
+
 /* 보더 초기화 */
 img,fieldset {border: 0;}
 
