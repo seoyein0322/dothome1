@@ -132,6 +132,30 @@
                                     <td>기본 색상을 밝게 합니다.</td>
                                 </tr>
                                 <tr>
+                                    <td>color-burn</td>
+                                    <td>기본 색상을 어둡게 합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>hard-light</td>
+                                    <td>overlay와 같지만 배경과 전경을 뒤집은 것입니다</td>
+                                </tr>
+                                <tr>
+                                    <td>soft-light</td>
+                                    <td>hard-light와 유사하지만 더 부드럽습니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>difference</td>
+                                    <td>최종 색은 두 색상 중 더 어두운 색을 밝은 색에서 뺀 결과입니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>exclusion</td>
+                                    <td>difference와 유사하지만 더 적은 대비를 가진 색을 반환합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>hue</td>
+                                    <td>최종 색은 전경색의 색조를 가지며 배경색의 채도와 밝기를 가집니다.</td>
+                                </tr>
+                                <tr>
                                     <td>saturation</td>
                                     <td>채도의 변화로 색상이 변경됩니다.</td>
                                 </tr>
@@ -153,6 +177,7 @@
                   .blendBox > div {
                       background: url(img/image01.jpg) no-repeat center center;
                       background-size: cover;
+                      background-color: #a18cd1;
                       float: left; width: 50%; height: 400px;
                     } 
                     .blendBox > div span {
@@ -160,9 +185,22 @@
                         color: #fff; padding: 5px 10px; border-radius: 5px;
                         display: inline-block; margin: 10px;
                     }
-                    .original.multiply {
-
-                    }
+                    .original.normal {background-blend-mode: normal;}
+                    .original.multiply {background-blend-mode: multiply;}
+                    .original.screen {background-blend-mode: screen;}
+                    .original.overlay {background-blend-mode: overlay;}
+                    .original.darken {background-blend-mode: darken;}
+                    .original.lighten {background-blend-mode: lighten;}
+                    .original.color-dodge {background-blend-mode: color-dodge;}
+                    .original.color-burn {background-blend-mode: color-burn;}
+                    .original.hard-light {background-blend-mode: hard-light;}
+                    .original.soft-light {background-blend-mode: soft-light;}
+                    .original.difference {background-blend-mode: difference;}
+                    .original.exclusion {background-blend-mode: exclusion;}
+                    .original.hue {background-blend-mode: hue ;}
+                    .original.saturation {background-blend-mode: saturation;}
+                    .original.color {background-blend-mode: color;}
+                    .original.luminosity {background-blend-mode: luminosity;}
                </style>
                <!-- Intro1 -->
                <div class="bs-docs-section">
