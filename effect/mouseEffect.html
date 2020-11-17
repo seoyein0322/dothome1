@@ -8,7 +8,7 @@
     <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
     <meta name="keywords"
         content="YEIN, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
-    <title>YEIN | cssAnimation</title>
+    <title>YEIN | Mouse Effect</title>
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/css/docs.min.css" rel="stylesheet">
@@ -72,24 +72,102 @@
     </header>
     <div class="bs-header bgs5" id="content">
         <div class="container">
-            <h1>Photoshop Reference v1.0 &lt;/doc&gt;</h1>
+            <h1>Mouse Effect Reference v1.0 &lt;/doc&gt;</h1>
             <p><a href="http://yein0322.dothome.co.kr/" target="_blank">yein0322.dothome.co.kr</a></p>
         </div>
     </div>
     <div class="container bs-docs-container">
         <div class="row">
             <div class="col-md-12" role="main">
+
+            <!-- //배너 광고 1140 -->
+            <div class="ad">
                 <script src="https://ads-partners.coupang.com/g.js"></script>
-<script>
-	new PartnersCoupang.G({ id:347697 });
-</script>
+                <script>
+                    new PartnersCoupang.G({ id:348407 });
+                </script>
+            </div>
+            <!-- //배너 광고 1140 -->
+
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
                     <h2 id="intro1" class="page-header">Mouse Effect - jQuery01</h2>
-                    <p class="bs-callout bs-callout-info"></p>
-                    
+                    <p class="bs-callout bs-callout-info">clientX | clientY | offsetX | offsetY | pageX | pageY | screenX | screenY를 이용하여 Mouse Effect를 완성하였습니다</p>
+                    <p><a class="btn btn-default" href="http://127.0.0.1:5500/effect/mouseEffect01-jquery.html" role="button">확인하기</a></p>
+                    <div class="javascriptSource">
+<pre class="line-number language-javaScript"><code>window.addEventListener("mousemove", function(event){
+    // $(".clientX")
+    document.querySelector(".clientX").innerHTML = event.clientX;
+    document.querySelector(".clientY").innerHTML = event.clientY;
+    document.querySelector(".offsetX").innerHTML = event.offsetX;
+    document.querySelector(".offsetY").innerHTML = event.offsetY;
+    document.querySelector(".pageX").innerHTML = event.pageX;
+    document.querySelector(".pageY").innerHTML = event.pageY;
+    document.querySelector(".screenX").innerHTML = event.screenX;
+    document.querySelector(".screenY").innerHTML = event.screenY;
+});
+document.querySelectorAll(".contents em").forEach(elem => {
+    elem.addEventListener("mouseenter", () => {
+        document.querySelector(".cursor").classList.add("active");
+    });
+    elem.addEventListener("mouseleave",()=>{
+        document.querySelector(".cursor").classList.remove("active");
+    })
+});
+</code></pre>
+                    </div>
+                    <!-- //javascriptSource -->
+
                 </div>
                <!-- //Intro1 -->
+
+               <!-- Intro2 -->
+               <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Mouse Effect - Javascript01</h2>
+                    <p class="bs-callout bs-callout-info">clientX | clientY | offsetX | offsetY | pageX | pageY | screenX | screenY를 이용하여 Mouse Effect를 완성하였습니다</p>
+                    <p><a class="btn btn-default" href="http://127.0.0.1:5500/effect/mouseEffect01-javascript.html" role="button">확인하기</a></p>
+                    <div class="jquerySource">
+<pre class="line-number language-javascript"><code>//출력용
+$(window).mousemove(function(event){
+    console.log(event);
+    $(".clientX").text(event.clientX);
+    $(".clientY").text(event.clientY);
+    $(".offsetX").text(event.offsetX);
+    $(".offsetY").text(event.offsetY);
+    $(".pageX").text(event.pageX);
+    $(".pageY").text(event.pageY);
+    $(".screenX").text(event.screenX);
+    $(".screenY").text(event.screenY);
+});
+
+//마우스 움직이기
+$(window).mousemove(function(e){
+    $(".cursor").css({left: e.clientX - 25 , top: e.clientY - 25});
+});
+
+//em태그에 마우스를 오버했을 때 active클래스 추가
+$(".contents").hover(function(){
+    $(".cursor").addClass("active");
+}, function(){
+    $(".cursor").removerClass("active");
+});
+</code></pre>
+                      </div>
+                      <!-- //jquerySource -->
+                </div>
+                <!-- //Intro2 -->
+
+                <!-- figma -->
+               <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">figma</h2>
+                    <p><a class="btn btn-primary btn-lg" href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F4dqpHVkHZWQ0eGPlWFZvzU%2FmouseEffect%3Fnode-id%3D1%253A3%26viewport%3D162%252C538%252C0.3913417458534241%26scaling%3Dmin-zoom" role="button">확인하기</a></p>
+                    <div class="iframe">
+                        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F4dqpHVkHZWQ0eGPlWFZvzU%2FmouseEffect%3Fnode-id%3D1%253A3%26viewport%3D162%252C538%252C0.3913417458534241%26scaling%3Dmin-zoom" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- //figma -->
+
+           
                 
             </div>
             <!-- //col-md-12 -->

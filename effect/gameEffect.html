@@ -79,20 +79,28 @@
     <div class="container bs-docs-container">
         <div class="row">
             <div class="col-md-9" role="main">
-                <script src="https://ads-partners.coupang.com/g.js"></script>
-<script>
-	new PartnersCoupang.G({ id:347697 });
-</script>
+            <!-- 배너광고 -->
+            <script src="https://ads-partners.coupang.com/g.js"></script>
+            <script>
+                new PartnersCoupang.G({ id:347697 });
+            </script>
+            <!-- //배너광고 -->
+
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
                     <h2 id="intro2" class="page-header">Quiz1</h2>
                     <p class="bs-callout bs-callout-info">주관식 1문제 스타일(자바스크립트/제이쿼리)</p>
+
+                    <div class="codepen">
                         <p class="codepen" data-height="650" data-theme-id="light" data-default-tab="result" data-user="seoyein0322" data-slug-hash="dyXvpOq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Quiz Project1">
                             <span>See the Pen <a href="https://codepen.io/seoyein0322/pen/dyXvpOq">
                             Quiz Project1</a> by seoyein0322 (<a href="https://codepen.io/seoyein0322">@seoyein0322</a>)
                             on <a href="https://codepen.io">CodePen</a>.</span>
                           </p>
                           <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    </div>
+                    <!-- //codepen -->
+
                           <div class="javascriptSource">
                               <h3 class="btn btn-primary btn-sm">javascript Source</h3>
 <pre class="line-number language-javaScript"><code>//문제정보
@@ -130,6 +138,8 @@ questionEx.style.display="block";
 });
 </code></pre>
                           </div>
+                          <!-- //javascriptSource -->
+
                           <div class="jquerySource">
                             <h3 class="btn btn-primary btn-sm">jquery Source</h3>
 <pre class="line-number language-javascript"><code>//문제정보    
@@ -161,29 +171,74 @@ questionEx.show();
 });
 </code></pre>
                           </div>
+                          <!-- //jquerySource -->
                 </div>
                <!-- //Intro1 -->
-               <!-- 배너광고 -->
-               <script src="https://ads-partners.coupang.com/g.js"></script>
-                <script>
-                    new PartnersCoupang.G({ id:347697 });
-                </script>
-               <!-- //배너광고 -->
+
+               
 
                <!-- Intro2 -->
                <div class="bs-docs-section">
                 <h2 id="intro2" class="page-header">Quiz2</h2>
-                <p class="bs-callout bs-callout-info">주관식 1문제 스타일(자바스크립트/제이쿼리)</p>
+                <p class="bs-callout bs-callout-info">주관식 3문제 스타일(자바스크립트/제이쿼리)</p>
+                <div class="codepen">
+                    <p class="codepen" data-height="800px" data-theme-id="light" data-default-tab="result" data-user="seoyein0322" data-slug-hash="eYzvazr" style="height: 800px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Quiz Project2">
+                        <span>See the Pen <a href="https://codepen.io/seoyein0322/pen/eYzvazr">
+                        Quiz Project2</a> by seoyein0322 (<a href="https://codepen.io/seoyein0322">@seoyein0322</a>)
+                </div>
+                <!-- //codepen -->
                 
+                    <div class="javascriptSource">
+                        <h3 class="btn btn-primary btn-sm">javascript Source</h3>
+<pre class="line-number language-javaScript"><code>//문제 정보
+const quizInfo = [
+	{
+		quizNum : "1",
+		quizAsk : "시멘틱 태그가 무엇인가요?",
+		quizAnswer : "의미가 부여된 HTML5 태그",
+		quizEx : "의미가 부여된 뜻으로 div태그에서 파생된 태그",
+	},
+	{
+		quizNum : "2",
+		quizAsk : "태그 중에 의미가 없는 태그는 무엇인가요?",
+		quizAnswer : "&lt;div&gt;, &lt;span&gt;",
+		quizEx : "의미가 없음",
+	},
+	{
+		quizNum : "3",
+		quizAsk : "태그 중에 글자의 중요성을 강조하는 태그는?",
+		quizAnswer : "&lt;strong&gt;",
+		quizEx : "&lt;strong&gt태그는 글자의 중요성을 강조합니다.",
+	}
+];
+
+//선택자
+const question = document.querySelectorAll(".question");
+const questionNum = document.querySelectorAll(".num");
+const questionBtn = document.querySelector(".confirm-btn");
+const questionAnswer = document.querySelectorAll(".confirm-answer");
+const questionEx = document.querySelectorAll(".confirm-ex");
+
+//문제 출력
+questionNum[0].innerHTML = quizInfo[0].quizNum;
+questionNum[1].innerHTML = quizInfo[1].quizNum;
+questionNum[2].innerHTML = quizInfo[2].quizNum;
+</code></pre>
+                    </div>
+                    <!-- //javascriptSource -->
+
+                </div>
                <!-- //Intro2 -->
-                
+
             </div>
             <!-- //col-md-9 -->
+
             <!-- //col-md-3 -->
             <div class="col-md-3">
                 <div class="bs-sidebar hidden-print" role="complementary">
                     <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">레이어 마스크</a></li>
+                        <li><a href="#intro1">주관식 1문제 스타일(자바스크립트/제이쿼리)</a></li>
+                        <li><a href="#intro2">주관식 3문제 스타일(자바스크립트)</a></li>
                     </ul>
                 </div>
             </div>
