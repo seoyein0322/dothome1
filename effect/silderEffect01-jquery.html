@@ -155,7 +155,7 @@
             let nextIndex = (currentIndex + 1) % sliderCount;
 
             slider.eq(currentIndex).fadeOut();  //첫번재 이미지를 3초후에 사라지게 한다.
-            slider.eq(currentIndex).fadeIn(); //두번째 이미지를 나타나게
+            slider.eq(nextIndex).fadeIn(); //두번째 이미지를 나타나게
 
             console.log("currentIndex :" + currentIndex);
             console.log("nextIndex :" + nextIndex);
