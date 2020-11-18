@@ -1,45 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
-    .nanumsquare {
-        font-family: 'NanumSquare', sans-serif !important;
-    }
+    <title>NAVER CLOVA</title>
     <style>
+       /* font */
+
+
+        /* Reset */
         *{margin: 0; padding: 0;}
-        a {text-decoration: none;}
-        ul {list-style: none;}
+        body{font-family: 'NanumSquare', sans-serif !important;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        .ir_so {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
 
-        #wrap {font-family: 'NanumSquare', sans-serif !important;}
-        #header {height: 88px;background: #000;}
-        #banner {height: 660px; background: url(img/배경.PNG); background-size: cover; background-position: center top;}
-        #contents {}
-        #cont1 {height: 200px;background: #222;}
-        #cont2 {height: 200px;background: #333;}
-        #cont3 {height: 200px;background: #444;}
-        #cont4 {height: 200px;background: #555;}
-        #cont5 {height: 200px;background: #666;}
-        #cont6 {height: 200px;background: #777;}
-        #footer {height: 200px;background: #888;}
+        /* Layout */
+        #wrap { width: 100%; }
+        #header { width: 100%; height: 80px; background: #000;}
+        #banner { width: 100%; height: 600px; background-image: url(img/배경.PNG); background-size: contain; background-position: center top;}
+        #contents { width: 100%; height: 3200px;}
+        #cont1 { width: 100%; height: 700px; background: #fff;}
+        #cont2 { width: 100%; height: 700px; background: #f8fafc;}
+        #cont3 { width: 100%; height: 300px; background: url(img/cont3.png);}
+        #cont4 { width: 100%; height: 900px; background: #fff;}
+        #cont5 { width: 100%; height: 300px; background: url(img/cont5.png);}
+        #cont6 { width: 100%; height: 300px; background: #fff;}
+        #footer { width: 100%; height: 100px; background: #000;}
 
-        .container {position:relative; width: 1200px; height: inherit; margin: 0 auto; /* background: rgba(255,255,255,0.3); */}
+        /* container */
+        .container {position: relative; width: 1200px; height: inherit; margin: 0 auto; /*background: rgba(0,0,0,0.4);*/}
 
-        .header {width: 100%; z-index: 1000px; overflow: hidden;}
-        .header .logo { margin-top:30px; width: 150px; height: 30px; background: url(https://static-clova.pstatic.net/static/468c453/img/sprite/sp_svg_icon.svg);position: absolute; left: 0; top:0;}
-        .header .menu { display: inline-block;position: absolute; left: 50%; top: 35%; transform: translate(-50%,-50%);}
-        .header .menu li {float: left; margin-top: 35px; }
-        .header .menu li a {font-size: 16px; color:#878787;padding: 20px 25px;}
-        .header .quick {position: absolute; right: 0px; top: 30px;}
-        .header .quick li { display: inline-block; padding: 5px;}
-        .header .quick li a { font-size: 11px; color: #878787; border: 2px solid #878787; margin: 5px; padding: 10px; border-radius: 5px;}
+        /* header */
+        .header {overflow: hidden;}
+        .header .logo { width: 150px; height: 30px; background: url(https://static-clova.pstatic.net/static/c9c16b3/img/sprite/sp_svg_icon.svg); position: absolute; left: 0; top: 30px;}
+        .header .menu {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+        .header .menu li {float: left; margin: 10px;}
+        .header .menu li a {font-size: 15px; font-weight: 1000; color: #878787; padding: 20px 25px;}
+        .header .button {position: absolute; right: 0; top: 30px;}
+        .header .button li {float: left; } 
+        .header .button li a {border: 2px solid #878787; border-radius: 5px; margin: 5px; padding: 10px; font-size: 11px; color: #878787;}
 
-        .banner {position: absolute; left: 50%; top: 50%; transform:translate(-50%,-50%); text-align: center;}
-        .banner h2 {font-size: 45px; color: #fff; margin-bottom: 20px;}
-        .banner a {border: 2px solid #fff; display: inline-block; text-decoration: none; padding: 10px; font-size: 15px; color: #fff; margin-bottom: 20px; border-radius: 30px; padding: 15px 25px;}
-        .banner a:hover {background: green; background-color: green; line-height: 1.2; border: 2px solid green;}
+        /* banner */
+        .banner {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center;}
+        .banner strong { font-size: 45px; font-weight: 1000; color: #fff; }
+        .banner a { border: 1px solid #fff; border-radius: 20px; padding: 10px 20px; margin-top: 20px; display: inline-block; font-size: 15px; font-weight: 1000; color: #fff;}
+        
+        /* cont1 */
+        .cont1 {position: absolute; left: 50%; top: 30%; transform: translate(-50%, -50%); text-align: center;}
+        .cont1 .title {font-size: 45px; font-weight: bold; }
+        .cont1 .desc {margin-top: 5px;}
+
+        .cont1 .list { overflow: hidden; position: relative;}
+        .cont1 .list .item {position: absolute; left: 0; top: 0; width: 100px; height: 95px; background-image: url(https://static-clova.pstatic.net/static/c9c16b3/img/sprite/sp_svg_icon.svg ); }
+        .cont1 .list .item .icon .icon_01 { background-position: 0px -120px;}
+        .cont1 .list .item .icon .icon_02 { background-position: -130px -120px;}
+        .cont1 .list .item .icon .icon_03 {background-position: -240px 0px;}
+        .cont1 .list .item .icon .icon_04 { background-position: -240px -95px;}
+
+        .cont1 .list .item .list_title {}
+        .cont1 .list .item .text {}
+        .cont1 .list .item {float: left; display: block;}
+        .cont1 .list .item {float: left; display: block;}
+        .cont1 .list .item {float: left; display: block;}
+        
+
+        /* footer */
     </style>
 </head>
 <body>
@@ -47,7 +74,7 @@
         <header id="header">
             <div class="container">
                 <div class="header">
-                    <h1 class="logo"></h1>
+                    <h1 class="logo ir_so">클로바</h1>
                     <ul class="menu">
                         <li><a href="#">기술 솔루션</a></li>
                         <li><a href="#">제품</a></li>
@@ -55,44 +82,93 @@
                         <li><a href="#">파트너</a></li>
                         <li><a href="#">리서치</a></li>
                     </ul>
-                    <ul class="quick">
+                    <ul class="button">
                         <li><a href="#">Biz Start</a></li>
                         <li><a href="#">비즈니스 문의</a></li>
                     </ul>
                 </div>
             </div>
         </header>
+        <!-- //header -->
+
         <aside id="banner">
             <div class="container">
                 <div class="banner">
-                    <h2>클로바 램프로 시작하는 <br> 책상 앞이 좋은 아이 프로젝트</h2>
+                    <strong>클로바 램프로 시작하는 <br> 책상 앞이 좋은 아이 프로젝트</strong>
                     <a href="#">자세히 보기</a>
                 </div>
+                <!-- //banner -->
             </div>
         </aside>
+        <!-- //aside -->
+
         <section id="contents">
-            <section id="cont1">
+            <div id="cont1">
+                <div class="container">
+                    <div class="cont1">
+                        <h2 class="title">CLOVA AI</h2>
+                        <p class="desc">네이버 클로바는 독자적으로 개발한 AI기술을 통해 <br> 세상에 없던 기술,서비스,제품을 만들어가고 있습니다.</p>
+                        <ul class="list">
+                            <li class="item item_01">
+                                <a href="#" class="icon icon_01 ir_pm">디바이스와 서비스</a>
+                                <strong class="list_title">Device & Service</strong>
+                                <p class="text">스마트 디바이스, 서비스로<br>더욱 편리한 일상을 만나보세요.</p>
+                            </li>
+                            <li class="item item_02">
+                                <a href="#" class="icon icon_02 ir_so">솔루션</a>
+                                <strong class="list_title">Solution</strong>
+                                <p class="text">비즈니스 맞춤형 AI 솔루션으로 <br> 혁신을 경험하세요.</p>
+                            </li>
+                            <li class="item item_03">
+                                <a href="#" class="icon icon_03 ir_so">프로덕트</a>
+                                <strong class="list_title">Product</strong>
+                                <p class="text">세계 최고 수준의 AI가 적용된<br>놀라운 서비스, 제품을 제공해보세요.</p>
+                            </li>
+                            <li class="item item_04">
+                                <a href="#" class="icon icon_04 ir_so">리서치</a>
+                                <strong class="list_title">Research</strong>
+                                <p class="text">CLOVA AI의 독자적인 기술과 <br> 세계적인 연구 성과를 확인하세요.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- //cont1 -->
+
+            <div id="cont2">
                 <div class="container"></div>
-            </section>
-            <section id="cont2">
+            </div>
+            <!-- //cont2 -->
+
+            <div id="cont3">
                 <div class="container"></div>
-            </section>
-            <section id="cont3">
+            </div>
+            <!-- //cont3 -->
+
+            <div id="cont4">
                 <div class="container"></div>
-            </section>
-            <section id="cont4">
+            </div>
+            <!-- //cont4 -->
+
+            <div id="cont5">
                 <div class="container"></div>
-            </section>
-            <section id="cont5">
+            </div>
+            <!-- //cont5 -->
+
+            <div id="cont6">
                 <div class="container"></div>
-            </section>
-            <section id="cont6">
-                <div class="container"></div>
-            </section>
+            </div>
+            <!-- //cont6 -->
+
         </section>
+        <!-- contents -->
+
         <footer id="footer">
             <div class="container"></div>
         </footer>
+        <!-- //footer -->
+
     </div>
+    <!-- //wrap -->
 </body>
 </html>
