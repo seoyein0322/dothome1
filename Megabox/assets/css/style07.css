@@ -71,7 +71,7 @@
 .movie_chart { height: 592px; }
 .movie_chart > div {overflow: hidden;}
 .movie_chart > div > div { float: left; width: 292px; height: 592px; margin-right: 11px; }
-.movie_chart > div > div:last-child {margin-right: 0\;}
+.movie_chart > div > div:last-child {margin-right: 0;}
 .movie_chart > div > div .poster {position: relative;}
 .movie_chart > div > div .poster img {display: block;}
 .movie_chart > div > div .poster .rank {position: absolute; top: 17px; left: 0; width: 50px; height: 50px; line-height: 50px; background-color: #38116a; text-align: center;}
