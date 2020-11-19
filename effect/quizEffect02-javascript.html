@@ -120,8 +120,10 @@
             <p class="question"></p>
             <div class="confirm">
                 <p class="confirm-btn">정답 확인하기</p>
-                <p class="confirm-answer"></p>
-                <p class="confirm-ex"></p>
+                <div class=" confirm-bottom">
+                    <p class="confirm-answer"></p>
+                    <p class="confirm-ex"></p>
+                </div>
             </div>
         </div>
         <div class="quiz">
@@ -129,8 +131,10 @@
             <p class="question"></p>
             <div class="confirm">
                 <p class="confirm-btn">정답 확인하기</p>
-                <p class="confirm-answer"></p>
-                <p class="confirm-ex"></p>
+                <div class=" confirm-bottom">
+                    <p class="confirm-answer"></p>
+                    <p class="confirm-ex"></p>
+                </div>
             </div>
         </div>
         <div class="quiz">
@@ -138,8 +142,10 @@
             <p class="question"></p>
             <div class="confirm">
                 <p class="confirm-btn">정답 확인하기</p>
-                <p class="confirm-answer"></p>
-                <p class="confirm-ex"></p>
+                <div class=" confirm-bottom">
+                    <p class="confirm-answer"></p>
+                    <p class="confirm-ex"></p>
+                </div>
             </div>
         </div>
     </div>
@@ -149,9 +155,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         //선택자
+        const questionQuiz = document.querySelectorAll(".quiz");
         const questionAsk = document.querySelectorAll(".question");
         const questionNum = document.querySelectorAll(".num");
         const questionBtn = document.querySelectorAll(".confirm-btn");
+        const questionBottom = document.querySelectorAll(".confirm-bottom");
         const questionAnswer = document.querySelectorAll(".confirm-answer");
         const questionEx = document.querySelectorAll(".confirm-ex");
 
@@ -180,28 +188,52 @@
         // questionNum.eq(1).html(quizInfo[1].quizNum);
         // questionNum.eq(2).html(quizInfo[2].quizNum);
 
-        questionNum[0].innerHTML = quizInfo[0].quizNum;
-        questionNum[1].innerHTML = quizInfo[1].quizNum;
-        questionNum[2].innerHTML = quizInfo[2].quizNum;
+        // questionNum[0].innerHTML = quizInfo[0].quizNum;
+        // questionNum[1].innerHTML = quizInfo[1].quizNum;
+        // questionNum[2].innerHTML = quizInfo[2].quizNum;
 
-        questionAsk[0].innerHTML = quizInfo[0].quizAsk;
-        questionAsk[1].innerHTML = quizInfo[1].quizAsk;
-        questionAsk[2].innerHTML = quizInfo[2].quizAsk;
+        // questionAsk[0].innerHTML = quizInfo[0].quizAsk;
+        // questionAsk[1].innerHTML = quizInfo[1].quizAsk;
+        // questionAsk[2].innerHTML = quizInfo[2].quizAsk;
 
-        questionAnswer[0].innerHTML = quizInfo[0].quizAnswer;
-        questionAnswer[1].innerHTML = quizInfo[1].quizAnswer;
-        questionAnswer[2].innerHTML = quizInfo[2].quizAnswer;
+        // questionAnswer[0].innerHTML = quizInfo[0].quizAnswer;
+        // questionAnswer[1].innerHTML = quizInfo[1].quizAnswer;
+        // questionAnswer[2].innerHTML = quizInfo[2].quizAnswer;
 
-        questionEx[0].innerHTML = quizInfo[0].quizEx;
-        questionEx[1].innerHTML = quizInfo[1].quizEx;
-        questionEx[2].innerHTML = quizInfo[2].quizEx;
+        // questionEx[0].innerHTML = quizInfo[0].quizEx;
+        // questionEx[1].innerHTML = quizInfo[1].quizEx;
+        // questionEx[2].innerHTML = quizInfo[2].quizEx;
 
-        for(let i=0; i<3; i++){
-            questionNum[i].innerHTML = quizInfo[i].quizNum;
-            questionAsk[i].innerHTML = quizInfo[i].quizAsk;
-            questionAnswer[i].innerHTML = quizInfo[i].quizAnswer;
-            questionEx[i].innerHTML = quizInfo[i].quizEx;
+        // for(let i=0; i<quizInfo.length; i++){
+        //     questionNum[i].innerHTML = quizInfo[i].quizNum;
+        //     questionAsk[i].innerHTML = quizInfo[i].quizAsk;
+        //     questionAnswer[i].innerHTML = quizInfo[i].quizAnswer;
+        //     questionEx[i].innerHTML = quizInfo[i].quizEx;
+        // }
+
+        //forEach
+        // questionQuiz.forEach(function(){});
+        questionQuiz.forEach((elem, index) => {
+            questionNum[index].innerHTML = quizInfo[index].quizNum;
+            questionAsk[index].innerHTML = quizInfo[index].quizAsk;
+            questionAnswer[index].innerHTML = quizInfo[index].quizAnswer;
+            questionEx[index].innerHTML = quizInfo[index].quizEx;
+        });
+
+        //정답 숨기기
+        for(let i=0; i<quizInfo.length; i++){
+            // questionAnswer[i].style.display = "none";
+            // questionEx[i].style.display = "none";
+            questionBottom[i].style.display = "none";
         }
+
+        //정답 확인
+        questionBtn.forEach(element => {
+            element.addEventListener("click",function(){
+                this.style.display = "none";
+                this.nextElementSibling.style.display = "block";
+            });
+        });
     </script>
 </body>
 </html>
