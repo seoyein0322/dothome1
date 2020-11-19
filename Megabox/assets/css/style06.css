@@ -59,7 +59,7 @@
 .slider .swiper-slide {}
 .slider .swiper-slide h2 { font-size: 62px; line-height: 65px; color: #fff; margin-top: 200px; }
 .slider .swiper-slide h2 em {display: block; font-size: 59px; font-weight: 100;}
-.slider .swiper-slide p {font-size: 27px;}
+.slider .swiper-slide p {font-size: 27px; color: #fff; padding-top: 15px;}
 
 
 /* 미디어쿼리 */
