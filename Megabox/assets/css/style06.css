@@ -56,6 +56,11 @@
 .slider .ss1 {background: url(../img/swiper01.jpg) no-repeat center center; background-size: cover;}
 .slider .ss2 {background: url(../img/swiper01.jpg) no-repeat center center; background-size: cover;}
 .slider .ss {background: url(../img/swiper01.jpg) no-repeat center center; background-size: cover;}
+.slider .swiper-slide {}
+.slider .swiper-slide h2 { font-size: 62px; color: #fff; margin-top: 200px;}
+.slider .swiper-slide p {}
+
+
 /* 미디어쿼리 */
 @media (max-width: 1290px){
     .container {width: 100%;}
@@ -70,7 +75,8 @@
     .row {padding: 0 24px;}
     .header h1 {float: none; text-align: center;}
     .header h1 strong {left: 24px;}
-
+    .banner_menu .bm_left ul {display: none;} 
+    .banner_menu .bm_right ul:first-child {display: none;}
     
 }
 @media (max-width: 960px){
