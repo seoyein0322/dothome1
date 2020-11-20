@@ -89,218 +89,50 @@
 
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">Parallax01</h2>
-                    <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트</p>
-                    <iframe width="100%" height="600px" src="parallax01-jquery.html" frameborder="0"></iframe>
+                    <h2 id="intro1" class="page-header">Slider Effect01</h2>
+                    <p class="bs-callout bs-callout-info">이미지 슬라이드 효과</p>
+                    <iframe width="100%" height="1000px" src="sliderEffect01-jquery.html" frameborder="0"></iframe>
 <h3>jQuery</h3>
-<pre class="line-numbers language-js"><code>$(window).scroll(function(){
-    const scrollTop = $(window).scrollTop() + $(window).height()/2;
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
 
-    //출력용
-    $(".scrollTop").text(parseInt(scrollTop));
-    $(".s1OffsetTop").text( parseInt($("#section1").offset().top) );
-    $(".s2OffsetTop").text( parseInt($("#section2").offset().top) );
-    $(".s3OffsetTop").text( parseInt($("#section3").offset().top) );
-    $(".s4OffsetTop").text( parseInt($("#section4").offset().top) );
-    $(".s5OffsetTop").text( parseInt($("#section5").offset().top) );
-    $(".s6OffsetTop").text( parseInt($("#section6").offset().top) );
-    $(".s7OffsetTop").text( parseInt($("#section7").offset().top) );
-    $(".s8OffsetTop").text( parseInt($("#section8").offset().top) );
-    $(".s9OffsetTop").text( parseInt($("#section9").offset().top) );
+let currentIndex = 0;               //현재 첫 번째 보이는 이미지
+let sliderCount = slider.length;    //이미지 갯수
 
-    //출력용 글씨 색
-    if( scrollTop > $("#section1").offset().top ){
-        $(".s1OffsetTop").css("color","red");
-    } else {
-        $(".s1OffsetTop").css("color","white");
-    }
-    if( scrollTop > $("#section2").offset().top ){
-        $(".s2OffsetTop").css("color","red");
-    } else {
-        $(".s2OffsetTop").css("color","white");
-    }
-    if( scrollTop > $("#section3").offset().top ){
-        $(".s3OffsetTop").css("color","red");
-    } else {
-        $(".s3OffsetTop").css("color","white");
-    }
-    if( scrollTop > $("#section4").offset().top ){
-        $(".s4OffsetTop").css("color","red");
-    } else {
-        $(".s4OffsetTop").css("color","white");
-    }
-    if( scrollTop > $("#section5").offset().top ){
-        $(".s5OffsetTop").css("color","red");
-    } else {
-        $(".s5OffsetTop").css("color","white");
-    }
-    if( scrollTop > $("#section6").offset().top ){
-        $(".s6OffsetTop").css("color","red");
-    } else {
-        $(".s6OffsetTop").css("color","white");
-    }
-    if( scrollTop > $("#section7").offset().top ){
-        $(".s7OffsetTop").css("color","red");
-    } else {
-        $(".s7OffsetTop").css("color","white");
-    }
-    if( scrollTop > $("#section8").offset().top ){
-        $(".s8OffsetTop").css("color","red");
-    } else {
-        $(".s8OffsetTop").css("color","white");
-    }
-    if( scrollTop > $("#section9").offset().top ){
-        $(".s9OffsetTop").css("color","red");
-    } else {
-        $(".s9OffsetTop").css("color","white");
-    }
+//3초에 한번씩 함수를 실행 
+setInterval(function(){
+    let nextIndex = (currentIndex + 1) % sliderCount;
 
-    //나타나기
-    if( scrollTop > $("#section1").offset().top ){
-        $("#section1").addClass("show");
-    } else {
-        $("#section1").removeClass("show");
-    }
-    if( scrollTop > $("#section2").offset().top ){
-        $("#section2").addClass("show");
-    } else {
-        $("#section2").removeClass("show");
-    }
-    if( scrollTop > $("#section3").offset().top ){
-        $("#section3").addClass("show");
-    } else {
-        $("#section3").removeClass("show");
-    }
-    if( scrollTop > $("#section4").offset().top ){
-        $("#section4").addClass("show");
-    } else {
-        $("#section4").removeClass("show");
-    }
-    if( scrollTop > $("#section5").offset().top ){
-        $("#section5").addClass("show");
-    } else {
-        $("#section5").removeClass("show");
-    }
-    if( scrollTop > $("#section6").offset().top ){
-        $("#section6").addClass("show");
-    } else {
-        $("#section6").removeClass("show");
-    }
-    if( scrollTop > $("#section7").offset().top ){
-        $("#section7").addClass("show");
-    } else {
-        $("#section7").removeClass("show");
-    }
-    if( scrollTop > $("#section8").offset().top ){
-        $("#section8").addClass("show");
-    } else {
-        $("#section8").removeClass("show");
-    }
-    if( scrollTop > $("#section9").offset().top ){
-        $("#section9").addClass("show");
-    } else {
-        $("#section9").removeClass("show");
-    }
-});
+    slider.eq(currentIndex).fadeOut();  //첫 번재 이미지를 사라지게
+    slider.eq(nextIndex).fadeIn(); //두 번째 이미지를 나타나게
 
-//for문
-$(window).scroll(function(){
-    const scrollTop = $(window).scrollTop() + $(window).height()/2;
-    $(".scrollTop").text(parseInt(scrollTop));
-    
-    for(let i=1; i&lt;=9; i++){
-        $(".s"+i+"OffsetTop").text( parseInt($("#section"+i).offset().top) );
-        if( scrollTop > $("#section"+i).offset().top ){
-            $(".s"+i+"OffsetTop").css("color","red");
-            $("#section"+i).addClass("show");
-        } else {
-            $(".s"+i+"OffsetTop").css("color","white");
-            $("#section"+i).removeClass("show");
-        }
-    }
-});
+    console.log("currentIndex : " + currentIndex);
+    console.log("nextIndex : " + nextIndex);
 
-//each()
-$(window).scroll(function(){
-    const scrollTop = $(window).scrollTop() + $(window).height()/2;
-    $(".scrollTop").text(parseInt(scrollTop));
-    
-    $(".content-item").each(function(num){
-        $(".s"+(num+1)+"OffsetTop").text( parseInt($("#section"+(num+1)).offset().top) );
-        
-        if( scrollTop > $(this).offset().top ){
-            $(".s"+(num+1)+"OffsetTop").css("color","red");
-            $(this).addClass("show");
-        } else {
-            $(".s"+(num+1)+"OffsetTop").css("color","white");
-            $(this).removeClass("show");
-        }
-    });
-});
+    //currentIndex++;
+    currentIndex = nextIndex;
+},3000);
 </code></pre>
 <h3>JavaScript</h3>
-<pre class="line-numbers language-js"><code>window.addEventListener("scroll", function(){
-    let pageYOffset = window.pageYOffset;
+<pre class="line-numbers language-js"><code>const sliderWrap = document.querySelector(".slider-wrap");
+const sliderImg = document.querySelector(".slider-img");
+const slider = document.querySelectorAll(".slider");
 
-    //출력용
-    document.querySelector(".pageYOffset").innerText = parseInt(pageYOffset);
-    document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
-    document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
-    document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
-    document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
-    document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
-    document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
-    document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
-    document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
-    document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
+let currentIndex = 0;               //현재 보이는 첫 번재 이미지
+let sliderCount = slider.length;    //이미지 갯수
 
-    //출력용 글씨 색
-    if( pageYOffset > document.getElementById("section1").offsetTop ){
-        document.querySelector(".s1OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s1OffsetTop").style.color = "white";
-    }
-    if( pageYOffset > document.getElementById("section2").offsetTop ){
-        document.querySelector(".s2OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s2OffsetTop").style.color = "white";
-    }
-    if( pageYOffset > document.getElementById("section3").offsetTop ){
-        document.querySelector(".s3OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s3OffsetTop").style.color = "white";
-    }
-    if( pageYOffset > document.getElementById("section4").offsetTop ){
-        document.querySelector(".s4OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s4OffsetTop").style.color = "white";
-    }
-    if( pageYOffset > document.getElementById("section5").offsetTop ){
-        document.querySelector(".s5OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s5OffsetTop").style.color = "white";
-    }
-    if( pageYOffset > document.getElementById("section6").offsetTop ){
-        document.querySelector(".s6OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s6OffsetTop").style.color = "white";
-    }
-    if( pageYOffset > document.getElementById("section7").offsetTop ){
-        document.querySelector(".s7OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s7OffsetTop").style.color = "white";
-    }
-    if( pageYOffset > document.getElementById("section8").offsetTop ){
-        document.querySelector(".s8OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s8OffsetTop").style.color = "white";
-    }
-    if( pageYOffset > document.getElementById("section9").offsetTop ){
-        document.querySelector(".s9OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s9OffsetTop").style.color = "white";
-    }
-});</code></pre>
+setInterval( () => {
+    let nextIndex = (currentIndex + 1) % sliderCount;
+
+    // slider[currentIndex].style.display = "none";
+    // slider[nextIndex].style.display = "block";
+
+    slider[currentIndex].style.opacity = "0";
+    slider[nextIndex].style.opacity = "1";
+
+    currentIndex = nextIndex;
+},3000);</code></pre>
                 </div>
                 <!-- //Intro1 -->
 
@@ -310,8 +142,8 @@ $(window).scroll(function(){
 
                 <!-- Intro2 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">Parallax02</h2>
-                    <p class="bs-callout bs-callout-info">패랠랙스 이펙트</p>
+                    <h2 id="intro1" class="page-header">Slider02</h2>
+                    <p class="bs-callout bs-callout-info">이미지 슬라이드 효과</p>
                     <iframe width="100%" height="560px" src="parallax01-jquery.html" frameborder="0"></iframe>
 <h3>jQuery</h3>
 <pre class="line-numbers language-js"><code>
