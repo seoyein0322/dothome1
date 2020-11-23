@@ -336,10 +336,10 @@
             // document.querySelector("#section8 .content-item-desc").style.transform = "translateY("+ -offset8 +"px)";
             // document.querySelector("#section9 .content-item-desc").style.transform = "translateY("+ -offset9 +"px)";
 
-            // for(let i=1; i<=9; i++){
-            //     let offset = (pageYOffset - document.getElementById("section"+i).offsetTop)*0.2;
-            //     document.querySelector("#section"+i+ ".content-item-desc").style.transform = "translateY("+ -offset1 +"px)";
-            // }
+            for(let i=1; i<=9; i++){
+                let offset = (pageYOffset - document.getElementById("section"+i).offsetTop)*0.2;
+                document.querySelector("#section"+i+ ".content-item-desc").style.transform = "translateY("+ -offset1 +"px)";
+            }
 
             //forEach
             document.querySelectorAll(".content-item").forEach((elem)=>{
