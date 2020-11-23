@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>silderEffect01-jQuery</title>
+    <title>silderEffect02-javascript</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <style>
         @font-face {
@@ -64,8 +64,9 @@
             color: var(--color-title);
             font-family: var(--font-cafe);
             font-size: 16px;
-            background: url(img/images08@.jpg);
+            background: url(img/images08@.jpg) no-repeat center center;
             background-size: cover;
+            height: 100vh;
         }
         body::before {
             content: '';
@@ -75,30 +76,28 @@
         }
         /* slider */
         .slider-wrap {
-            display: flex; justify-content: center; align-items: center; height: 100vh;
+            width: 800px; height: 480px;
+            overflow: hidden;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
         }
         .slider-img {
-            position: relative;
-            width: 800px; height: 480px; 
             overflow: hidden;
-            box-shadow: 4px 4px 20px  rgba(0,0,0,0.5);
-            
+            width: 4000px; height: 480px;
+            position: relative;
         }
         .slider-img .slider {
-            position: absolute;
-            left: 0; top: 0;
-            
+            width: 800px; height: 480px;
+            float: left;
+            position: relative;
         }
         .slider-img .slider span {
             position: absolute;
             left: 5px; top: 5px;
             
         }
-        .slider-img .slider:nth-child(1) {z-index: 5;}
-        .slider-img .slider:nth-child(2) {z-index: 4;}
-        .slider-img .slider:nth-child(3) {z-index: 3;}
-        .slider-img .slider:nth-child(4) {z-index: 2;}
-        .slider-img .slider:nth-child(5) {z-index: 1;}
         
     </style>
 </head>
@@ -106,13 +105,13 @@
 
     <!-- info -->
     <div class="info left">
-        <h1>SilderEffect01 - jQuery</h1>
-        <p>이미지 슬라이드- 3초에 한번씩 변경하기</p>
+        <h1>SilderEffect02 - javascript</h1>
+        <p>이미지 슬라이드- 가로로 이동하기</p>
     </div>
     <div class="info right">
         <ul>
-            <li><a href="silderEffect01-jquery.html" class="active">1</a><a href="silderEffect01-javascript.html">1</a></li>
-            <li><a href="silderEffect02-jquery.html">2</a><a href="silderEffect02-javascript.html">2</a></li>
+            <li><a href="silderEffect01-jquery.html">1</a><a href="silderEffect01-javascript.html">1</a></li>
+            <li><a href="silderEffect02-jquery.html">2</a><a href="silderEffect02-javascript.html" class="active">2</a></li>
             <li><a href="silderEffect03-jquery.html">3</a><a href="silderEffect03-javascript.html">3</a></li>
             <li><a href="silderEffect04-jquery.html">4</a><a href="silderEffect04-javascript.html">4</a></li>
             <li><a href="silderEffect05-jquery.html">5</a><a href="silderEffect05-javascript.html">5</a></li>
@@ -130,40 +129,53 @@
     <main>
         <div class="slider-wrap">
             <div class="slider-img">
-                <div class="slider"><img src="img/images07.jpg" alt="이미지"><span>이미지1</span></div>
-                <div class="slider"><img src="img/images09.jpg" alt="이미지"><span>이미지2</span></div>
-                <div class="slider"><img src="img/images10.jpg" alt="이미지"><span>이미지3</span></div>
-                <div class="slider"><img src="img/images11.jpg" alt="이미지"><span>이미지4</span></div>
-                <div class="slider"><img src="img/images12.jpg" alt="이미지"><span>이미지5</span></div>
+                <div class="slider"><img src="img/images13.jpg" alt="이미지"><span>이미지1</span></div>
+                <div class="slider"><img src="img/images14.jpg" alt="이미지"><span>이미지2</span></div>
+                <div class="slider"><img src="img/images15.jpg" alt="이미지"><span>이미지3</span></div>
+                <div class="slider"><img src="img/images16.jpg" alt="이미지"><span>이미지4</span></div>
+                <div class="slider"><img src="img/images17.jpg" alt="이미지"><span>이미지5</span></div>
             </div>
         </div>
     </main>
     
 
      <!-- script -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
      <script>
-        const sliderWrap = $(".slider-wrap");
-        const sliderImg = $(".slider-img");
-        const slider = $(".slider");
+        const sliderWrap = document.querySelector(".slider-wrap");
+        const sliderImg = document.querySelector(".slider-img");
+        const slider = document.querySelectorAll(".slider");
 
-        let currentIndex = 0; //현재 첫 번째 보이는 이미지
-        let sliderCount = slider.length; //이미지 갯수
+        let currnetIndex = 0;
+        let sliderCount = slider.length;
+        // let sliderWidth = sliderImg.clientWidth / 5;
+        let sliderWidth = sliderImg.scrollWidth / 5 ;
+        
+        console.log(sliderWidth);
 
-        //3초에 한번씩 함수를 실행
         setInterval(function(){
-            let nextIndex = (currentIndex + 1) % sliderCount;
+            // if(currnetIndex < sliderCount -1 ){
+            //     currnetIndex++;
+            // } else {
+            //     currnetIndex = 0;
+            // }
 
-            slider.eq(currentIndex).fadeOut();  //첫번재 이미지를 3초후에 사라지게 한다.
-            slider.eq(nextIndex).fadeIn(); //두번째 이미지를 나타나게
+            //삼항연산자
+            currnetIndex < sliderCount -1 ? currnetIndex++ : currnetIndex = 0;
 
-            console.log("currentIndex :" + currentIndex);
-            console.log("nextIndex :" + nextIndex);
+            let sliderPosition = currnetIndex * -sliderWidth;
 
-            // currentIndex++;
-            currentIndex = nextIndex;
-            
+            // sliderImg.animate({left: sliderPosition}, 400);
+            // sliderImg.style.left = sliderPosition;
+            // sliderImg.style.transition = "all 0.6s";
+
+            gsap.to(sliderImg, {duration: 0.4, left: sliderPosition, ease: "expo.out"});
+
         },3000);
+
+        
+        
+
      </script>
 </body>
 </html>
