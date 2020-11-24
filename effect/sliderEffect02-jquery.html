@@ -151,14 +151,14 @@
         let sliderCount = slider.length; //이미지 갯수
 
         setInterval(function(){
-            // if(currentIndex < sliderCount - 1){
-            //     currentIndex++; // 0 2 3 4 0
-            // } else {
-            //     currentIndex = 0
-            // }
+            if(currentIndex < sliderCount - 1){
+                currentIndex++; // 0 2 3 4 0
+            } else {
+                currentIndex = 0
+            }
             
             //삼항연산식
-            currnetIndex < sliderCount - 1 ? currentIndex++ : currentIndex = 0;
+            // currnetIndex < sliderCount - 1 ? currentIndex++ : currentIndex = 0;
 
             console.log(currentIndex);
 
