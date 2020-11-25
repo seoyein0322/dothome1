@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 클로바 3단계</title>
+    <style>
+        /* reset */
+        * {margin: 0; padding: 0;}
+        a {text-decoration: none;}
+        ul {list-style: none;}
+        /* IR 효과 */
+        /* 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
+        .ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;}
+
+        /* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
+        .ir_wa {display: block; overflow: hidden; position: relative; z-index: -1; width: 100%; height: 100%;}
+
+        /*대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+        .ir_so {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
+
+
+        /* layout */
+        #wrap {background: #fff;} 
+        #header {width: 100%; height: 80px; background: #fff;}
+        #banner {width: 100%;}
+        #contents {width: 100%;}
+        #footer {width: 100%; height: 100px; background: #000;}
+
+        /* container */
+        .container {position: relative; width: 1300px; height: inherit; margin: 0 auto; /* background: rgba(0,0,0,0.4);*/}
+
+        /* header */
+        .header {}
+        .header .logo { position: absolute; left: 0; top: 30px; width: 150px; height: 30px; background: url(https://static-clova.pstatic.net/static/4b722fb/img/sprite/sp_svg_icon.svg); background-position: -4px -62px;}
+        .header .nav {overflow: hidden; position: absolute; left: 50%; top: 45%; transform: translate(-50%, -50%);}
+        .header .nav > div {float: left; margin-right: 80px; font-size: 15px; font-weight: bold;}
+        .header .quick { position: absolute; right: 0; top: 25px;}
+        .header .quick > div {border: 1px solid #000; border-radius: 5px; float: left; padding: 7px 15px; margin-right: 5px; font-size: 11px;}
+
+        /* banner */
+        .banner {margin: 123px 0 50px; display: block; text-align: center;}
+        .banner h2 {font-size: 41px; font: 300px; line-height: 56px; letter-spacing: -.2px; color: #000;}
+        .banner a {display: inline-block; width: 200px; padding: 21px 0 17px; color: #fff; font-size: 20px; line-height: 22px; font-weight: 400;border-radius: 4px; background: #05d686; margin-top: 30px;}
+
+        /* contents */
+        .contents {padding: 40px 40px 111px; margin: 46px; box-sizing: border-box;  display: block; text-align: center;}
+        .contents .contents_list { overflow: hidden; display: block;margin: 80px; width: 1000px;}
+        .contents .contents_list li{ position: relative; float:left; width: 194px; height: 196px;  border: 1px solid #f2f2f2; display: block; margin: -1px 0 0 -1px; }
+        .contents .contents_list li img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%;}
+        .contents .contents_list li img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%;}
+        .contents .contents_list li img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%;}
+
+        /* footer */
+        .footer {text-align: center; }
+        .footer .ftop {width: 1300px; height: 50px;display: block;overflow: hidden; }
+        .footer .ftop .flogo {float: left; width: 145px; height: 35px; margin-left: 70px; margin-top: 5px; background: url(https://static-clova.pstatic.net/static/4b722fb/img/sprite/sp_svg_icon.svg); background-position: -4px -26px;}
+        .footer .ftop .ficon {float: right; display: block; margin-top: 20px; margin-right: 100px;}
+        .footer .ftop .ficon  .ficon1 {float: left; margin-right: 30px; width: 21px; height: 19px; background: url(https://static-clova.pstatic.net/static/4b722fb/img/sprite/sp_svg_icon.svg); background-position: -128px -92px;}
+        .footer .ftop .ficon  .ficon2 {float: left; margin-right: 30px; width: 19px; height: 19px; background: url(https://static-clova.pstatic.net/static/4b722fb/img/sprite/sp_svg_icon.svg); background-position: -164px -218px;}
+        .footer .ftop .ficon  .ficon3 {float: left; margin-right: 30px; width: 19px; height: 19px; background: url(https://static-clova.pstatic.net/static/4b722fb/img/sprite/sp_svg_icon.svg); background-position: -138px -218px;}
+        .footer .ftop .ficon  .ficon4 {float: left; width: 21px; height: 19px; background: url(https://static-clova.pstatic.net/static/4b722fb/img/sprite/sp_svg_icon.svg); background-position: -200px -172px;} 
+        .footer .fbot { width: 1300px; height: 50px; margin: 0 auto; display: block; color: #878787;}
+        .footer .fbot > div {overflow: hidden; display: block; box-sizing: border-box; width: 25.3333%; margin-left: 70px;}
+        .footer .fbot > div:nth-child(1) {float: left;}
+        .footer .fbot > div:nth-child(2) {float: left; padding: 0 50px;}
+        .footer .fbot > div:nth-child(3) {float: left; width: 31.3333%;}
+        .footer .fbot > div p {float: left;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="header">
+                    <h1 class="logo ir_pm">클로바</h1>
+                    <nav class="nav">
+                        <div>기술 솔루션</div>
+                        <div>제품</div>
+                        <div>플랫폼</div>
+                        <div>파트너</div>
+                        <div>리서치</div>
+                    </nav>
+                    <div class="quick">
+                        <div>Biz Start</div>
+                        <div>비즈니스 문의</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="container">
+                <div class="banner">
+                    <h2>클로바는 다양한 브랜드, <br> 서비스 및 개발사들과 함께 하겠습니다.</h2>
+                    <a href="#">제휴 제안 신청</a>
+                </div>
+            </div>
+        </div>
+        <div id="contents">
+            <div class="container">
+                <div class="contents">
+                    <ul class="contents_list">
+                        <li></a><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/dy_media.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_1.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_2.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_3.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_4.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_5.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_6.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_7.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_8.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_9.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_10.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_11.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_12.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/infomark.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/iscream_edu.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_13.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_14.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_15.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_16.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/markt.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/minibig.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_17.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_18.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_19.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_20.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_30.jpg" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_31.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_21.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_22.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_23.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_32.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_33.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_24.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_25.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_26.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_27.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_28.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_29.png" alt="이미지"></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="footer">
+                    <div class="ftop">
+                        <div class="flogo ir_pm">클로바</div>
+                        <div class="ficon">
+                            <div class="ficon1 ir_pm">블로그</div>
+                            <div class="ficon2 ir_pm">페이스북</div>
+                            <div class="ficon3 ir_pm">인스타</div>
+                            <div class="ficon4 ir_pm">유튜브</div>
+                        </div>
+                    </div>
+                    <div class="fbot">
+                        <div class="fb1">
+                            <p>고객센터 1833-5387</p>
+                            <p>고객센터 1833-5387</p>
+                        </div>
+                        <div class="fb2">
+                            <p>Powered by NAVER · LINE</p>
+                        </div>
+                        <div class="fb3">
+                            <p>공지사항</p>
+                            <p>이용약관</p>
+                            <p>CLOVA 채용안내</p>
+                            <p>CLOVA JP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
