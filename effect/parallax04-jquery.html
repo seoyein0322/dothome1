@@ -357,13 +357,13 @@
             // });
 
             // 한글자씩 나오게 하기
-            // if( $(window).scrollTop() > $("#section1").offset().top ){
-            //     $("#section1 .content-item-desc span").each(function(i){
-            //         setTimeout(() => {
-            //             $("#section1 .content-item-desc span").eq(i).addClass("show");
-            //         }, 50 *(i+1));
-            //     });
-            // }
+            if( $(window).scrollTop() > $("#section1").offset().top ){
+                $("#section1 .content-item-desc span").each(function(i){
+                    setTimeout(() => {
+                        $("#section1 .content-item-desc span").eq(i).addClass("show");
+                    }, 50 *(i+1));
+                });
+            }
 
             //한글자씩 나오게 하기(한번에)
             $(".content-item").each(function(){
