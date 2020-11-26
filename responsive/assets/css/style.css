@@ -160,6 +160,15 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .footer li:first-child::before {width: 0; height: 0;}
 .footer address {padding-top: 15px; font-style: normal;}
 
+/* Effect */
+.side1 img {transition: box-shadow 0.3s ease-in-out;}
+.side1 img:hover {box-shadow: 0px 0px 18px 12px rgba(0,0,0,0.8);}
+.side2 img {transition: box-shadow 0.3s ease-in;}
+.side2 img:hover {box-shadow: 18px 18px 5px rgba(0,0,0,0.8);}
+.side3 img {transition: border-radius 0.3s ease;}
+.side3 img:hover {border-radius: 0 30px 30px; border: 2px solid #000;}
+
+
 /* 미디어쿼리 */
 @media (max-width: 1220px){
     .container {width: 100%;}
