@@ -17,9 +17,9 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .header .header_menu a {color:#fff; transition: color 0.3s; padding: 8px 0 6px 10px; display: inline-block; font-family: 'Abel';}
 .header .header_menu a:hover {color:#ccc;}
 .header .header_tit {text-align: center; margin-top:55px; text-transform: uppercase;font-family: 'Abel';}
-.header .header_tit h1 {background-color: #51b0dc; display: inline-block; letter-spacing: 2px; font-weight: 900; padding: 5px 30px; transition: box-shadow  0.3s ease-in-out, border-radius 0.3s ease-in-out ; font-size: 30px;  color:#fff; } 
+.header .header_tit h1 {transition: box-shadow  0.3s ease-in-out, border-radius 0.3s ease-in-out ; font-size: 30px;  background-color: #51b0dc; display: inline-block; letter-spacing: 2px; font-weight: 900; padding: 5px 30px;  color:#fff; } 
 .header .header_tit h1:hover {border-radius: 10px 10px 10px 10px; box-shadow: 0px 0px 14px 10px #257fac;}
-.header .header_tit a {background-color: #4a9abf; display: inline-block;  padding: 10px 20px; margin-top: -7px; font-size: 16px; color:#fff; transition: box-shadow 0.25s ease-in-out, border-radius 0.25s ease-in-out; }
+.header .header_tit a {transition: box-shadow 0.25s ease-in-out, border-radius 0.25s ease-in-out; background-color: #4a9abf; display: inline-block;  padding: 10px 20px; margin-top: -7px; font-size: 16px; color:#fff;  }
 .header .header_tit a:hover {border-radius: 0px 0px 20px 20px; box-shadow: 0px 0px 14px 10px #257fac;}
 .header .header_icon {padding-bottom: 40px; text-align: center; margin-top: 40px;}
 .header .header_icon li {display: inline; margin: 0 2px;}
@@ -90,7 +90,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 /* 메뉴 */
 .menu {}
 .menu li {position: relative;}
-.menu li a { font-size: 16px; text-transform: uppercase; color: #878787; border-bottom: 1px solid #dbdbdb; padding: 10px; display: block; transition:box-shadow 0.33s ease,background 0.33s ease;}
+.menu li a {transition:box-shadow 0.33s ease, background 0.33s ease; font-size: 16px; text-transform: uppercase; color: #878787; border-bottom: 1px solid #dbdbdb; padding: 10px; display: block;}
 .menu li a i {position: absolute; right: 10px; top:15px;}
 .menu li a:hover {box-shadow: inset 180px 0 0 0 rgba(36,130,174,0.7); color: #fff; background: rgba(36,130,174,0.9);}
 
@@ -159,6 +159,15 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .footer li::before {content:''; width: 1px; height: 12px; background: #dbdbdb; position: absolute; left: 0; top: 2px;}
 .footer li:first-child::before {width: 0; height: 0;}
 .footer address {padding-top: 15px; font-style: normal;}
+
+/* Effect */
+.side1 img {transition: box-shadow 0.3s ease-in-out;}
+.side1 img:hover {box-shadow: 0px 0px 18px 12px rgba(0,0,0,0.8);}
+.side2 img {transition: box-shadow 0.3s ease-in;}
+.side2 img:hover {box-shadow: 18px 18px 5px rgba(0,0,0,0.8);}
+.side3 img {transition: border-radius 0.3s ease;}
+.side3 img:hover {border-radius: 0 30px 30px; border: 2px solid #000;}
+
 
 /* 미디어쿼리 */
 @media (max-width: 1220px){
