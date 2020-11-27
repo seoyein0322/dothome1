@@ -160,13 +160,101 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .footer li:first-child::before {width: 0; height: 0;}
 .footer address {padding-top: 15px; font-style: normal;}
 
-/* Effect */
-.side1 img {transition: box-shadow 0.3s ease-in-out;}
-.side1 img:hover {box-shadow: 0px 0px 18px 12px rgba(0,0,0,0.8);}
-.side2 img {transition: box-shadow 0.3s ease-in;}
-.side2 img:hover {box-shadow: 18px 18px 5px rgba(0,0,0,0.8);}
-.side3 img {transition: border-radius 0.3s ease;}
-.side3 img:hover {border-radius: 0 30px 30px; border: 2px solid #000;}
+/* side1 hover effect */
+.column.col7 .side1 {
+	position: relative;
+}
+.column.col7 .side1 .img {
+	opacity:1;
+	transition: all .3s ease-in-out;
+}
+.column.col7 .side1::before {
+	content: '';
+	width: 60px; height: 1px;
+	background: #fff;
+	position: absolute; left: -100px; top: 50%;
+	transform: translate(-50%,-50%);
+	transition: all 0.33s ease-in-out;
+	z-index: 10;
+}
+.column.col7 .side1::after {
+	content: '';
+	width: 1px; height: 60px;
+	background: #fff;
+	position: absolute; left: 50%; top: -100px;
+	transform: translate(-50%,-50%);
+	transition: all 0.33s ease-in-out;
+}
+.column.col7 .side1:hover::before {
+	left: 50%; top: 50%;
+}
+.column.col7 .side1:hover::after {
+	left: 50%; top: 50%;
+}
+.column.col7 .side1:hover img {
+	opacity: 0.5;
+}
+
+.column.col8 .side2 {position: relative;}
+.column.col8 .side2 .back {position:absolute; left: 0; top: 0; z-index: -1;} */
+.column.col8 .side2 .img { 
+	width: 100%; 
+	vertical-align: top;
+	box-sizing: border-box;
+}
+/* side2 hover Effect */
+/* .column.col8 .side2.front{
+	transform: rotateY(0deg); 
+	transition: transform 1s;
+	backface-visibility: hidden;
+}
+.column.col8 .side2:hover .front{
+	transform: rotateY(180deg); 
+}
+.column.col8 .side2 .back{
+	transform: rotateY(-180deg); 
+	transition: transform 1s;
+}
+.column.col8 .side2:hover .back{
+	transform: rotateY(0deg); 
+} */
+
+/* 사이드 이펙트2 */
+.side2 {position: relative; display: block; perspective: 600px;}
+.side2 .front {
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: all 0.5s ease-in-out;
+    backface-visibility: hidden;
+}
+.side2 .back {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; z-index: -1;
+    transform-style: preserve-3d;
+    transform: rotateY(-180deg);
+    transition: all 0.5s ease-in-out;
+    backface-visibility: hidden;
+}
+.side2:hover .front {transform: rotateY(180deg);}
+.side2:hover .back {transform: rotateY(0deg); z-index: 1;}
+
+/* 사이드 이펙트3 */
+.side3 {position: relative; perspective: 600px; display: block;}
+.side3 .front {
+    transform-style: preserve-3d;
+    transform: rotatex(0deg);
+    transition: all 0.5s ease-in-out;
+    backface-visibility: hidden;
+}
+.side3 .back {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; z-index: -1;
+    transform: rotatex(-180deg);
+    transition: all 0.5s ease-in-out;
+    backface-visibility: hidden;
+}
+.side3:hover .front {transform: rotatex(180deg)}
+.side3:hover .back {transform: rotatex(0deg); z-index: 1;}
 
 
 /* 미디어쿼리 */
