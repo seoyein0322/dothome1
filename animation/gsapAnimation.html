@@ -245,7 +245,7 @@ $(".btn3-1").click(function(){
                 </div>
                 <!-- //Intro3 -->
 
-                <!-- Intro4 -->
+                <!-- Intro04 -->
                 <div class="bs-docs-section">
                     <h2 id="intro4" class="page-header">
                         Animation04 - 움직임 효과
@@ -272,10 +272,141 @@ gsap.to(".animation04-6",{ duration:2, left:leftWidth, rotationY: 360, ease:"slo
 gsap.to(".animation04-7",{ duration:2, left:leftWidth, rotationY: 360, ease:"bounce.out"});
 </code></pre>
                 </div>
-                <!-- //Intro3 -->
+                <!-- //Intro04 -->
 
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">
+                        Animation05 - 무한 애니메이션
+                        <button type="button" class="btn btn-warning">Start</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg5">
+                            <div class="animation08"><span>08</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                </div>
+                <!-- //Intro5 -->
+
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">
+                        Animation06 - 일정한 시간 애니메이션
+                        <button type="button" class="btn btn-warning">Start</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg6">
+                            <div class="animation09"><span>09</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$("#intro6 > button").click(function(){
+    setInterval(time, 4000);
+});
+function time(){
+    $(".animation09")
+        .animate({left: leftWidth},500,"easeOutQuint")
+        .animate({top: leftHeight},500,"easeOutQuint")
+        .animate({left: "0%"},500,"easeOutQuint")
+        .animate({top: "0%"},500,"easeOutQuint")
+        ;
+}
+</code></pre>
+                </div>
+                <!-- //Intro6 -->
                 
-                    
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">
+                        Animation07 - 사라지는 애니메이션
+                        <button type="button" class="btn btn-warning">Start</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg7">
+                            <div class="animation10"><span>10</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$("#intro7 > button").click(function(){
+    $(".animation10")
+        .animate({left: leftWidth},500,"easeOutQuint")
+        .animate({top: leftHeight},500,"easeOutQuint")
+        .animate({left: "0%"},500,"easeOutQuint")
+        .animate({top: "0%"},500,"easeOutQuint");
+    setTimeout(out,4000);
+});
+
+function out(){
+    $(".animation10").clearQueue().hide();
+}
+</code></pre>
+                </div>
+                <!-- //Intro7 -->
+
+                <!-- Intro8 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">
+                        Animation08 - 콜백 함수
+                        <button type="button" class="btn btn-warning">Start</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg8">
+                            <div class="animation11"><span>11</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$("#intro8 > button").click(function(){
+    $(".animation11")
+        .animate({left: leftWidth},500,"easeOutQuint")
+        .animate({top: leftHeight},500,"easeOutQuint")
+        .animate({left: "0%"},500,"easeOutQuint")
+        .animate({top: "0%"},500,"easeOutQuint", function(){
+            alert("도착");
+        });
+});
+</code></pre>
+                </div>
+                <!-- //Intro8 -->
+
+                <!-- Intro9 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro10" class="page-header">GSAP Animation - 01</h2>
+                    <p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-user="seoyein0322" data-slug-hash="XWKwbVo" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GSAP Animation Sample01">
+                        <span>See the Pen <a href="https://codepen.io/seoyein0322/pen/XWKwbVo">
+                        GSAP Animation Sample01</a> by seoyein0322 (<a href="https://codepen.io/seoyein0322">@seoyein0322</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <!-- //Intro9 -->
+
+                <!-- Intro10 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro10" class="page-header">GSAP Animation - 01</h2>
+                    <p class="codepen" data-height="800" data-theme-id="light" data-default-tab="result" data-user="seoyein0322" data-slug-hash="RwRmWYQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GSAP Animation Sample02">
+                        <span>See the Pen <a href="https://codepen.io/seoyein0322/pen/RwRmWYQ">
+                        GSAP Animation Sample02</a> by seoyein0322 (<a href="https://codepen.io/seoyein0322">@seoyein0322</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <!-- //Intro10 -->
+
+                <!-- Intro11 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro10" class="page-header">GSAP Animation - 01</h2>
+                    <p class="codepen" data-height="800" data-theme-id="light" data-default-tab="result" data-user="seoyein0322" data-slug-hash="OJRPqEP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Rocket Animation">
+                        <span>See the Pen <a href="https://codepen.io/seoyein0322/pen/OJRPqEP">
+                        Rocket Animation</a> by seoyein0322 (<a href="https://codepen.io/seoyein0322">@seoyein0322</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <!-- //Intro11 -->
+                  
                 </div>
                 <!-- //col-md-12 -->
             
