@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>silderEffect07-jQuery</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <title>Parallax07 - jQuery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
+        /* reset */
         @font-face {
-            font-family: 'BMEULJIRO';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+            font-family: 'MaruBuri-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
-
         *, *::before, *::after {
-            box-sizing:  border-box;
+            box-sizing: border-box;
             margin: 0; padding: 0;
         }
         a {
@@ -30,18 +30,43 @@
         }
         a {
             text-decoration: none;
-            transition: all 0.2s
+            transition: all 0.2s;
         }
-
         /* info */
-        .info {position: fixed; z-index: 1000;}
-        .info.left {left: 20px; top: 20px;}
-        .info.right {right: 20px; top: 20px;}
-        .info.bottom {right: 20px; bottom: 20px;}
-        .info h1 {font-size: 2rem; line-height: 1.4;}
-        .info p {font-size: 1rem;}
-        .info li {font-size: 1rem; line-height: 1.4;}
-        .info li a {color: #fff; width: 25px; height: 25px; border: 1px dashed #fff; display: inline-block; border-radius: 50%; text-align: center; line-height: 25px; font-size: 0.8rem; margin: 5px;}
+        .info {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {
+            left: 20px; top: 20px;
+        }
+        .info.right {
+            right: 20px; top: 20px;
+        }
+        .info.bottom {
+            right: 20px; bottom: 20px;
+        }
+        .info h1 {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+        .info p {
+            font-size: 1rem;
+        }
+        .info li {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+        .info li a {
+            color:#fff;
+            width: 25px; height: 25px;
+            border: 1px dashed #fff;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            font-size: 0.8rem;
+            margin: 3px;
+        }
         .info li a.active {
             background: #fff;
             color: #000;
@@ -49,22 +74,20 @@
         @media (max-width: 800px){
             .info h1 {display: none;}
         }
-
         /* main */
         body {
-            --color-h1 : #dc6e25;
+            --color-h1 : #DC6E25;
             --color-title : #fff;
             --color-sub : #999;
             --color-link : #000;
             --color-bg : #111;
-            --font-cafe :  'BMEULJIRO';
+            --font-cafe : 'MaruBuri-Regular';
             --font-lato : 'Lato', sans-serif;
-
             background-color: var(--color-bg);
             color: var(--color-title);
             font-family: var(--font-cafe);
             font-size: 16px;
-            background: url(img/images13@.jpg) no-repeat center center;
+            background: url(img/images15@2.jpg) no-repeat center center;
             background-size: cover;
             height: 100vh;
         }
@@ -72,11 +95,11 @@
             content: '';
             position: absolute; left: 0; top: 0;
             width: 100%; height: 100vh;
-            background: rgba(8,31,36,0.9);
+            background: rgba(8,31,36,0.7);
         }
         /* slider */
         .slider-wrap {
-            width: 800px; height: 480px;
+            width: 800px; height: 480px; 
             overflow: hidden;
             position: absolute;
             left: 50%; top: 50%;
@@ -95,10 +118,9 @@
         .slider-img .slider span {
             position: absolute;
             left: 5px; top: 5px;
-            
         }
         .slider-btn a {
-            position: absolute;
+            position: absolute; 
             top: 50%;
             transform: translateY(-50%);
             z-index: 1000;
@@ -116,59 +138,69 @@
         }
         .slider-dot {
             position: absolute;
-            left: 50%; bottom: 30px;
+            left: 50%;
+            bottom: 30px;
             transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
         }
         .slider-dot a {
-            width: 20px; height: 20px;
+            width: 20px; 
+            height: 20px;
             display: inline-block;
             background: rgba(0,0,0,0.3);
             text-indent: -9999px;
             border-radius: 50%;
             margin: 5px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
+            /* 닷이미지 */
+            width: 150px; height: 70px; line-height: 70px;
+            text-align: center;
+            background-size: cover;
+            border-radius: 3px;
+            white-space: nowrap;
+            text-indent: initial;
+            color: #fff;
         }
         .slider-dot a.active {
-            background: rgba(255,255,255,0.9);
+            background-color: rgba(255,255,255,0.9);
+            /* 닷이미지 */
+            background-size: cover;
+            background-color: rgba(46, 19, 19, 0.9);
+            background-blend-mode: difference;
+            transform: scale(1.05);
         }
-        
     </style>
 </head>
 <body>
-
     <!-- info -->
     <div class="info left">
-        <h1>SilderEffect07 - jQuery</h1>
-        <p>이미지 슬라이드- 버튼, 닷 만들기</p>
+        <h1>Slider Effect07 - jQuery</h1>
+        <p>이미지 슬라이드 - 버튼, 닷 만들기</p>
     </div>
     <div class="info right">
         <ul>
-            <li><a href="silderEffect01-jquery.html">1</a><a href="silderEffect01-javascript.html">1</a></li>
-            <li><a href="silderEffect02-jquery.html">2</a><a href="silderEffect02-javascript.html">2</a></li>
-            <li><a href="silderEffect03-jquery.html">3</a><a href="silderEffect03-javascript.html">3</a></li>
-            <li><a href="silderEffect04-jquery.html">4</a><a href="silderEffect04-javascript.html">4</a></li>
-            <li><a href="silderEffect05-jquery.html">5</a><a href="silderEffect05-javascript.html">5</a></li>
-            <li><a href="silderEffect06-jquery.html">6</a><a href="silderEffect06-javascript.html">6</a></li>
-            <li><a href="silderEffect07-jquery.html" class="active">7</a><a href="silderEffect07-javascript.html">7</a></li>
-            <li><a href="silderEffect08-jquery.html">8</a><a href="silderEffect08-javascript.html">8</a></li>
-            <li><a href="silderEffect09-jquery.html">9</a><a href="silderEffect09-javascript.html">9</a></li>
-            <li><a href="silderEffect10-jquery.html">10</a><a href="silderEffect10-javascript.html">10</a></li>
+            <li><a href="sliderEffect01-jquery.html">1</a><a href="sliderEffect01-javascript.html">1</a></li>
+            <li><a href="sliderEffect02-jquery.html">2</a><a href="sliderEffect02-javascript.html">2</a></li>
+            <li><a href="sliderEffect03-jquery.html">3</a><a href="sliderEffect03-javascript.html">3</a></li>
+            <li><a href="sliderEffect04-jquery.html">4</a><a href="sliderEffect04-javascript.html">4</a></li>
+            <li><a href="sliderEffect05-jquery.html">5</a><a href="sliderEffect05-javascript.html">5</a></li>
+            <li><a href="sliderEffect06-jquery.html">6</a><a href="sliderEffect06-javascript.html">6</a></li>
+            <li><a href="sliderEffect07-jquery.html" class="active">7</a><a href="sliderEffect07-javascript.html">7</a></li>
+            <li><a href="sliderEffect08-jquery.html">8</a><a href="sliderEffect08-javascript.html">8</a></li>
+            <li><a href="sliderEffect09-jquery.html">9</a><a href="sliderEffect09-javascript.html">9</a></li>
         </ul>
     </div>
-
-
-    <!-- //info -->
-
+    <!-- info -->
+    <!-- main -->
     <main>
         <div class="slider-wrap">
             <div class="slider-img">
-                <div class="slider s1"><img src="img/images02.jpg" alt="이미지"><span>이미지1</span></div>
-                <div class="slider s2"><img src="img/images09.jpg" alt="이미지"><span>이미지2</span></div>
-                <div class="slider s3"><img src="img/images10.jpg" alt="이미지"><span>이미지3</span></div>
-                <div class="slider s4"><img src="img/images15.jpg" alt="이미지"><span>이미지4</span></div>
-                <div class="slider s5"><img src="img/images17.jpg" alt="이미지"><span>이미지5</span></div>
-                <div class="slider s5"><img src="img/images18.jpg" alt="이미지"><span>이미지6</span></div>
-                <div class="slider s5"><img src="img/images12.jpg" alt="이미지"><span>이미지7</span></div>
+                <div class="slider s1"><img src="img/images06.jpg" alt="이미지1"><span>이미지1</span></div>
+                <div class="slider s2"><img src="img/images07.jpg" alt="이미지2"><span>이미지2</span></div>
+                <div class="slider s3"><img src="img/images08.jpg" alt="이미지3"><span>이미지3</span></div>
+                <div class="slider s4"><img src="img/images09.jpg" alt="이미지4"><span>이미지4</span></div>
+                <div class="slider s5"><img src="img/images10.jpg" alt="이미지5"><span>이미지5</span></div>
             </div>
         </div>
         <div class="slider-btn">
@@ -176,80 +208,66 @@
             <a href="#" class="next">next</a>
         </div>
         <div class="slider-dot">
-            <!-- <a href="#" active">1</a>
+            <!-- <a href="#" class="active">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
             <a href="#">5</a> -->
         </div>
     </main>
-    
-
-     <!-- script -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-     <script>
+    <!-- //main -->
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
         const sliderWrap = $(".slider-wrap");
         const sliderImg = $(".slider-img");
         const slider = $(".slider");
         const sliderBtn = $(".slider-btn");
         const sliderDot = $(".slider-dot");
-
         let sliderCount = slider.length;
         let sliderWidth = slider.outerWidth();
         let sliderHeight = slider.outerHeight();
         let sliderTotalWidth = sliderWidth * sliderCount;
         let currentIndex = 0;
         let dotIndex = "";
-
-        sliderImg.css({width: sliderTotalWidth, height: sliderHeight});
-
+        sliderImg.css({ width: sliderTotalWidth, height: sliderHeight });
         //이미지 움직이기
         function gotoSlider(index){
-            slider.animate({left: -sliderWidth * index},400);
+            sliderImg.animate({ left: -sliderWidth * index }, 400);
             currentIndex = index;
             sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
         }
-        //전달되는 값이 없으므로 
-        //currentIndex값을 바꾸는 게 핵심!
-        //이미지가 늘어나면 닷이 늘어나도록 스크립하기 1.이미지 갯수를 파악하고 닷을 만들어줘야 한다.
-
-
         //이미지 갯수만큼 닷 버튼 만들기
-        slider.each(function( index){
-            dotIndex += "<a href = '#'></a>";
-            // dotIndex += "<a href = '#'>"+ (index+1)+"</a>";
-            // let name = $(this).find("img").attr("alt");
-            // dotIndex += "<a href = '#'>"+ name +"</a>";
-        })
+        slider.each(function(index){
+            //dotIndex += "<a href='#'></a>";
+            //dotIndex += "<a href='#'>"+ (index+1) +"</a>";
+            //let name = $(this).find("img").attr("alt");
+            //dotIndex += "<a href='#'>"+ name +"</a>";
+            let sliderName = $(this).find("img").attr("alt");
+            let sliderSrc = $(this).find("img").attr("src");
+            dotIndex += "<a href='#' style='background-image:url("+sliderSrc+")'>"+sliderName+"</a>";
+        });
         sliderDot.html(dotIndex);
         sliderDot.find("a").eq(0).addClass("active");
-
         //닷 버튼 클릭하기
         sliderDot.on("click","a",function(e){
             e.preventDefault();
             gotoSlider($(this).index());
         });
-        //몇번째인지 인지하는 메서드 index
-        //active의 위치를 변경시켜주는 건 removeClass 밑에 있는 자식 a에게 줘야한다 (선택자)
-        //내가 클릭한 얘한테 반응시켜줘야한다 addClass
-
-        //버튼 클릭하기
+        //버큰 클릭하기
         sliderBtn.on("click","a",function(e){
             e.preventDefault();
             let nextIndex = (currentIndex + 1) % sliderCount;
             let prevIndex = (currentIndex - 1) % sliderCount;
-            if(currentIndex == 0)prevIndex = sliderCount - 1;  // 0이전에 -나오면 이미지가 출력되어지지 않고 4이미지 나와야하니깐 이미지갯수 -1해줍니다. 
-
-            //console.log("nextIndex:" + nextIndex);
-            console.log("prevIndex:" + prevIndex);
-
-            if($(this).hasClass("prev")){
+            if(currentIndex == 0) prevIndex = sliderCount - 1;
+            //console.log("nextIndex :" + nextIndex)
+            console.log("prevIndex :" + prevIndex)
+            if( $(this).hasClass("prev") ){
                 gotoSlider(prevIndex);
             } else {
                 gotoSlider(nextIndex);
             }
-        })
-
-     </script>
+        });
+    </script>
 </body>
 </html>
