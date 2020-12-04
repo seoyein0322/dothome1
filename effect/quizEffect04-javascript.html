@@ -71,7 +71,7 @@
             border-radius: 50%;
             position: absolute; left: 0; top: 9px;
         }
-        .quiz-wrap .quiz .confirm-btn {
+        .confirm .confirm-btn {
             background: #00005C;
             color: #fff;
             text-align: center;
@@ -80,6 +80,7 @@
             margin-bottom: 20px;
             cursor: pointer;
         }
+
         .quiz-wrap .quiz .confirm-answer {
             border: 3px solid #000;
             padding: 10px;
@@ -177,10 +178,10 @@
                     <span class="choice"></span>
                 </label>
             </div> -->
+            </div>
             <div class="confirm">
                 <p class="confirm-btn">정답 확인하기</p>
-                <div class="confirm-result">
-                </div>
+                <div class="confirm-result"></div>
             </div>
         </div>
 
@@ -190,14 +191,8 @@
     <script>
         //선택자
         const questionQuiz = document.querySelector(".quiz");
-        const questionAsk = document.querySelector(".question");
-        const questionNum = document.querySelector(".num");
         const questionBtn = document.querySelector(".confirm-btn");
-        const questionBottom = document.querySelector(".confirm-bottom");
-        const questionAnswer = document.querySelector(".confirm-answer");
-        const questionEx = document.querySelector(".confirm-ex");
-        const questionSelect = document.querySelectorAll(".select");
-        const questionChoice = document.querySelectorAll(".choice");
+        const questionResult = document.querySelector(".confirm-result");
 
         //문제 정보   //배열을 쓰지 않고 객체를 사용
         const quizInfo = [
@@ -205,13 +200,13 @@
                 quizNum : 1,
                 quizAsk : "다음 중 시멘틱 태그는 무엇인가요?",
                 quizChoice : {
-                    1: "<a> 태그",
-                    2: "<br> 태그",
-                    3: "<em> 태그",
-                    4: "<main> 태그",
+                    1: "&lt;a&gt; 태그",
+                    2: "&lt;br&gt; 태그",
+                    3: "&lt;em&gt; 태그",
+                    4: "&lt;main&gt; 태그",
                 },
-                quizAnswer : 1,
-                quizEx : "<main> 태그는 시멘틱 태그입니다."
+                quizAnswer : 4,
+                quizEx : "&lt;main&gt; 태그는 시멘틱 태그입니다."
             },{
                 quizNum : 2,
                 quizAsk : "다음 중 CSS의 단위로 맞지 않는 것은 무엇인가요??",
@@ -221,7 +216,7 @@
                     3: "vm",
                     4: "ch",
                 },
-                quizAnswer : 1,
+                quizAnswer : 3,
                 quizEx : "vm단위는 없습니다."
             },{
                 quizNum : 1,
@@ -232,45 +227,63 @@
                     3: "vue.js",
                     4: "c++",
                 },
-                quizAnswer : 1,
+                quizAnswer : 4,
                 quizEx : "c++는 자바스크립트 언어와 관련이 없습니다."
             }
         ];
 
-        //문제 만들기  //문제 정보를 배열에 대입시킵니다. 문제정보를 가져와야합니다 push로 데이터를 넣고 join으로 묶어줌 리터럴..사용 중간에 넣어서 사용할 수 있음 
-        function updateQuiz(){
-            const output = [];  
 
-            quizInfo.forEach((currentQuestion, questionNumber)=>{
+
+        //문제 만들기
+        function updataQuiz(){
+            const output = [];
+            quizInfo.forEach((currentQuestion, questionNumber) => {
                 output.push(`
-                    <h2>&lt; 문제<span class="num">${questionNumber.quizNum}</span> &gt;</h2>
+                    <h2>&lt; 문제<span class="num">${currentQuestion.quizNum}</span> &gt;</h2>
                     <p class="question">${currentQuestion.quizAsk}</p>
                     <div class="selects">
-                        <label for="select1">
-                            <input class="select" type="radio" name="select" id="select1" value="1">
+                        <label>
+                            <input class="select" type="radio" name="select${questionNumber}" value="1">
                             <span class="choice">${currentQuestion.quizChoice[1]}</span>
                         </label>
-                        <label for="select2">
-                            <input class="select" type="radio" name="select" id="select2" value="2">
+                        <label>
+                            <input class="select" type="radio" name="select${questionNumber}" value="2">
                             <span class="choice">${currentQuestion.quizChoice[2]}</span>
                         </label>
-                        <label for="select3">
-                            <input class="select" type="radio" name="select" id="select3" value="3">
+                        <label>
+                            <input class="select" type="radio" name="select${questionNumber}" value="3">
                             <span class="choice">${currentQuestion.quizChoice[3]}</span>
                         </label>
-                        <label for="select4">
-                            <input class="select" type="radio" name="select" id="select4" value="4">
+                        <label>
+                            <input class="select" type="radio" name="select${questionNumber}" value="4">
                             <span class="choice">${currentQuestion.quizChoice[4]}</span>
                         </label>
                     </div>
                 `)
             });
-
             questionQuiz.innerHTML = output.join(' ');
         }
-        updateQuiz();
+        updataQuiz();
 
-        
+
+        //결과 확인하기  전체select에 0이 들어가면 1번 문제 , number갯수만큼 돌려버린다. 갯수파악 비교하기 편하게 value값을 가져온다
+         function showResults(){
+            const selectContainers = questionQuiz.querySelectorAll(".selects");
+            let numCorrect = 0;
+            quizInfo.forEach((currentQuestion, questionNumber ) => { 
+                const selectContainer = selectContainers[questionNumber];
+                const resultSelector = `input[name=select${questionNumber}]:checked`;
+                const resultAnswer = (selectContainer.querySelector(resultSelector) || {}).value;
+                if(resultAnswer == currentQuestion.quizAnswer){
+                    numCorrect++;
+                    selectContainers[questionNumber].style.color = "blue";
+                } else {
+                    selectContainers[questionNumber].style.color = "red";
+                }
+            });
+            questionResult.innerHTML = `${quizInfo.length} 문제 중에 ${numCorrect} 문제를 맞추었습니다.`;
+        }
+        questionBtn.addEventListener("click", showResults);
 
     </script>
 </body>
