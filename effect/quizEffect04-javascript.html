@@ -274,6 +274,7 @@
                 const selectContainer = selectContainers[questionNumber];
                 const resultSelector = `input[name=select${questionNumber}]:checked`;
                 const resultAnswer = (selectContainer.querySelector(resultSelector) || {}).value;
+                const resultEx = (selectContainer.querySelector(quizEx) || {}).value;
                 if(resultAnswer == currentQuestion.quizAnswer){
                     numCorrect++;
                     selectContainers[questionNumber].style.color = "blue";

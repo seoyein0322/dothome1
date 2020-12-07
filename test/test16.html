@@ -1,37 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>네이버 클로바 4단계</title>
+    <title>네이버 클로바 3단계</title>
     <style>
         /* reset */
         * {margin: 0; padding: 0;}
-        a {text-decoration: none; color: #000;}
+        a {text-decoration: none;}
         ul {list-style: none;}
         /* IR 효과 */
         /* 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
         .ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;}
+
         /* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
         .ir_wa {display: block; overflow: hidden; position: relative; z-index: -1; width: 100%; height: 100%;}
+
         /*대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
         .ir_so {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
 
-        #wrap {width: 100%;}
-        #header {width: 100%; height: 80px;background: #fff;}
-        #banner {width: 100%; height: 600px;}
-        #contents {width: 100%;height: 800px;background: #fff;}
+
+        /* layout */
+        #wrap {background: #fff;} 
+        #header {width: 100%; height: 80px; background: #fff;}
+        #banner {width: 100%;}
+        #contents {width: 100%;}
         #footer {width: 100%; height: 100px; background: #000;}
 
         /* container */
         .container {position: relative; width: 1300px; height: inherit; margin: 0 auto; /* background: rgba(0,0,0,0.4);*/}
 
         /* header */
+        .header {}
         .header .logo { position: absolute; left: 0; top: 30px; width: 150px; height: 30px; background: url(https://static-clova.pstatic.net/static/4b722fb/img/sprite/sp_svg_icon.svg); background-position: -4px -62px;}
         .header .nav {overflow: hidden; position: absolute; left: 50%; top: 45%; transform: translate(-50%, -50%);}
         .header .nav > div {float: left; margin-right: 80px; font-size: 15px; font-weight: bold;}
         .header .quick { position: absolute; right: 0; top: 25px;}
         .header .quick > div {border: 1px solid #000; border-radius: 5px; float: left; padding: 7px 15px; margin-right: 5px; font-size: 11px;}
+
+        /* banner */
+        .banner {margin: 123px 0 50px; display: block; text-align: center;}
+        .banner h2 {font-size: 41px; font: 300px; line-height: 56px; letter-spacing: -.2px; color: #000;}
+        .banner a {display: inline-block; width: 200px; padding: 21px 0 17px; color: #fff; font-size: 20px; line-height: 22px; font-weight: 400;border-radius: 4px; background: #05d686; margin-top: 30px;}
+
+        /* contents */
+        .contents {padding: 40px 40px 111px; margin: 46px; box-sizing: border-box;  display: block; text-align: center;}
+        .contents .contents_list { overflow: hidden; display: block;margin: 80px; width: 1000px;}
+        .contents .contents_list li{ position: relative; float:left; width: 194px; height: 196px;  border: 1px solid #f2f2f2; display: block; margin: -1px 0 0 -1px; }
+        .contents .contents_list li img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%;}
+        .contents .contents_list li img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%;}
+        .contents .contents_list li img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%;}
 
         /* footer */
         .footer {text-align: center; }
@@ -48,18 +66,6 @@
         .footer .fbot > div:nth-child(2) {float: left; padding: 0 50px;}
         .footer .fbot > div:nth-child(3) {float: left; width: 31.3333%;}
         .footer .fbot > div p {float: left;}
-
-        /* banner */
-        .banner {text-align: left; padding: 30px 0; background: #000;}
-        #banner .bg {overflow: hidden; position: relative; margin-top: -90px; background: #000; display: inline-block; }
-        #banner .bg .bg1{float: left; background: #000; position: absolute; top: 0; right: 0; bottom: 0; left: 0; height: 100%; background-image: url(https://static-clova.pstatic.net/static/4b722fb/img/research/research_intro_main_3.png); background-size: cover;}
-        #banner .bg .bg2{float: left; position: absolute; top: 0; right: 0; bottom: 0; left: 0; height: 100%; background-image: url(https://static-clova.pstatic.net/static/4b722fb/img/research/research_intro_main_2.png); background-size: cover;}
-        #banner .bg .bg3{float: left; position: absolute; top: 0; right: 0; bottom: 0; left: 0; height: 100%; background-image: url(https://static-clova.pstatic.net/static/4b722fb/img/research/research_intro_main_3.png); background-size: cover;animation: change_opacity_3 15s ease-in-out 10s infinite;}
-        .banner .title {}
-        .banner .title h2 {}
-        .banner .title p {margin-bottom: 20px;}
-        .banner .title a {border: 1px solid #fff; border-radius: 5px; background: #000; padding: 10px 15px; }
-        .banner .title a::before {}
     </style>
 </head>
 <body>
@@ -82,96 +88,62 @@
                 </div>
             </div>
         </div>
-        <!-- //header -->
-
         <div id="banner">
-            <div class="bg">
-                <div class="bg1">이미지1</div>
-                <div class="bg2">이미지2</div>
-                <div class="bg3">이미지3</div>
-            </div>
             <div class="container">
                 <div class="banner">
-                    <div class="title">
-                        <h2>Research Areas</h2>
-                        <p>CLOVA AI Research 는 네이버와 라인이 함께 만드는<br>
-                            오감인지 AI플랫폼을 더욱 스마트하게 만들기 위한<br>
-                            머신러닝/딥러닝 기반의 AI 선행 기술을 연구 개발하는 조직입니다.
-                        </p>
-                        <a href="#">RESEARCH VIDEO</a>
-                    </div>
+                    <h2>클로바는 다양한 브랜드, <br> 서비스 및 개발사들과 함께 하겠습니다.</h2>
+                    <a href="#">제휴 제안 신청</a>
                 </div>
             </div>
         </div>
-        <!-- //banner -->
-
         <div id="contents">
-            <div id="cont1">
-                <div class="container">
-                    <div class="cont1">
-                        <div class="text">
-                            <a href="#">English</a>
-                            <a href="#">Korean</a>
-                        </div>
-                        <p>클로바는 한국의 1등 검색포털 네이버와 일본의 1등 메신저 라인이 함께 만드는 인공지능 플랫폼으로 네이버와 라인이 20여년간 연구해온 세계 최고 수준의 검색, 언어처리, 대화, 음성, 이미지, 비전, 추천 등의 인공지능 기술과 네이버와 라인이 보유한 수많은 콘텐츠와 서비스를 하나의 플랫폼으로 제공할 예정입니다. 또한, 누구나 쉽게 클로바 플랫폼을 활용하여 인공지능 서비스를 만들 수 있게 하여 사용자나 다양한 파트너들과 함께 AI 생태계를 만들고 더 편리한 세상을 함께 만들어 나갈 예정입니다.</p>
-                        <a href="#">TECHNOLOGIES VIDEO</a>
-                    </div>
-                </div>
-            </div>
-            <div id="cont2">
-                <div class="container">
-                    <div class="cont2">
-                        <div class="cont2_box1">
-                            <h3>CLOVA AI Research</h3>
-                            <p>CLOVA AI Research 는 네이버와 라인이 함께 만드는 오감인지 AI플랫폼을 더욱 스마트하게 만들기 위한 머신러닝/딥러닝 기반의 AI 선행 기술을 연구 개발하는 조직입니다.</p>
-                            <a href="#">더보기</a>
-                        </div>
-                        <div class="cont2_box2">
-                            <h3>NSML</h3>
-                            <p>NSML은 CLOVA AI Research 에서 개발한 딥러닝 클라우드 플랫폼으로 딥러닝을 연구하는 분들의 쉽고 빠른 Machine Learning 연구를 가능하게 합니다.</p>
-                            <a href="#">더보기</a>
-                        </div>
-                        <div class="cont2_box3">
-                            <h3>AI Recommender System</h3>
-                            <p>AiRS는 다양한 콘텐츠를 개인의 관심사에 맞춰서 추천해 주는 인공지능 기반 개인화 추천 시스템입니다.</p>
-                            <a href="#">더보기</a>
-                        </div>
-                        <div class="cont2_box4">
-                            <h3>Dialogue</h3>
-                            <p>클로바 대화 시스템은 대화를 통하여 사용자의 요구 사항을 해결하는 시스템으로, 대화에서 사용자의 의도를 정확히 파악하고 의도에 부합한 결과를 제공합니다.</p>
-                            <a href="#">더보기</a>
-                        </div>
-                        <div class="cont2_box5">
-                            <h3>Music Recommendation</h3>
-                            <p>클로바 음악추천 시스템은 사용자의 요청에 적합한 개인화된 음악을 추천합니다.</p>
-                            <a href="#">더보기</a>
-                        </div>
-                        <div class="cont2_box6">
-                            <h3>Natural Language Processing</h3>
-                            <p>클로바의 자연언어처리는 사용자가 발화한 여러 표현을 기계적으로 분석하여 시스템이 이해할 수 있는 형태로 만들고 사용자의 질의에 대한 답변이 될 수 있는 정답을 문서나 Knowledge Base에서 찾아서 제시해주는 일을 합니다.</p>
-                            <a href="#">더보기</a>
-                        </div>
-                        <div class="cont2_box7">
-                            <h3>Speech Recognition</h3>
-                            <p>클로바의 음성 인식은 가장 뛰어난 한국어 인식 능력을 가지고 있습니다.</p>
-                            <a href="#">더보기</a>
-                        </div>
-                        <div class="cont2_box8">
-                            <h3>Speech Synthesis</h3>
-                            <p>음성합성은 텍스트를 사람의 목소리로 읽어주는 기술입니다.</p>
-                            <a href="#">더보기</a>
-                        </div>
-                        <div class="cont2_box9">
-                            <h3>Vision</h3>
-                            <p>클로바 비전 팀은 우리 주변의 시각적 세계를 이해하는 기계 학습 알고리즘을 개발하고, 비전 기반의 새로운 사용자 경험을 네이버 제품에 적용합니다.</p>
-                            <a href="#">더보기</a>
-                        </div>
-                    </div>
+            <div class="container">
+                <div class="contents">
+                    <ul class="contents_list">
+                        <li></a><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/dy_media.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_1.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_2.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_3.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_4.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_5.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_6.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_7.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_8.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_9.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_10.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_11.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_12.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/infomark.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/iscream_edu.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_13.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_14.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_15.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_16.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/markt.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/minibig.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_17.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_18.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_19.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_20.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_30.jpg" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_31.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_21.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_22.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_23.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_32.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_33.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_24.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_25.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_26.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_27.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_28.png" alt="이미지"></li>
+                        <li><img src="https://static-clova.pstatic.net/static/4b722fb/img/partner/partner_logo_29.png" alt="이미지"></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- contents -->
-
         <div id="footer">
             <div class="container">
                 <div class="footer">
@@ -202,7 +174,6 @@
                 </div>
             </div>
         </div>
-        <!-- //footer -->
     </div>
 </body>
 </html>
