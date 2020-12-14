@@ -3,8 +3,8 @@
     /* 트레일러 영상 플레이어를 활성화 */
     /* YouTube iframe API: https://developers.google.com/youtube/player_parameters */
     
-    (function handleTrailer() {
-        // 셀렉터 캐시
+    (function handleTrailer(){
+        // 셀럭터 캐시
         var $selector = {
             body: $( "body" ),
             overlay: $( "#blackout" ),
@@ -12,7 +12,7 @@
             showButton: $( "#showTrailer" ),
             hideButton: $( "#hideTrailer" ),
         };
-        
+
         // 플레이어
         var player = {
             obj: null, // 플레이어 오브젝트
@@ -30,12 +30,12 @@
             visible: false
         };
 
-        // 보이기, 숨기기 버튼 활성화
-        $selector.showButton.on( "click", showPlayer );
-        $selector.hideButton.on( "click", hidePlayer );
+        //보이기, 숨기기 버튼 활성화
+        $selector.showButton.on("click", showPlayer);
+        $selector.hideButton.on("click", hidePlayer);
 
-        // YouTube API를 이용해 iframe을 생성
-        function setPlayer( id ) {
+        //YouTube API를 이용해 iframe을 생성
+        function setPlayer( id ){
             player.obj = new YT.Player( "trailer", {
                 width: 480,
                 height: 282,
@@ -43,53 +43,46 @@
                 playerVars: player.query
             });
 
-            // 처음 플레이어 크기 설정
+            //처음 플레이어 크기 설정
             resizePlayer();
 
-            // 리사이즈나 화면 회전시 플레이어 크기 다시 설정
-            $( window ).on( "resize orientationchange", function() {
-                resizePlayer();
+            //리사이즈 화면 회전시 플레이어 크기 다시 설정
+            $(window).on("resize orientationchange", function(){
+
             });
         }
-
-        // 화면 크기에 비례해 iframe의 크기 조절
-        function resizePlayer() {
+        function resizePlayer(){
             var viewport = {}, frame = {}, modal = {};
 
-            viewport.width = $( window ).width();
-            viewport.height = $( window ).height();
+            viewport.width = $(window).width();
+            viewport.height = $(window).height();
 
             frame.width = viewport.width;
-            frame.height = frame.width / 1.6; // 16 : 10
+            frame.height = frame.width / 1.6;  //1.6 : 10
 
-            modal.top = ( ( viewport.height - frame.height ) / 2 ) + "px";
+            modal.top = ((viewport.height - frame.height) / 2 ) + "px";
             modal.left = "0px";
 
-            $selector.modal.css( modal );
+            $selector.modal.css( model );
+            player.obj.setSize( frame.width, frame.width );
+        };
 
-            player.obj.setSize( frame.width, frame.height );
-        }
-
-        // iframe 보이기
-        function showPlayer() {
-            // 처음 클릭시 iframe을 생성 
+        //iframe 보이기
+        function showPlayer(){
             if ( !player.obj ) {
                 setPlayer( $selector.showButton.data("youtube") );
             }
-
+            
             $selector.body.addClass("modal_on");
             $selector.overlay.show();
             player.visible = true;
-        }
-
-        // iframe 감추기
-        function hidePlayer() {
-            player.obj.stopVideo();
+        };
+        //iframe 감추기
+        function hidePlayer(){
             $selector.overlay.hide();
-            $selector.body.removeClass("modal_on");
+            $selector.body.removeClass("");
             player.visible = false;
-        }
-
+        };
     })();
 
 })(jQuery);     
