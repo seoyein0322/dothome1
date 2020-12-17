@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>parallax05-javascript</title>
+    <title>parallax06-jQuery</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <style>
         @font-face {
@@ -194,49 +194,78 @@
             background-size: cover;
         }
 
-        .content-item-scroll {
+        /* reveal */
+        .content-item-imgWrap.reveal {
             position: relative;
-            left: 70%; bottom: -100px;
-            display: inline-block;
-            transform: translate(0, -50%);
-            color: #fff;
-            padding-top: 70px;
-            transition: opacity .3s;
         }
-        .content-item:nth-child(even) .content-item-scroll {
-            left: 10%;
-        }
-        .content-item-scroll span {
+        .content-item-imgWrap.reveal ::before {
+            content: '';
             position: absolute;
-            top: 0;
-            left: 50%;
-            width: 24px;
-            height: 24px;
-            margin-left: -12px;
-            border-left: 1px solid #fff;
-            border-bottom: 1px solid #fff;
-            transform: rotate(-45deg);
-            animation: scroll 2s infinite;
-            opacity: 1;
-            box-sizing: border-box;
+            right: 0; top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 100;
+            background: #fff;
         }
-        .content-item-scroll span:nth-of-type(1) {
-            animation-delay: 0s;
+        .content-item-imgWrap.reveal.show ::before {
+            animation: reveal 1000ms cubic-bezier(.77,0,.18,1);
         }
-        .content-item-scroll span:nth-of-type(2) {
-            animation-delay: .15s;
-            top: 16px;
+        @keyframes reveal {
+            0% {width: 0; left: 0;}
+            50% {width: 100%; left: 0;}
+            80% {width: 100%; left: 0;}
+            100% {width: 0; left: 100%;}
         }
-        .content-item-scroll span:nth-of-type(3) {
-            animation-delay: .15s;
-            top: 32px;
+        .content-item-imgWrap.reveal .content-item-img {
+            opacity: 0;
         }
-        @keyframes scroll {
+        .content-item-imgWrap.reveal.show .content-item-img {
+            animation: opacitiy 1000ms 200ms linear forwards;
+        }
+        @keyframes opacitiy {
             0% {opacity: 0;}
-            50% {opacity: 1;}
-            100% {opacity: 0;}
+            70% {opacity: 1;}
+            100% {opacity: 1;}
         }
 
+        /* reveal - desc */
+        .content-item-desc.reveal {
+            position: relative;
+        }
+        .content-item-desc.reveal::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 100;
+            background: #fff;
+
+        }
+        .content-item-desc.reveal.show::before {
+            animation: reveal 1000ms cubic-bezier(.77,0,.18,1);
+        }
+        .content-item-desc.reveal span {
+            opacity: 0;
+        }
+        .content-item-desc.reveal.show span {
+            animation: opacitiy 1000ms 200ms linear forwards;
+        }
+
+        @keyframes reveal {
+            0% {width: 0; left: 0;}
+            50% {width: 100%; left: 0;}
+            80% {width: 100%; left: 0;}
+            100% {width: 0; left: 100%;}
+        }
+        @keyframes opacitiy {
+            0% {opacity: 0;}
+            69% {opacity: 0;}
+            70% {opacity: 1;}
+            100% {opacity: 1;}
+        }
+        
+        
 
     </style>
 </head>
@@ -244,8 +273,8 @@
 
     <!-- info -->
     <div class="info left">
-        <h1>Parallax Effect05 - javascript</h1>
-        <p>패랠랙스 스크로링 효과</p>
+        <h1>Parallax Effect06 - jQuery</h1>
+        <p>패랠랙스 스크로링 효과 - 리빌효과</p>
     </div>
     <div class="info right">
         <ul>
@@ -253,8 +282,8 @@
             <li><a href="parrallax02-jquery.html">2</a><a href="parrallax02-javascript.html">2</a></li>
             <li><a href="parrallax03-jquery.html">3</a><a href="parrallax03-javascript.html">3</a></li>
             <li><a href="parrallax04-jquery.html">4</a><a href="parrallax04-javascript.html">4</a></li>
-            <li><a href="parrallax05-jquery.html">5</a><a href="parrallax05-javascript.html" class="active">5</a></li>
-            <li><a href="parrallax06-jquery.html">6</a><a href="parrallax06-javascript.html">6</a></li>
+            <li><a href="parrallax05-jquery.html">5</a><a href="parrallax05-javascript.html">5</a></li>
+            <li><a href="parrallax06-jquery.html" class="active">6</a><a href="parrallax06-javascript.html">6</a></li>
             <li><a href="parrallax07-jquery.html">7</a><a href="parrallax07-javascript.html">7</a></li>
             <li><a href="parrallax08-jquery.html">8</a><a href="parrallax08-javascript.html">8</a></li>
             <li><a href="parrallax09-jquery.html">9</a><a href="parrallax09-javascript.html">9</a></li>
@@ -279,47 +308,42 @@
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">높은 목표를 세우고, 스스로 채찍질 한다.</p>
-                    <a class="content-item-scroll" href="#section5" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>Section5</a>
+                    <p class="content-item-desc"><span>높은 목표를 세우고, 스스로 채찍질 한다.</span></p>
                 </section>
 
                 <section id="section2" class="content-item">
                     <span class="content-item-num">02</span>
                     <h2 class="content-item-title">Section2</h2>
-                    <figure class="content-item-imgWrap">
+                    <figure class="content-item-imgWrap reveal">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">자기 신뢰는 성공의 첫 번째 비결이다.</p>
-                    <a class="content-item-scroll" href="#section6" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>Section6</a>
+                    <p class="content-item-desc  reveal"><span>자기 신뢰는 성공의 첫 번째 비결이다.</span></p>
                 </section>
 
                 <section id="section3" class="content-item">
                     <span class="content-item-num">03</span>
                     <h2 class="content-item-title">Section3</h2>
-                    <figure class="content-item-imgWrap">
+                    <figure class="content-item-imgWrap reveal">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">실패는 선택지가 아니다. 모두가 성공해야 한다.</p>
-                    <a class="content-item-scroll" href="#section4" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>Section4</a>
+                    <p class="content-item-desc  reveal"><span>실패는 선택지가 아니다. 모두가 성공해야 한다.</span></p>
                 </section>
                 <section id="section4" class="content-item">
                     <span class="content-item-num">04</span>
                     <h2 class="content-item-title">Section4</h2>
-                    <figure class="content-item-imgWrap">
+                    <figure class="content-item-imgWrap reveal">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">모든 성취의 시작점은 갈망이다.</p>
-                    <a class="content-item-scroll" href="#section5" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>Section5</a>
+                    <p class="content-item-desc  reveal"><span>모든 성취의 시작점은 갈망이다.</span></p>
                 </section>
 
                 <section id="section5" class="content-item">
                     <span class="content-item-num">05</span>
                     <h2 class="content-item-title">Section5</h2>
-                    <figure class="content-item-imgWrap">
+                    <figure class="content-item-imgWrap reveal">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">우리가 실패에서 배우면, 실패는 성공이 된다.</p>
-                    <a class="content-item-scroll" href="#section2" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>Section2</a>
+                    <p class="content-item-desc  reveal"><span>우리가 실패에서 배우면, 실패는 성공이 된다.</span></p>
                 </section>
                 <section id="section6" class="content-item">
                     <span class="content-item-num">06</span>
@@ -327,8 +351,7 @@
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">기운과 끈기는 모든 것을 이겨낸다.</p>
-                    <a class="content-item-scroll" href="#section7" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>Section7</a>
+                    <p class="content-item-desc"><span>기운과 끈기는 모든 것을 이겨낸다.</span></p>
                 </section>
                 <section id="section7" class="content-item">
                     <span class="content-item-num">07</span>
@@ -336,8 +359,7 @@
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">미래는 현재 우리가 무엇을 하는가에 달려있다.</p>
-                    <a class="content-item-scroll" href="#section9" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>Section9</a>
+                    <p class="content-item-desc"><span>미래는 현재 우리가 무엇을 하는가에 달려있다.</span></p>
                 </section>
                 <section id="section8" class="content-item">
                     <span class="content-item-num">08</span>
@@ -345,8 +367,7 @@
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">탐험되지 않은 삶은 가치가 없다.</p>
-                    <a class="content-item-scroll" href="#section1" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>Section1</a>
+                    <p class="content-item-desc"><span>탐험되지 않은 삶은 가치가 없다.</span></p>
                 </section>
                 <section id="section9" class="content-item">
                     <span class="content-item-num">09</span>
@@ -354,8 +375,7 @@
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">성공의 80%가 서서히 나타나고 있다.</p>
-                    <a class="content-item-scroll" href="#section3" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>Section3</a>
+                    <p class="content-item-desc"><span>성공의 80%가 서서히 나타나고 있다.</span></p>
                 </section>
             </div>
         </section>
@@ -363,15 +383,23 @@
     
 
      <!-- script -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src=https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js></script>
      <script>
-         document.querySelectorAll("a[href='#']").forEach(elem =>{
-             elem.addEventListener("click", e => {
-                 e.preventDefault();
-                 document.querySelector(elem.getAttribute('href')).scrollIntoView({
-                     behavior : 'smooth'
-                 })
-             });
-         })
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+
+            // if(scrollTop > $("#section2").offset().top){
+            //     $("#section2").addClass("show");
+            // }
+
+            $(".reveal").each(function(){
+                if( scrollTop + $(window).height()/2 > $(this).offset().top){
+                    $(this).addClass("show");
+                }
+            });
+        });
+        
      </script>
 </body>
 </html>
