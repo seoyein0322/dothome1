@@ -28,16 +28,8 @@
         #section2 .imgWrap .img {background: url(../img/images14@.jpg); background-size: cover;}
         #section3 .imgWrap .img {background: url(../img/images15@.jpg); background-size: cover;}
         #section4 .imgWrap .img {background: url(../img/images16@.jpg); background-size: cover;}
-        #section5 .imgWrap .img {
-            background: url(../img/images17@.jpg);
-            background-size: cover;
-
-        }
-        #section6 .imgWrap .img {
-            background: url(../img/images18@.jpg);
-            background-size: cover;
-
-        }
+        #section5 .imgWrap .img {background: url(../img/images17@.jpg);background-size: cover;}
+        #section6 .imgWrap .img {background: url(../img/images18@.jpg);background-size: cover;}
 
         .content-item {
             position: relative;
@@ -50,6 +42,7 @@
             font-weight: 100;
             opacity: 0.082;
             letter-spacing: -1vw;
+            opacity: 0; 
         }
         .content-item .imgWrap {
             position: absolute; left: 60%; top: 50%;
@@ -57,6 +50,7 @@
             z-index: 100;
             width: 50vw; height: 50vh;
             background: #ccc;
+            opacity: 0; 
 
         }
         .content-item .imgWrap .img {
@@ -71,6 +65,7 @@
             font-size: 4vw;
             word-break: keep-all;
             font-family: 'S-CoreDream-3Light';
+            opacity: 0; 
         }
 
         body {
@@ -108,18 +103,8 @@
             100% {background-position: -1800px 0px;}
         }
         @keyframes walk2 {
-            0% {background-position: 0px -200px;;}
-            100% {background-position: -1800px -200px;;}
-        }
-
-        #section3 .imgWrap {
-            opacity: 0; 
-        }
-        #section3 .title {
-            opacity: 0;
-        }
-        #section3 .num {
-            opacity: 0;
+            0% {background-position: 0px -200px;}
+            100% {background-position: -1800px -200px;}
         }
     </style>
 </head>
@@ -201,6 +186,7 @@
             let step = dWidth/dHeight;
             let goLeft = wScroll * step;
             $("#contents").css("left",-goLeft);
+            $("#contents").css("walking",-goLeft);
 
             clearTimeout($.data(this, "scrollCheck"));
 
@@ -217,41 +203,35 @@
             }
             lastScrollTop = wScroll;
 
-            if( wScroll > $("#section1").offset().left + $(window).width()){
+            if( wScroll > $("#section1").position().left - $(window).width()){
                 gsap.to("#section1 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"})
                 gsap.to("#section1 .title", {duration: 0.4, opacity: 1,  top: "60%", delay: 0.4})
                 gsap.to("#section1 .num", {duration: 0.4, opacity: 1, left: "70%", delay: 0.8})
-                // 가로모드로 top이 아니라 left를 사용한다
             }
-            if( wScroll > $("#section2").offset().left + $(window).width()){
+            if( wScroll > $("#section2").position().left - $(window).width()){
                 gsap.to("#section2 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"})
                 gsap.to("#section2 .title", {duration: 0.4, opacity: 1,  top: "60%", delay: 0.4})
                 gsap.to("#section2 .num", {duration: 0.4, opacity: 1, left: "70%", delay: 0.8})
-                // 가로모드로 top이 아니라 left를 사용한다
             }
-            if( wScroll > $("#section3").offset().left + $(window).width()){
+            if( wScroll > $("#section3").position().left - $(window).width()){
                 gsap.to("#section3 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"})
                 gsap.to("#section3 .title", {duration: 0.4, opacity: 1,  top: "60%", delay: 0.4})
                 gsap.to("#section3 .num", {duration: 0.4, opacity: 1, left: "70%", delay: 0.8})
-                // 가로모드로 top이 아니라 left를 사용한다
             }
-            if( wScroll > $("#section4").offset().left + $(window).width()){
+            if( wScroll > $("#section4").position().left - $(window).width()){
                 gsap.to("#section4 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"})
                 gsap.to("#section4 .title", {duration: 0.4, opacity: 1,  top: "60%", delay: 0.4})
                 gsap.to("#section4 .num", {duration: 0.4, opacity: 1, left: "70%", delay: 0.8})
-                // 가로모드로 top이 아니라 left를 사용한다
             }
-            if( wScroll > $("#section5").offset().left + $(window).width()){
+            if( wScroll > $("#section5").position().left - $(window).width()){
                 gsap.to("#section5 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"})
                 gsap.to("#section5 .title", {duration: 0.4, opacity: 1,  top: "60%", delay: 0.4})
                 gsap.to("#section5 .num", {duration: 0.4, opacity: 1, left: "70%", delay: 0.8})
-                // 가로모드로 top이 아니라 left를 사용한다
             }
-            if( wScroll > $("#section6").offset().left + $(window).width()){
+            if( wScroll > $("#section6").position().left - $(window).width()){
                 gsap.to("#section6 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"})
                 gsap.to("#section6 .title", {duration: 0.4, opacity: 1,  top: "60%", delay: 0.4})
                 gsap.to("#section6 .num", {duration: 0.4, opacity: 1, left: "70%", delay: 0.8})
-                // 가로모드로 top이 아니라 left를 사용한다
             }
         });
 
