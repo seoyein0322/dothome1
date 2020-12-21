@@ -46,17 +46,55 @@
             "title": "<figure>",
             "desc": "<figure> 태그는 독립적인 콘텐츠를 표현합니다. <figcaption> 요소를 사용해 설명을 붙일 수 있습니다. "
         },{
-            "id": 10,
-            "link": "https://webzz.tistory.com/231",
+            "id": "H",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "<h1>~<h6>",
+            "desc": "<h1>~<h6>태그는 제목 영역을 나타낼 때 사용합니다."
+        },{
+            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+            "title": "<header>",
+            "desc": "<header> 태그는 웹 문서의 소개 컨텐츠 및 네비게이션 링크를 정의합니다."
+        },{
+            "id": "I",
+            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+            "title": "<i>",
+            "desc": "<i> 태그는 기본 텍스트와는 다른 분위기나 음성을 위한 텍스트 영역을 정의할 때 사용합니다."
+        },{
+            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+            "title": "<img>",
+            "desc": "<img>태그는 HTML 문서에 이미지를 삽입하는 태그입니다."
+        },{
+            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+            "title": "<input>",
+            "desc": "<input>태그는 실제로 사용자가 양식을 입력하기 위한 태그입니다."
+        },{
+            "id": "L",
+            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+            "title": "<li>",
+            "desc": "<li>태그는 list의 약자로, 목록을 만드는 태그입니다."
+        },{
+            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+            "title": "<label>",
+            "desc": "<label>태그는 폼의 양식에 이름 붙이는 태그입니다. <input>태그를 도와주는 역합입니다."
+        },{
+            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+            "title": "<legend>",
+            "desc": "<legend> 태그는 <fieldset> 요소의 캡션(caption)을 정의할 때 사용합니다."
+        },{
+            "id": "M",
+            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+            "title": "<meta>",
+            "desc": "HTML 문서의 메타 정보를 나타내는 태그를 의미합니다.페이지에 대한 설명, 키워드, 제작자 및 각종 정보를 지정하고 표시하는 데 사용합니다."
+        },{
+            "id": "N",
+            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+            "title": "<nav>",
+            "desc": "<nav> 태그는 현재 웹 사이트에서 주요한 지점으로 이동할 수 있는 네비게이션(NAVigation) 역할을 담당하고 있는 태그입니다."
+        },{
+            "id": "O",
+            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+            "title": "<ol>",
+            "desc": "<ol>태그는번호를 메겨 순서가 있는 (ordered list) 목록을 만듭니다."
         },{
             "type": "css",
             "id": 1,
