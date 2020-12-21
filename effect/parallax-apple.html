@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>parallax-apple</title>
+    <title>Document</title>
     <style>
         @font-face {
             font-family: 'NEXON Lv1 Gothic OTF Bold';
@@ -17,15 +17,15 @@
             font-weight: normal;
             font-style: normal;
         }
-
-        *{margin: 0; padding: 0; box-sizing: border-box;}
-        body { height: 20000px; font-family: 'NEXON Lv1 Gothic OTF Bold';}
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {height: 20000px; font-family: 'NEXON Lv2 Gothic Bold';}
+        em {font-style: normal;}
         .scroll {
             position: fixed; right: 10px; top: 10px;
-            width: 50px; height: 50px; line-height: 50px; 
+            width: 50px; height: 50px; line-height: 50px;
             text-align: center; color: #fff;
             background: rgba(0,0,0,0.5);
-            z-index: 10000000;
+            z-index: 100000000;
         }
         #section1 {}
         #section2 {}
@@ -33,21 +33,19 @@
         #section4 {}
         #section5 {}
         #section6 {}
-
-        /* common */
+        /* commom */
         .fixed {
             position: fixed; 
-            top: 50%; left: 50%; 
-            transform: translate(-50%, -50%); 
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
             z-index: 1000;
         }
         img {
-            width: 100%;vertical-align: top;
+            width: 100%; vertical-align: top;
             object-fit: cover;
         }
-
-        /* section1 */
-        .s1Txt01 {
+         /* section1 */
+         .s1Txt01 {
             font-size: 8vw;
         }
         .s1Txt02 {
@@ -60,29 +58,26 @@
             z-index: 900;
         }
         .s1Txt04 {
-            width: 30vw;
-            height: 30vw;
-            background: #000;
-            border-radius: 50%;
-            
+           width: 30vw;
+           height: 30vw;
+           background: #000;
+           border-radius: 50%;
         }
         .s1Txt05 {
-            color:#fff;
+            color: #fff;
             font-size: 4vw;
         }
-
         /* section2 */
         .s2Txt01 {
             width: 100vw; height: 100vh;
             background: #000;
         }
         .s2Txt02 h2 {
-            color: #fff;
             font-size: 4vw;
             text-align: center;
             line-height: 1.2;
             background-repeat: no-repeat;
-            background-image: url(img/apple-text-bg.jpg);
+            background-image: url(img/hero_manifesto_bg__c0zrbe748m82_medium.jpg);
             background-size: cover;
             background-clip: text;
             -webkit-background-clip: text;
@@ -92,91 +87,57 @@
         }
         .s2Txt03 {
             color: #fff;
-            font-size: 4vw;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            
-        }
-        .s2Txt03 > p {
-            flex: 1 1 30%
-        }
-        .s2Txt03 .text1 {
-            top: 30%; 
-
-        }
-        .s2Txt03 .text2 {
-            top: 30%;
-        }
-        .s2Txt03 .text3 {
-            top: 30%; 
-        }
-        .s2Txt03 .text4 {
-            top: 30%; 
-        }
-        .s2Txt03 .desc-wrap {
-            flex: 1 1 60%;
-            font-size: 15px;
             font-family: 'NEXON Lv1 Gothic OTF';
         }
-        .s2Txt03 .desc-wrap .desc {
-            font-size: 40px;
-            top: 30%; 
-        }
         .s2Txt03 .text1 {
-            top: 30%; 
-
+            top: 30%;
+            display: flex;
+            justify-content: space-between;
+            width: 55vw;
+        }
+        .s2Txt03 .text1 h3 {
+            flex: 0 0 32%;
+            font-size: 2vw;
+            font-weight: normal;
+            line-height: 1.4;
+        }
+        .s2Txt03 .text1 p {
+            flex: 0 0 60%;
+            font-size: 1vw;
+            line-height: 1.8;
+            font-family: 'NEXON Lv2 Gothic Light';
         }
         .s2Txt03 .text2 {
-            top: 30%;
+            top: 30%; display: none;
         }
         .s2Txt03 .text3 {
-            top: 30%; 
+            top: 30%; display: none;
         }
         .s2Txt03 .text4 {
-            top: 30%; 
+            top: 30%; display: none;
         }
-
         .s2Txt04 {
             width: 60vw;
             height: 60vh;
-            background: url(img/apple-pad-mockup.png);
+            background-image: url(img/apple-pad-mockup.png);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center top;
             /* background-color: #fff; */
             top: 70%;
+        }
+        .s2Txt04 .imgWrap {
+            width: 94%; height: 100%;
+            margin: 3%;
+            position: relative;
             overflow: hidden;
-        }
-        .s2Txt04 > div {
-            float: left;
-        }
-        .s2Txt04 .img1 {
-            margin: 30px;
-            
-        }
-        .s2Txt04 .img1 img {
             border-radius: 30px 30px 0 0;
         }
-
-
-        .s2Txt04 .img2 {
-            margin: 30px;
-        }
-        .s2Txt04 .img2 img {
-            border-radius: 30px 30px 0 0;
-        }
-        .s2Txt04 .img3 {
-            margin: 30px;
-        }
-        .s2Txt04 .img3 img {
-            border-radius: 30px 30px 0 0;
-        }
-        .s2Txt04 .img4 {
-            margin: 30px;
-        }
-        .s2Txt04 .img4 img {
-            border-radius: 30px 30px 0 0;
+        .s2Txt04 .imgWrap > div {
+            position: absolute;
+            left: 50%; top: 50%;
+            width: 100%; height: 100%;
+            transform: translate(-50%, -50%);
         }
         .s2Txt04 .imgWrap > div .view {
             position: absolute;
@@ -207,256 +168,289 @@
             box-shadow: 255 255 255 6px inset rgba(255,255,255,0.9);
             
         }
-        
+
+        /* section3 */
+        .s3Txt01 {
+            width: 100vw; height: 100vh;
+            background: #000;
+            overflow: hidden;
+        }
+        .s3Txt02 h2 {
+            font-size: 4vw;
+            text-align: center;
+            line-height: 1.2;
+            background-repeat: no-repeat;
+            background-image: url(img/hero_manifesto_bg__c0zrbe748m82_medium.jpg);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: capitalize;
+            white-space: nowrap;
+            text-transform: nowrap;
+            transform: translate(-50%, -50%) scale(1.5)
+        }
+        .txtBox {}
+        .txtBox1 {left: 200%;}
+        .txtBox2 {left: 200%;}
+        .txtBox3 {left: 200%;}
+        .txtBox4 {left: 200%;}
+        .txtBox5 {left: 200%;}
+        .txtBox6 {left: 200%;}
+
+        .aniBox1 {width: 90vw; height: 90vh;}
+        .aniBox2 {width: 90vw; height: 90vh;}
+        .aniBox3 {width: 90vw; height: 90vh;}
+        .aniBox4 {width: 90vw; height: 90vh;}
+        .aniBox5 {width: 90vw; height: 90vh;}
+        .aniBox6 {width: 90vw; height: 90vh;}
     </style>
-</head>
-<body>
-    <div class="scroll">0</div>
-
-    <div id="contents ">
-        <section id="section1"
-            data-0 = "display:block"
-            data-7999 = "display:none"
-        >
-            <div class="s1Txt01 fixed"
-                data-0 = "top: 50%; opacity: 1"
-                data-500 = "top: 30%; opacity: 0"
-            >안녕하세요!</div>
-            <div class="s1Txt02 fixed"
-                data-300 = "top: 70%; opacity: 0"
-                data-800 = "top: 50%; opacity: 1; font-size: 8vw "
-                data-1700 = "top: 50%; opacity: 1; font-size: 0vw  "
-            >프론트앤드 개발자입니다.</div>
-            <div class="s1Txt03 fixed"
-                data-1600 = "width: 0%; height: 0%"
-                data-3000 = "width: 100%; height: 100%"
+    </head>
+    <body>
+        <div class="scroll">0</div>
+        <div id="contents">
+            <section id="section1"
+                data-0 = 'display:block'
+                data-7999 = 'display:none'
             >
-                <img src="img/parallax-apple.jpg" alt="이미지" class="fixed"
-                data-1600 = "border-radius: 500px"
-                data-3000 = "border-radius: 0px">
-            </div>
-            <div class="s1Txt04 fixed" data-title="검은 색 원"
-                data-2300 = "width: 0vw; height: 0vw"
-                data-3300 = "width: 30vw; height: 30vw"
-                data-5000 = "width: 30vw; height: 30vw"
-                data-7600 = "width: 230vw; height: 230vw"
-            >
-                <span class="s1Txt05 fixed"
-                data-2800 = "transform: translate(-50%, -50%) scale(0) rotate(-360deg)"
-                data-4300 = "transform: translate(-50%, -50%) scale(1) rotate(0deg)"
-                data-5000 = "transform: translate(-50%, -50%) scale(1) rotate(0deg)"
-                data-7000 = "transform: translate(-50%, -50%) scale(0) rotate(0deg)"
-                >Hello!</span>
-            </div>
-        </section>
-        <!--//section1-->
-
-        <section id="section2"
-            data-7899 = "display:none"
-            data-7900 = "display:block"
-            data-19000 = "display:block"
-            data-19001 = "display:none"
-        >
-            <div class="s2Txt01 fixed" data-title="검은색 배경"></div>
-            <div class="s2Txt02">
-                <h2 class=" fixed"
-                    data-7900 = "opacity: 0;"
-                    data-8200 = "opacity: 1; top: 50%"
-                    data-8800 = "opacity: 1; top: 14%"
-                    data-20000 = "opacity: 1; top: 50%"
-                >I've been working on Sites</h2>
-
-                <div class="s2Txt03">
-                        <p class="fixed text1"
-                            data-8799 = "opacity: 0;"
-                            data-9000 = "opacity: 1;"
-                            data-10000 = "opacity: 0;"
-                        >웹표준 사이트</p>
-                        <p class="fixed text2"
-                            data-11000 = "opacity: 0;"
-                            data-12000 = "opacity: 1;"
-                            data-13000 = "opacity: 0;"
-                        >반응형 사이트</p>
-                        <p class="fixed text3"
-                            data-14000 = "opacity: 0;"
-                            data-15000 = "opacity: 1;"
-                            data-16000 = "opacity: 0;"
-                        >기업 사이트</p>
-                        <p class="fixed text4"
-                            data-17000 = "opacity: 0;"
-                            data-18000 = "opacity: 1;"
-                            data-19000 = "opacity: 0;"
-                        >리액트</p>
-                    </div>
-                    
-
-                        <p class="fixed text1-desc"
-                            data-8799 = "opacity: 0;"
-                            data-9000 = "opacity: 1;"
-                            data-10000 = "opacity: 0;"
-                        >웹 접근성 지침서2.0을 바탕으로 사이트를 제작하였습니다.</p>
-                        <p class="fixed text2-desc"
-                            data-11000 = "opacity: 0;"
-                            data-12000 = "opacity: 1;"
-                            data-13000 = "opacity: 0;"
-                        >모든 디바이스 환경에 따라 사이트를 최적화시켜 사이트를 제작하였습니다</p>
-                        <p class="fixed text3-desc"
-                            data-14000 = "opacity: 0;"
-                            data-15000 = "opacity: 1;"
-                            data-16000 = "opacity: 0;"
-                        >기업에서 가장 많이 사용하는 스타일의 사이트를 제작하였습니다.</p>
-                        <p class="fixed text4-desc"
-                            data-17000 = "opacity: 0;"
-                            data-18000 = "opacity: 1;"
-                            data-19000 = "opacity: 0;"
-                        >React를 이용하여 포트폴리오 사이트를 제작하였습니다.</p>
-                    
+                <div class="s1Txt01 fixed" 
+                    data-0="top: 50%; opacity:1"
+                    data-500="top: 30%; opacity:0"
+                >안녕하세요!</div>
+                <div class="s1Txt02 fixed"
+                    data-300="top: 70%; opacity:0"
+                    data-800="top: 50%; opacity:1; font-size: 8vw;"
+                    data-1700="top: 50%; opacity:1; font-size: 0vw;"
+                >프론트앤드 개발자 서예인입니다.</div>
+                <div class="s1Txt03 fixed"
+                    data-1600="width: 0%; height: 0%"
+                    data-3000="width: 100%; height: 100%"
+                ><img src="img/parallax-apple.jpg" alt="이미지" class="fixed"
+                    data-1600="border-radius:500px"
+                    data-3000="border-radius:0px"
+                >
                 </div>
-                
-                <div class="s2Txt04 fixed">
+                <div class="s1Txt04 fixed" data-title="검은색 원"
+                    data-2300="width: 0vw; height: 0vw;"
+                    data-3300="width: 30vw; height: 30vw;"
+                    data-5000="width: 30vw; height: 30vw;"
+                    data-7600="width: 230vw; height: 230vw;"
+                >
+                <span class="s1Txt05 fixed"
+                    data-2800="transform: translate(-50%, -50%) scale(0) rotate(-360deg)"
+                    data-4300="transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                    data-5000="transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                    data-7000="transform: translate(-50%, -50%) scale(0) rotate(0deg)"
+                >Hello!</span>
+                </div>
+            </section>
+            <!-- //section1 -->
+            <section id="section2"
+            data-7899="display:none"
+            data-7900="display:block"
+            data-30000="display:block"
+            data-30001="display:none">   
+            <div class="s2Txt01 fixed" data-titlt="검은색 배경"></div>
+            <div class="s2Txt02">
+                <h2 class="fixed"
+                    data-7900 = "opacity:0; top: 50%; transform: translate(-50%, -50%) scale(1.5)"
+                    data-8200 = "opacity:1; top: 50%; transform: translate(-50%, -50%) scale(1.5)"
+                    data-8800 = "opacity:1; top: 14%; transform: translate(-50%, -50%) scale(1)"
+                    data-27000 = "opacity:1; top: 14%; transform: translate(-50%, -50%) scale(1)"
+                    data-28000 = "opacity:1; top: 50%; transform: translate(-50%, -50%) scale(1.5)"
+                >I've been working on Sites</h2>
+                <div class="s2Txt03">
+                    <div class="fixed text1"
+                        data-9800 = "top: 50%; opacity:0"
+                        data-10000 = "top: 30%; opacity:1"
+                        data-11000 = "top: 30%; opacity:1"
+                        data-12000 = "top: 50%; opacity:0"
+                        >
+                        <h3>웹표준 사이트</h3>
+                        <p>
+                            웹 접근성 지침서2.0을 바탕으로 사이트를 제작하였습니다.
+                        </p>
+                    </div>
+                    <div class="fixed text1"
+                        data-13000 = "top: 50%; opacity:0"
+                        data-14000 = "top: 30%; opacity:1"
+                        data-15000 = "top: 30%; opacity:1"
+                        data-16000 = "top: 50%; opacity:0"
+                        >
+                        <h3>반응형 사이트</h3>
+                        <p>
+                            모든 디바이스 환경에 따라 사이트를 최적화시켜 사이트를 제작하였습니다
+                        </p>
+                    </div>
+                    <div class="fixed text1"
+                        data-17000 = "top: 50%; opacity:0"
+                        data-18000 = "top: 30%; opacity:1"
+                        data-19000 = "top: 30%; opacity:1"
+                        data-20000 = "top: 50%; opacity:0"
+                        >
+                        <h3>기업 사이트</h3>
+                        <p>
+                            기업에서 가장 많이 사용하는 스타일의 사이트를 제작하였습니다.
+                        </p>
+                    </div>
+                    <div class="fixed text1"
+                        data-21000 = "top: 50%; opacity:0"
+                        data-22000 = "top: 30%; opacity:1"
+                        data-23000 = "top: 30%; opacity:1"
+                        data-24000 = "top: 50%; opacity:0"
+                        >
+                        <h3>리액트</h3>
+                        <p>
+                            React를 이용하여 포트폴리오 사이트를 제작하였습니다.
+                        </p>
+                    </div>        
+                </div>  
+                <div class="s2Txt04 fixed"
+                    data-8600 = "top: 150%"
+                    data-9600 = "top: 70%"
+                    data-27000 = "top: 70%"
+                    data-28000 = "top: 150%"
+                    >
+                    <div class="imgWrap">
                         <div class="img1"
-                        data-8799 = "opacity: 0;"
-                        data-9000 = "opacity: 1;"
-                        data-10000 = "transform: translate;"
-                            ><img src="img/apple-site01.jpg" alt="웹표준 사이트">
+                            data-12000 = "left: 50%"
+                            data-14000 = "left: -50%"
+                        ><img src="img/apple-site01.jpg" alt="웹표준">
                             <a href="#" class="view">VIEW</a>
                         </div>
                         <div class="img2"
-                            data-11000 = "opacity: 0;"
-                            data-12000 = "opacity: 1;"
-                            data-13000 = "opacity: 0;"
-                        ><img src="img/apple-site02.jpg" alt="반응형 사이트">
-                        <a href="#" class="view">VIEW</a>
+                            data-12000 = "left: 150%"
+                            data-14000 = "left: 50%"
+                            data-16000 = "left: 50%"
+                            data-18000 = "left: -50%"
+                        ><img src="img/apple-site02.jpg" alt="반응형">
+                            <a href="#" class="view">VIEW</a>
                         </div>
-                            <div class="img3"
-                                data-14000 = "opacity: 0;"
-                                data-15000 = "opacity: 1;"
-                                data-16000 = "opacity: 0;"
-                            ><img src="img/apple-site03.jpg" alt="기업 사이트">
+                        <div class="img3"
+                            data-16000 = "left: 150%"
+                            data-18000 = "left: 50%"
+                            data-20000 = "left: 50%"
+                            data-22000 = "left: -50%"
+                        ><img src="img/apple-site03.jpg" alt="메가박스">
                             <a href="#" class="view">VIEW</a>
                         </div>
                         <div class="img4"
-                            data-17000 = "opacity: 0;"
-                            data-18000 = "opacity: 1;"
-                            data-19000 = "transform: translate(-50%, -50%) scale(0) rotate(-360deg);"
-                            data-20000 = "opacity: 0;"
-                            ><img src="img/apple-site04.jpg" alt="리액트">
+                            data-20000 = "left: 150%"
+                            data-22000 = "left: 50%"
+                        ><img src="img/apple-site04.jpg" alt="리액트">
                             <a href="#" class="view" class="white">VIEW</a>
+                        </div>
+                    </div>
+                    <!-- <div class="img3">웹표준이미지3</div>
+                    <div class="img4">웹표준이미지4</div> -->
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+            <section id="section3"
+                data-29999="display:none"
+                data-30000="display:block"
+                data-43000="display:block"
+                data-43001="display:none"
+                >
+                <div class="s3Txt01 fixed" data-titlt="검은색 배경"
+                    data-29000="width: 200vw; height: 200vw"
+                    data-33000="width: 30vw; height: 30vw"
+                    data-35000="width: 50vw; height: 30vw"
+                >
+                    <div class="s3Txt02">
+                        <h2 class="txtBox fixed"
+                            data-30000="left: 50%"
+                            data-31000="left: -150%"
+                        ><span>I've been working on Sites</sapn></h2>
+                        <h2 class="txtBox1 fixed"
+                            data-32000="left: 200%"
+                            data-35000="left: -200%"
+                        ><span>Animation1</span></h2>
+                        <h2 class="txtBox2 fixed"
+                            data-34000="left: 200%"
+                            data-37000="left: -200%"
+                        ><span>Animation2</span></h2>
+                        <h2 class="txtBox3 fixed"
+                            data-35000="left: 200%"
+                            data-38000="left: -200%"
+                        ><span>Animation3</span></h2>
+                        <h2 class="txtBox4 fixed"
+                            data-36000="left: 200%"
+                            data-39000="left: -200%"
+                        ><span>Animation4</span></h2>
+                        <h2 class="txtBox5 fixed"
+                            data-37000="left: 200%"
+                            data-40000="left: -200%"
+                        ><span>Animation5</span></h2>
+                        <h2 class="txtBox6 fixed"
+                            data-38000="left: 200%"
+                            data-41000="left: -200%"
+                        ><span>Animation6</span></h2>
                     </div>
                 </div>
+
+                <div class="s3Txt03">
+                    <div class="aniBox1 fixed"
+                        data-32000 = "left: 200%; top:20%"
+                        data-35000 = "left: -200%; top:20%"
+                    >
+                        <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/Loading Animation.html" scrolling=no></iframe>
+                    </div>
+                    <div class="aniBox2 fixed"
+                        data-34000 = "left: 200%; top:80%"
+                        data-37000 = "left: -200%; top:80%"
+                    >
+                        <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/Rocket Animation.html" scrolling=no></iframe>
+                    </div>
+                    <div class="aniBox3 fixed"
+                        data-35000 = "left: 200%; top:40%"
+                        data-38000 = "left: -200%; top:40%"
+                    >
+                        <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/Wave Circle.html" scrolling=no></iframe>
+                    </div>
+                    <div class="aniBox4 fixed"
+                        data-36000 = "left: 200%; top:50%"
+                        data-39000 = "left: -200%; top:50%"
+                    >
+                        <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/cubeAnimation.html" scrolling=no></iframe>
+                    </div>
+                    <div class="aniBox5 fixed"
+                        data-37000 = "left: 200%; top:30%"
+                        data-40000 = "left: -200%; top:30%"
+                    >
+                        <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/GSAPAnimation.html" scrolling=no></iframe>
+                    </div>
+                    <div class="aniBox6 fixed"
+                        data-38000 = "left: 200%; top:70%"
+                        data-41000 = "left: -200%; top:70%"
+                    >
+                        <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/watch-face.html" scrolling=no></iframe>
+                    </div>
+                </div>
+                
+                
+            </section>
+            <!-- //section3 -->
+            <section id="section4">
+            </section>
+            <!-- //section4 -->
+            <section id="section5">
+            </section>
+            <!-- //section5 -->
+            <section id="section6">
+            </dsectioniv>
+            <!-- //section6 -->
         </div>
-        </section>
-        <!--//section2-->
-
-        <section id="section3">
-            <section id="section3"
-            data-29999="display:none"
-            data-30000="display:block"
-            data-40000="display:block"
-            data-49000="display:none"
-            >
-            <div class="s3Txt01 fixed" data-titlt="검은색 배경"
-                data-30000="width: 200vw; height: 200vw"
-                data-34000="width: 30vw; height: 30vw"
-            >
-                <div class="s3Txt02"
-                    data-32000="left: 50%"
-                    data-50000="left: -50%"
-                >
-                    <h2 class="txtBox fixed"
-                        data-32000 = "left: 50%"
-                        data-33000 = "left: -50%"
-                        data-34000 = "left: -150%"
-                    ><span>I've been working on Sites</sapn></h2>
-                    <h2 class="txtBox1 fixed"
-                        data-35000="left: 50% "
-                        data-36000="left: -50%"
-                        data-37000="left: -150%"
-                    ></h2><span>Animation1</span></h2>
-                    <h2 class="txtBox2 fixed"
-                        data-37000="left: 50% "
-                        data-38000="left: -50%"
-                        data-39000="left: -150%"
-                    ><span>Animation2</span></h2>
-                    <h2 class="txtBox3 fixed"
-                        data-40000="left: 50%"
-                        data-41000="left: -50%"
-                        data-42000="left: -150%"
-                    ></h2><span>Animation3</span></h2>
-                    <h2 class="txtBox4 fixed"
-                        data-43000="left: 50%"
-                        data-44000="left: -50%"
-                        data-45000="left: -150%"
-                    ></h2><span>Animation4</span></h2>
-                    <h2 class="txtBox5 fixed"
-                        data-46000="left: 50%"
-                        data-47000="left: -50%"
-                        data-48000="left: -150%"
-                    ></h2><span>Animation5</span></h2>
-                    <h2 class="txtBox6 fixed"
-                        data-49000="left: 50%"
-                        data-50000="left: -50%"
-                        data-51000="left: -150%"
-                    ></h2><span>Animation6</span></h2>
-                </div>
-            </div>
-            <div class="s3Txt03">
-                <div class="aniBox1 fixed"
-                    data-32000="width: 500vw; height: 500vw; left: 70%; top: 50%;"
-                    data-35000="width: 500vw; height: 500vw; left: -70%; top: 50%;"
-                >
-                    <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/Loading Animation.html"
-                        
-                    ></iframe>
-                </div>
-                <div class="aniBox2 fixed"
-                    data-36000="left: 50%; top: 20%;"
-                    data-37000="left: -50%; top: 20%;"
-                >
-                    <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/Rocket Animation.html"></iframe>
-                </div>
-                <div class="aniBox3 fixed"
-                    data-38000="left: 50%; top: 20%;"
-                    data-39000="left: -50%; top: 20%;"
-                >
-                    <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/Wave Circle.html"></iframe>
-                </div>
-                <div class="aniBox4 fixed"
-                    data-40000="left: 50%; top: 20%;"
-                    data-41000="left: -50%; top: 20%;"
-                >
-                    <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/cubeAnimation.html"></iframe>
-                </div>
-                <div class="aniBox5 fixed"
-                    data-42000="left: 50%; top: 20%;"
-                    data-43000="left: -50%; top: 20%;"
-                >
-                    <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/GSAPAnimation.html"></iframe>
-                </div>
-                <div class="aniBox6 fixed"
-                    data-44000="left: 50%; top: 20%;"
-                    data-45000="left: -50%; top: 20%;"
-                >
-                    <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/watch-face.html"></iframe>
-                </div>
-            </div>
-        </section>
-        <!--//section3-->
-        <section id="section4"></section><!--//section4-->
-        <section id="section5"></section><!--//section5-->
-        <section id="section6"></section><!--//section6-->
-    </div>
-
-    <!-- script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
-    <script>
-        var s = skrollr.init();
-
-        $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop();
-            $(".scroll").text(scrollTop);
-        });
-    </script>
-</body>
-</html>
+        <!-- script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+        <script>
+            var s = skrollr.init();
+            $(window).scroll(function(){
+                let scrollTop = $(window).scrollTop();
+                $(".scroll").text(scrollTop);
+            })
+        </script>
+    </body>
+    </html>
