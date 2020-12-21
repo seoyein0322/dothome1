@@ -224,6 +224,60 @@
             z-index: 100;
             background: #dc6e25;
         }
+        .reveal.reveal-RTL::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 100;
+            background: #fff;
+        }
+        .reveal.reveal-RTL.reveal-two::after {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 100;
+            background: #dc6e25;
+        }
+        .reveal.reveal-TTL::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 100;
+            background: #fff;
+        }
+        .reveal.reveal-TTL.reveal-two::after {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 100;
+            background: #dc6e25;
+        }
+        .reveal.reveal-BTT::before {
+            content: '';
+            position: absolute;
+            top: 0; 
+            width: 0;
+            height: 100%;
+            z-index: 100;
+            background: #fff;
+        }
+        .reveal.reveal-BTT.reveal-two::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 0;
+            height: 100%;
+            z-index: 100;
+            background: #dc6e25;
+        }
 
         .reveal.show::before {
             animation: reveal 1000ms cubic-bezier(.77,0,.18,1);
@@ -266,16 +320,16 @@
             100% {width: 0; right: 100%;}
         }
         @keyframes reveal-TTL {
-            0% {width: 0; top: 0; }
+            0% {width: 100%; top: 0; }
             50% {width: 100%; top: 0;}
             80% {width: 100%; top: 0;}
-            100% {width: 0; top: 100%;}
+            100% {width: 100%; top: 100%;}
         }
         @keyframes reveal-BTT {
-            0% {width: 0; bottom: 0; }
-            50% {width: 100%; bottom: 0;}
-            80% {width: 100%; bottom: 0;}
-            100% {width: 0; bottom: 100%;}
+            0% {width: 100%; top: 0; }
+            50% {width: 100%; top: 0;}
+            80% {width: 100%; top: 0;}
+            100% {width: 100%; top: -100%;}
         }
         @keyframes opacitiy {
             0% {opacity: 0;}
@@ -324,10 +378,10 @@
                 <section id="section1" class="content-item">
                     <span class="content-item-num">01</span>
                     <h2 class="content-item-title">Section1</h2>
-                    <figure class="content-item-imgWrap">
+                    <figure class="content-item-imgWrap reveal reveal-BTT">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc"><span>높은 목표를 세우고, 스스로 채찍질 한다.</span></p>
+                    <p class="content-item-desc reveal reveal-BTT"><span>높은 목표를 세우고, 스스로 채찍질 한다.</span></p>
                 </section>
 
                 <section id="section2" class="content-item">
@@ -353,16 +407,16 @@
                     <figure class="content-item-imgWrap reveal reveal-TTB">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc  reveal"><span>모든 성취의 시작점은 갈망이다.</span></p>
+                    <p class="content-item-desc  reveal  reveal-TTB"><span>모든 성취의 시작점은 갈망이다.</span></p>
                 </section>
 
                 <section id="section5" class="content-item">
                     <span class="content-item-num">05</span>
                     <h2 class="content-item-title">Section5</h2>
-                    <figure class="content-item-imgWrap reveal reveal-BTT">
+                    <figure class="content-item-imgWrap reveal ">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc  reveal  reveal-BTT"><span>우리가 실패에서 배우면, 실패는 성공이 된다.</span></p>
+                    <p class="content-item-desc  reveal"><span>우리가 실패에서 배우면, 실패는 성공이 된다.</span></p>
                 </section>
                 <section id="section6" class="content-item">
                     <span class="content-item-num">06</span>
@@ -375,10 +429,10 @@
                 <section id="section7" class="content-item">
                     <span class="content-item-num">07</span>
                     <h2 class="content-item-title">Section7</h2>
-                    <figure class="content-item-imgWrap reveal reveal-BTT">
+                    <figure class="content-item-imgWrap reveal reveal-BTT reveal-two">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc reveal reveal-BTT"><span>미래는 현재 우리가 무엇을 하는가에 달려있다.</span></p>
+                    <p class="content-item-desc reveal reveal-BTT reveal-two"><span>미래는 현재 우리가 무엇을 하는가에 달려있다.</span></p>
                 </section>
                 <section id="section8" class="content-item">
                     <span class="content-item-num">08</span>
@@ -391,10 +445,10 @@
                 <section id="section9" class="content-item">
                     <span class="content-item-num">09</span>
                     <h2 class="content-item-title">Section9</h2>
-                    <figure class="content-item-imgWrap reveal reveal-BBT reveal-two">
+                    <figure class="content-item-imgWrap reveal raveal-RTL reveal-two">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc reveal reveal-BBT reveal-two"><span>성공의 80%가 서서히 나타나고 있다.</span></p>
+                    <p class="content-item-desc reveal raveal-RTL reveal-two"><span>성공의 80%가 서서히 나타나고 있다.</span></p>
                 </section>
             </div>
         </section>

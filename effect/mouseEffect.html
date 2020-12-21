@@ -89,12 +89,18 @@
             </div>
             <!-- //배너 광고 1140 -->
 
-                <!-- Intro1 -->
-                <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">Mouse Effect - jQuery01</h2>
-                    <p class="bs-callout bs-callout-info">clientX | clientY | offsetX | offsetY | pageX | pageY | screenX | screenY를 이용하여 Mouse Effect를 완성하였습니다</p>
-                    <iframe width="100%" height="600px" src="mouseEffect01-jquery.html" frameborder="0"></iframe>
-<h3>jQuery</h3>
+               <!-- Intro1 -->
+               <div class="bs-docs-section">
+                <h2 id="intro1" class="page-header">Mouse Effect - jQuery01</h2>
+                <p class="bs-callout bs-callout-info">clientX | clientY | offsetX | offsetY | pageX | pageY | screenX | screenY를 이용하여 Mouse Effect를 완성하였습니다</p>
+                <iframe width="100%" height="600px" src="mouseEffect01-jquery.html" frameborder="0"></iframe>
+<div>
+<ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+</ul>
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
 <pre class="line-numbers language-js"><code>//출력용
 $(window).mousemove(function(event){
     console.log(event);
@@ -119,7 +125,8 @@ $(".contents em").hover(function(){
     $(".cursor").removeClass("active");
 });
 </code></pre>
-<h3>JavaScript</h3>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">
 <pre class="line-numbers language-js"><code>//출력용
 //$(window).mousemove(function(event){});
 window.addEventListener("mousemove", function(event){
@@ -179,84 +186,109 @@ window.addEventListener("mousemove", function(e){
             document.querySelector(".cursor").classList.remove("active");
         });
     });
-});</code></pre>
-                    </div>
-                    <!-- //javascriptSource -->
-
-                </div>
-               <!-- //Intro1 -->
+});
+</code></pre>
+    </div>
+</div>
+</div>
+            </div>
+            <!-- //Intro1 -->
 
                <!-- Intro2 -->
                <div class="bs-docs-section">
                     <h2 id="intro2" class="page-header">Mouse Effect02</h2>
                     <p class="bs-callout bs-callout-info">GSAP를 이용한 마우스 효과입니다.</p>
                     <iframe width="100%" height="600px" src="mouseEffect02-jquery.html" frameborder="0"></iframe>
-<pre class="line-numbers language-js"><code>//출력용
-    $(document).mousemove(function(e){
-        //console.log(e)
-        $(".pageX").text(e.pageX);
-        $(".pageY").text(e.pageY);
-    });
-    
-    //마우스 움직이기
-    $(document).mousemove(function(e){
-        let cursorWidth = $(".cursor").width() / 2;
-        let cursorFWidth = $(".cursor-follower").width() / 2;
-    
-        gsap.to(".cursor", {duration: 0.3, left: e.pageX - cursorWidth, top: e.pageY - cursorWidth, ease: "power1.out"});
-        gsap.to(".cursor-follower", {duration: 0.8, left: e.pageX - cursorFWidth, top: e.pageY - cursorFWidth, ease: "power1.out"});
-    });
-    
-    //마우스 오버효과
-    $(".contents em").hover(function(){
-        $(".cursor").addClass("active");
-        $(".cursor-follower").addClass("active");
-    }, function(){
-        $(".cursor").removeClass("active");
-        $(".cursor-follower").removeClass("active");
-    });</code></pre>
+<pre class="line-numbers language-js"><code></code></pre>
     <h3>JavaScript</h3>
-    <pre class="line-numbers language-js"><code>//출력용
-    document.addEventListener("mousemove", e => {
-        document.querySelector(".pageX").textContent = e.pageX;
-        document.querySelector(".pageY").textContent = e.pageY;
-    });
-    
-    const cursor = document.querySelector(".cursor");
-    const follower = document.querySelector(".cursor-follower");
-    const cursorText = document.querySelectorAll(".contents em");
-    const cursorWidth = cursor.clientWidth / 2;
-    const followerWidth = follower.clientWidth / 2;
-    
-    //마우스 움직이기
-    document.addEventListener("mousemove", e => {
-        gsap.to(cursor, {duration: .3, left: e.pageX - cursorWidth, top: e.pageY - cursorWidth});
-        gsap.to(follower, {duration: .8, left: e.pageX - followerWidth, top: e.pageY - followerWidth});
-    });
-    
-    //마우스 오버효과
-    // cursorText.addEventListener("mouseenter", function(){
-    //     cursor.classList.add("active");
-    //     follower.classList.add("active");
-    // });
-    // cursorText.addEventListener("mouseleave", function(){
-    //     cursor.classList.remove("active");
-    //     follower.classList.remove("active");
-    // });
-    
-    //마우스 오버효과(다중 선택)
-    cursorText.forEach(elem => {
-        elem.addEventListener("mouseenter",()=>{
-            cursor.classList.add("active");
-            follower.classList.add("active");
-        });
-        elem.addEventListener("mouseleave",()=>{
-            cursor.classList.remove("active");
-            follower.classList.remove("active");
-        });
-    });</code></pre>
+    <pre class="line-numbers language-js"><code></code></pre>
                 </div>
                 <!-- //Intro2 -->
+
+                <!-- Intro1 -->
+               <div class="bs-docs-section">
+                <h2 id="intro1" class="page-header">Mouse Effect - jQuery01</h2>
+                <p class="bs-callout bs-callout-info">clientX | clientY | offsetX | offsetY | pageX | pageY | screenX | screenY를 이용하여 Mouse Effect를 완성하였습니다</p>
+                <iframe width="100%" height="600px" src="mouseEffect01-jquery.html" frameborder="0"></iframe>
+<div>
+<ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+</ul>
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
+<pre class="line-numbers language-js"><code>//출력용
+$(document).mousemove(function(e){
+    //console.log(e)
+    $(".pageX").text(e.pageX);
+    $(".pageY").text(e.pageY);
+});
+
+//마우스 움직이기
+$(document).mousemove(function(e){
+    let cursorWidth = $(".cursor").width() / 2;
+    let cursorFWidth = $(".cursor-follower").width() / 2;
+
+    gsap.to(".cursor", {duration: 0.3, left: e.pageX - cursorWidth, top: e.pageY - cursorWidth, ease: "power1.out"});
+    gsap.to(".cursor-follower", {duration: 0.8, left: e.pageX - cursorFWidth, top: e.pageY - cursorFWidth, ease: "power1.out"});
+});
+
+//마우스 오버효과
+$(".contents em").hover(function(){
+    $(".cursor").addClass("active");
+    $(".cursor-follower").addClass("active");
+}, function(){
+    $(".cursor").removeClass("active");
+    $(".cursor-follower").removeClass("active");
+});
+</code></pre>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+<pre class="line-numbers language-js"><code>//출력용
+document.addEventListener("mousemove", e => {
+    document.querySelector(".pageX").textContent = e.pageX;
+    document.querySelector(".pageY").textContent = e.pageY;
+});
+
+const cursor = document.querySelector(".cursor");
+const follower = document.querySelector(".cursor-follower");
+const cursorText = document.querySelectorAll(".contents em");
+const cursorWidth = cursor.clientWidth / 2;
+const followerWidth = follower.clientWidth / 2;
+
+//마우스 움직이기
+document.addEventListener("mousemove", e => {
+    gsap.to(cursor, {duration: .3, left: e.pageX - cursorWidth, top: e.pageY - cursorWidth});
+    gsap.to(follower, {duration: .8, left: e.pageX - followerWidth, top: e.pageY - followerWidth});
+});
+
+//마우스 오버효과
+// cursorText.addEventListener("mouseenter", function(){
+//     cursor.classList.add("active");
+//     follower.classList.add("active");
+// });
+// cursorText.addEventListener("mouseleave", function(){
+//     cursor.classList.remove("active");
+//     follower.classList.remove("active");
+// });
+
+//마우스 오버효과(다중 선택)
+cursorText.forEach(elem => {
+    elem.addEventListener("mouseenter",()=>{
+        cursor.classList.add("active");
+        follower.classList.add("active");
+    });
+    elem.addEventListener("mouseleave",()=>{
+        cursor.classList.remove("active");
+        follower.classList.remove("active");
+    });
+});
+</code></pre>
+    </div>
+</div>
+</div>
+            </div>
+            <!-- //Intro1 -->
 
                 <!-- figma -->
                <div class="bs-docs-section">

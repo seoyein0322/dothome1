@@ -95,7 +95,13 @@
                     <h2 id="intro1" class="page-header">Parallax01</h2>
                     <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트</p>
                     <iframe width="100%" height="600px" src="parallax01-jquery.html" frameborder="0"></iframe>
-<h3>jQuery</h3>
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
 <pre class="line-numbers language-js"><code>$(window).scroll(function(){
     const scrollTop = $(window).scrollTop() + $(window).height()/2;
 
@@ -241,7 +247,8 @@ $(window).scroll(function(){
     });
 });
 </code></pre>
-<h3>JavaScript</h3>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
 <pre class="line-numbers language-js"><code>window.addEventListener("scroll", function(){
     let pageYOffset = window.pageYOffset;
 
@@ -303,20 +310,27 @@ $(window).scroll(function(){
     } else {
         document.querySelector(".s9OffsetTop").style.color = "white";
     }
-});</code></pre>
+});
+    
+</code></pre>
+        </div>
+    </div>
+</div>
                 </div>
                 <!-- //Intro1 -->
 
-
-
-
-
                 <!-- Intro2 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">Parallax02</h2>
-                    <p class="bs-callout bs-callout-info">패랠랙스 이펙트</p>
-                    <iframe width="100%" height="560px" src="parallax02-jquery.html" frameborder="0"></iframe>
-<h3>jQuery</h3>
+                    <h2 id="intro2" class="page-header">Parallax02</h2>
+                    <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트</p>
+                    <iframe width="100%" height="600px" src="parallax02-jquery.html" frameborder="0"></iframe>
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home2" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+        <li role="presentation"><a href="#profile2" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home2">
 <pre class="line-numbers language-js"><code>$(window).scroll(function(){
     let scrollTop = $(window).scrollTop();
 
@@ -358,9 +372,9 @@ $(window).scroll(function(){
     $(".scrollTop").text(scrollTop);
 
 });
-
 </code></pre>
-<h3>JavaScript</h3>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile2">
 <pre class="line-numbers language-js"><code>window.addEventListener("scroll",()=>{
     let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
     
@@ -397,16 +411,399 @@ $(window).scroll(function(){
     });
 });
 </code></pre>
+        </div>
+    </div>
+</div>
                 </div>
                 <!-- //Intro2 -->
+
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Parallax03</h2>
+                    <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트</p>
+                    <iframe width="100%" height="600px" src="parallax03-jquery.html" frameborder="0"></iframe>
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home3" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+        <li role="presentation"><a href="#profile3" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home3">
+<pre class="line-numbers language-js"><code>let scrollTop = $(window).scrollTop();
+
+function scroll(){
+    const newScrollTop = $(window).scrollTop();
+    const different = newScrollTop - scrollTop;
+
+    console.log("scrollTop :" + scrollTop);
+    console.log("newScrollTop :" + newScrollTop);
+    console.log("different :" + different);
+
+    // $(".content-item-imgWrap").css({"transform": "rotate("+different+"deg)"});
+    gsap.to(".content-item-imgWrap", {duration: 0.3, skewY: different*0.2, ease:Power1.ease});
+    gsap.to(".content-item-num", {duration: 0.6, x: different, ease:Power1.ease});
+    gsap.to(".content-item-desc", {duration: 0.6, skewX: different, ease:Power1.ease});
+
+    scrollTop = newScrollTop;
+    requestAnimationFrame(scroll);
+
+}
+scroll()
+</code></pre>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile3">
+<pre class="line-numbers language-js"><code>let pageYOffset = window.pageYOffset;
+
+const scroll = () => {
+    const newPageYOffset = window.pageYOffset;
+    const different = newPageYOffset - pageYOffset;
+
+    console.log("scrollTop :" + pageYOffset);
+    console.log("newScrollTop :" + newPageYOffset);
+    console.log("different :" + different);
+
+    let target = document.querySelectorAll(".content-item-img");
+
+    //target.style.transform = "rotate("+different+"deg)";
+    //forEach
+    // target.forEach(box =>{
+    //     box.style.transform = "rotate("+different+"deg)";
+    // })
+
+    gsap.to(".content-item-imgWrap", {duration: 0.3, skewY: different*0.2, ease:Power1.ease});
+    gsap.to(".content-item-num", {duration: 0.6, x: different, ease:Power1.ease});
+    gsap.to(".content-item-desc", {duration: 0.6, skewX: different, ease:Power1.ease});
+
+    pageYOffset = newPageYOffset;
+    requestAnimationFrame(scroll);
+}
+scroll();
+
+// let num = 0;
+// function render(){
+//     document.querySelector(".content-item-num").innerHTML = num;
+//     num++;
+//     setInterval(render,100);
+//     requestAnimationFrame(render,100);
+// }
+// render();
+</code></pre>
+        </div>
+    </div>
+</div>
+                </div>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">Parallax04</h2>
+                    <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트</p>
+                    <iframe width="100%" height="600px" src="parallax04-jquery.html" frameborder="0"></iframe>
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home4" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+        <li role="presentation"><a href="#profile4" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home4">
+<pre class="line-numbers language-js"><code>// let text = $("#section1 .content-item-desc").text();
+    // let split = text.split("").join("&lt;/span&gt;&lt;span&gt;");
+    // split = "&lt;span&gt;"+ split + "&lt;/span&gt;";
+
+    //글씨 쪼개기
+    $(".content-item-desc").each(function(){
+        let text = $(this).text();
+        let split = text.split("").join("&lt;/span&gt;&lt;span aria-hidden='true'&gt;");
+        split = "&lt;span aria-hidden='true'&gt;" + split + "&lt;/span&gt;";
+        $(this).html(split).attr("aria-label",text);
+    });
+
+    //나타나기
+    $(window).scroll(function(){
+        //한번에 나오게 하기
+        // $(".content-item").each(function(){
+        //     if( $(window).scrollTop() &gt; $(this).offset().top ){
+        //         $(this).find(".content-item-desc").addClass("show");
+        //     } else {
+        //         $(this).find(".content-item-desc").removeClass("show");
+        //     }
+        // });
+
+        // 한글자씩 나오게 하기
+        if( $(window).scrollTop() &gt; $("#section1").offset().top ){
+            $("#section1 .content-item-desc span").each(function(i){
+                setTimeout(() =&gt; {
+                    $("#section1 .content-item-desc span").eq(i).addClass("show");
+                }, 50 *(i+1));
+            });
+        }
+        if( $(window).scrollTop() &gt; $("#section2").offset().top ){
+            $("#section2 .content-item-desc span").each(function(i){
+                setTimeout(() =&gt; {
+                    $("#section1 .content-item-desc span").eq(i).addClass("show");
+                }, 50 *(i+1));
+            });
+        }
+        if( $(window).scrollTop() &gt; $("#section3").offset().top ){
+            $("#section3 .content-item-desc span").each(function(i){
+                setTimeout(() =&gt; {
+                    $("#section1 .content-item-desc span").eq(i).addClass("show");
+                }, 50 *(i+1));
+            });
+        }
+        if( $(window).scrollTop() &gt; $("#section4").offset().top ){
+            $("#section4 .content-item-desc span").each(function(i){
+                setTimeout(() =&gt; {
+                    $("#section1 .content-item-desc span").eq(i).addClass("show");
+                }, 50 *(i+1));
+            });
+        }
+        if( $(window).scrollTop() &gt; $("#section5").offset().top ){
+            $("#section5 .content-item-desc span").each(function(i){
+                setTimeout(() =&gt; {
+                    $("#section1 .content-item-desc span").eq(i).addClass("show");
+                }, 50 *(i+1));
+            });
+        }
+        if( $(window).scrollTop() &gt; $("#section6").offset().top ){
+            $("#section6 .content-item-desc span").each(function(i){
+                setTimeout(() =&gt; {
+                    $("#section1 .content-item-desc span").eq(i).addClass("show");
+                }, 50 *(i+1));
+            });
+        }
+        if( $(window).scrollTop() &gt; $("#section7").offset().top ){
+            $("#section7 .content-item-desc span").each(function(i){
+                setTimeout(() =&gt; {
+                    $("#section1 .content-item-desc span").eq(i).addClass("show");
+                }, 50 *(i+1));
+            });
+        }
+        if( $(window).scrollTop() &gt; $("#section8").offset().top ){
+            $("#section8 .content-item-desc span").each(function(i){
+                setTimeout(() =&gt; {
+                    $("#section1 .content-item-desc span").eq(i).addClass("show");
+                }, 50 *(i+1));
+            });
+        }
+        if( $(window).scrollTop() &gt; $("#section9").offset().top ){
+            $("#section9 .content-item-desc span").each(function(i){
+                setTimeout(() =&gt; {
+                    $("#section1 .content-item-desc span").eq(i).addClass("show");
+                }, 50 *(i+1));
+            });
+        }
+
+        //한글자씩 나오게 하기(한번에)
+        // $(".content-item").each(function(){
+        //     if($(window).scrollTop() &gt; $(this).offset().top){
+        //         gsap.to($(this).find(".content-item-desc span"),{duration: .3, opacity: 1, y: 0, stagger: 0.05, ease: Power1.ease});
+        //     } 
+        // });
+
+    });
+</code></pre>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile4">
+<pre class="line-numbers language-js"><code>// let text = document.querySelector("#section1 .content-item-desc");
+// let splitText = text.innerText;
+// let splitWrap = splitText.split("").join("&lt;/span&gt;&lt;span aria-hidden:'true'&gt;")
+//     splitWrap = "&lt;span aria-hidden:'true'&gt;" + splitWrap + "&lt;/span&gt;";
+
+//     text.innerHTML = splitWrap;
+//     text.setAttribute("aria-label",splitText);
+
+//글씨 나누기(한번에, forEach)
+document.querySelectorAll(".content-item-desc").forEach((elem)=&gt;{
+    let splitText = elem.innerText;
+    let splitWrap = splitText.split("").join("&lt;/span&gt;&lt;span aria-hidden:'true'&gt;")
+    splitWrap = "&lt;span aria-hidden:'true'&gt;" + splitWrap + "&lt;/span&gt;";
+
+    elem.innerHTML = splitWrap;
+    elem.setAttribute("aria-label",splitText);
+});
+
+window.addEventListener("scroll", () =&gt; {
+    let papeYOffset = (window.papeYOffset || document.documentElement.scrollTop);
+
+    if( pageYOffset &gt; document.getElementById("section1").offsetTop){   
+        document.querySelectorAll("#section1 .content-item-desc span").forEach((elem, index)=&gt;{
+            setTimeout(() =&gt; {
+                elem.classList.add("show");
+            }, 50 * (index +1 ));
+        })
+    }
+});
+window.addEventListener("scroll", () =&gt; {
+    let papeYOffset = (window.papeYOffset || document.documentElement.scrollTop);
+
+    if( pageYOffset &gt; document.getElementById("section2").offsetTop){   
+        document.querySelectorAll("#section2 .content-item-desc span").forEach((elem, index)=&gt;{
+            setTimeout(() =&gt; {
+                elem.classList.add("show");
+            }, 50 * (index +1 ));
+        })
+    }
+});
+window.addEventListener("scroll", () =&gt; {
+    let papeYOffset = (window.papeYOffset || document.documentElement.scrollTop);
+
+    if( pageYOffset &gt; document.getElementById("section3").offsetTop){   
+        document.querySelectorAll("#section3 .content-item-desc span").forEach((elem, index)=&gt;{
+            setTimeout(() =&gt; {
+                elem.classList.add("show");
+            }, 50 * (index +1 ));
+        })
+    }
+});
+window.addEventListener("scroll", () =&gt; {
+    let papeYOffset = (window.papeYOffset || document.documentElement.scrollTop);
+
+    if( pageYOffset &gt; document.getElementById("section4").offsetTop){   
+        document.querySelectorAll("#section4 .content-item-desc span").forEach((elem, index)=&gt;{
+            setTimeout(() =&gt; {
+                elem.classList.add("show");
+            }, 50 * (index +1 ));
+        })
+    }
+});
+window.addEventListener("scroll", () =&gt; {
+    let papeYOffset = (window.papeYOffset || document.documentElement.scrollTop);
+
+    if( pageYOffset &gt; document.getElementById("section5").offsetTop){   
+        document.querySelectorAll("#section5 .content-item-desc span").forEach((elem, index)=&gt;{
+            setTimeout(() =&gt; {
+                elem.classList.add("show");
+            }, 50 * (index +1 ));
+        })
+    }
+});
+
+window.addEventListener("scroll", () =&gt; {
+    let papeYOffset = (window.papeYOffset || document.documentElement.scrollTop);
+
+    if( pageYOffset &gt; document.getElementById("section6").offsetTop){   
+        document.querySelectorAll("#section6 .content-item-desc span").forEach((elem, index)=&gt;{
+            setTimeout(() =&gt; {
+                elem.classList.add("show");
+            }, 50 * (index +1 ));
+        })
+    }
+});
+window.addEventListener("scroll", () =&gt; {
+    let papeYOffset = (window.papeYOffset || document.documentElement.scrollTop);
+
+    if( pageYOffset &gt; document.getElementById("section7").offsetTop){   
+        document.querySelectorAll("#section7 .content-item-desc span").forEach((elem, index)=&gt;{
+            setTimeout(() =&gt; {
+                elem.classList.add("show");
+            }, 50 * (index +1 ));
+        })
+    }
+});
+window.addEventListener("scroll", () =&gt; {
+    let papeYOffset = (window.papeYOffset || document.documentElement.scrollTop);
+
+    if( pageYOffset &gt; document.getElementById("section8").offsetTop){   
+        document.querySelectorAll("#section8 .content-item-desc span").forEach((elem, index)=&gt;{
+            setTimeout(() =&gt; {
+                elem.classList.add("show");
+            }, 50 * (index +1 ));
+        })
+    }
+});
+window.addEventListener("scroll", () =&gt; {
+    let papeYOffset = (window.papeYOffset || document.documentElement.scrollTop);
+
+    if( pageYOffset &gt; document.getElementById("section9").offsetTop){   
+        document.querySelectorAll("#section9 .content-item-desc span").forEach((elem, index)=&gt;{
+            setTimeout(() =&gt; {
+                elem.classList.add("show");
+            }, 50 * (index +1 )); 
+        })
+    }
+});
+
+// alert(splitText);
+</code></pre>
+        </div>
+    </div>
+</div>
+                </div>
+                <!-- //Intro4 -->
+
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">Parallax05</h2>
+                    <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트</p>
+                    <iframe width="100%" height="600px" src="parallax05-jquery.html" frameborder="0"></iframe>
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home5" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+        <li role="presentation"><a href="#profile5" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home5">
+<pre class="line-numbers language-js"><code>$("a[href^='#']").click(function(){
+    e.preventDefault();
+    //데이터를 바로 선택자로 가져온 거임
+    let target = $($(this).attr("href"));
+    $("html, body").animate({ scrollTop : target.offset().top},800, "easeInOut");
+});
+</code></pre>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile5">
+<pre class="line-numbers language-js"><code>document.querySelectorAll("a[href='#']").forEach(elem =&gt;{
+    elem.addEventListener("click", e =&gt; {
+        e.preventDefault();
+        document.querySelector(elem.getAttribute('href')).scrollIntoView({
+            behavior : 'smooth'
+        })
+    });
+})
+</code></pre>
+        </div>
+    </div>
+</div>
+                </div>
+                <!-- //Intro5 -->
+
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">Parallax06</h2>
+                    <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트</p>
+                    <iframe width="100%" height="600px" src="parallax06-jquery.html" frameborder="0"></iframe>
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home6" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+        <li role="presentation"><a href="#profile6" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home6">
+<pre class="line-numbers language-js"><code>document.querySelectorAll(".reveal").forEach(elem =&gt; {
+    if(scrollTop + window.papeYOffset/2 &gt; elem.offsetTop){
+        elem.classList.add("show");
+    }
+});
+</code></pre>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile6">
+<pre class="line-numbers language-js"><code>
+
+</code></pre>
+        </div>
+    </div>
+</div>
+                </div>
+                <!-- //Intro6 -->
 
 
            <!-- figma -->
            <div class="bs-docs-section">
             <h2 id="intro2" class="page-header">figma</h2>
-            <p><a class="btn btn-primary btn-lg" href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FN95wAfkfGbpcvuBs56HVPs%2Fscript%3Fnode-id%3D43%253A0%26viewport%3D-2705%252C286%252C0.5%26scaling%3Dmin-zoom" role="button">확인하기</a></p>
+            <p><a class="btn btn-primary btn-lg" href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FSiAPIBQqzHDNgZ43pdmPSF%2FParallax%3Fnode-id%3D4%253A0%26viewport%3D-3974%252C407%252C0.5%26scaling%3Dmin-zoom" role="button">확인하기</a></p>
             <div class="iframe">
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);"  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FN95wAfkfGbpcvuBs56HVPs%2Fscript%3Fnode-id%3D43%253A0%26viewport%3D-2705%252C286%252C0.5%26scaling%3Dmin-zoom" allowfullscreen></iframe>
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FSiAPIBQqzHDNgZ43pdmPSF%2FParallax%3Fnode-id%3D4%253A0%26viewport%3D-3974%252C407%252C0.5%26scaling%3Dmin-zoom" allowfullscreen></iframe>
             </div>
         </div>
        <!-- //figma -->
