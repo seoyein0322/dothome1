@@ -141,11 +141,10 @@
         }
         .s2Txt04 .imgWrap > div .view {
             position: absolute;
-            left: 50%;
+            left: 50%;top: 50%;
             transform: translate(-50%, -50%);
-            top: 20%;
             width: 100px; height: 100px;
-            background: rgba(255,255,255,0.8);
+            background: rgba(0,0,0,0.8);
             text-align: center;
             color: #fff;
             border-radius: 50%;
@@ -156,17 +155,18 @@
         .s2Txt04 .imgWrap > div .view:hover {
             box-shadow: 0 0 0 6px inset rgba(0,0,0,0.9);
             background: rgba(0,0,0,0.7);
-            color: rgba(255,255,255,1)
+            color: rgba(0,0,0,1)
         }
         .s2Txt04 .imgWrap > div .view.white {
             background: rgba(255,255,255,.5);
             color: rgba(0,0,0,0.8);
-            box-shadow: 255 255 255 6px inset rgba(255,255,255,0.9);
+            transition: box-shadow 400ms ease, background 400ms ease;
         }
         .s2Txt04 .imgWrap > div .view.white:hover {
             background: rgba(255,255,255,.7);
-            color: rgba(0,0,0,1);
-            box-shadow: 0 0 0 6px inset rgba(255,255,255,0.9);
+            color: rgba(255,255,255,1);
+            box-shadow: 255 255 255 6px inset rgba(255,255,255,0.9);
+            
         }
 
         /* section3 */
@@ -191,15 +191,15 @@
             transform: translate(-50%, -50%) scale(1.5)
         }
         .txtBox {}
-        .txtBox1 {left: 200%;}
-        .txtBox2 {left: 200%;}
-        .txtBox3 {left: 200%;}
-        .txtBox4 {left: 200%;}
-        .txtBox5 {left: 200%;}
-        .txtBox6 {left: 200%;}
+        .txtBox1 {left: 50%;}
+        .txtBox2 {left: 60%;}
+        .txtBox3 {left: 70%;}
+        .txtBox4 {left: 80%;}
+        .txtBox5 {left: 90%;}
+        .txtBox6 {left: 100%;}
 
-        .aniBox1 {width: 50vw; height: 50vh;}
-        .aniBox2 {width: 50vw; height: 50vh;}
+        .aniBox1 {width: 500vw; height: 500vw;}
+        .aniBox2 {width: 200vw; height: 200vh;}
         .aniBox3 {width: 50vw; height: 50vh;}
         .aniBox4 {width: 50vw; height: 50vh;}
         .aniBox5 {width: 50vw; height: 50vh;}
@@ -338,7 +338,7 @@
                             data-20000 = "left: 150%"
                             data-22000 = "left: 50%"
                         ><img src="img/apple-site04.jpg" alt="리액트">
-                            <a href="#" class="view" class="white">VIEW</a>
+                            <a href="#" class="view white">VIEW</a>
                         </div>
                     </div>
                     <!-- <div class="img3">웹표준이미지3</div>
@@ -358,66 +358,82 @@
                     data-34000="width: 30vw; height: 30vw"
                 >
                     <div class="s3Txt02"
-                        data-30000="left: 50%"
-                        data-34000="left: -50%"
+                        data-32000="left: 50%"
+                        data-50000="left: -50%"
                     >
                         <h2 class="txtBox fixed"
-                            data-32000="left: 50%"
-                            data-35000="left: -50%"
+                            data-32000 = "left: 50%"
+                            data-33000 = "left: -50%"
+                            data-34000 = "left: -150%"
                         ><span>I've been working on Sites</sapn></h2>
                         <h2 class="txtBox1 fixed"
-                            data-36000="left: 50%"
-                            data-37000="left: -50%"
+                            data-35000="left: 50% "
+                            data-36000="left: -50%"
+                            data-37000="left: -150%"
                         ></h2><span>Animation1</span></h2>
                         <h2 class="txtBox2 fixed"
-                            data-38000="left: 50%"
-                            data-39000="left: -50%"
+                            data-37000="left: 50% "
+                            data-38000="left: -50%"
+                            data-39000="left: -150%"
                         ><span>Animation2</span></h2>
                         <h2 class="txtBox3 fixed"
                             data-40000="left: 50%"
                             data-41000="left: -50%"
+                            data-42000="left: -150%"
                         ></h2><span>Animation3</span></h2>
                         <h2 class="txtBox4 fixed"
-                            data-42000="left: 50%"
-                            data-43000="left: -50%"
+                            data-43000="left: 50%"
+                            data-44000="left: -50%"
+                            data-45000="left: -150%"
                         ></h2><span>Animation4</span></h2>
                         <h2 class="txtBox5 fixed"
-                            data-44000="left: 50%"
-                            data-45000="left: -50%"
-                        ></h2><span>Animation5</span></h2>
-                        <h2 class="txtBox6 fixed"
                             data-46000="left: 50%"
                             data-47000="left: -50%"
+                            data-48000="left: -150%"
+                        ></h2><span>Animation5</span></h2>
+                        <h2 class="txtBox6 fixed"
+                            data-49000="left: 50%"
+                            data-50000="left: -50%"
+                            data-51000="left: -150%"
                         ></h2><span>Animation6</span></h2>
                     </div>
                 </div>
                 <div class="s3Txt03">
                     <div class="aniBox1 fixed"
-                        data-36500="left: 50%; top: 20% "
-                        data-37500="left: -50%; top: 20% "
+                        data-32000="left: 70%; top: 50%;"
+                        data-35000="left: -70%; top: 50%;"
                     >
-                        <iframe src=""></iframe>
+                        <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/Loading Animation.html"></iframe>
                     </div>
                     <div class="aniBox2 fixed"
-                        data-36500="left: 50%; top: 20% "
-                        data-37500="left: -50%; top: 20% "
+                        data-36000="left: 50%; top: 20%;"
+                        data-37000="left: -50%; top: 20%;"
                     >
-                        <iframe src=""></iframe>
+                        <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/Rocket Animation.html"></iframe>
                     </div>
                     <div class="aniBox3 fixed"
-                        data-36500="left: 50%; top: 20% "
-                        data-37500="left: -50%; top: 20% "
+                        data-38000="left: 50%; top: 20%;"
+                        data-39000="left: -50%; top: 20%;"
                     >
-                        <iframe src=""></iframe>
+                        <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/Wave Circle.html"></iframe>
                     </div>
-                    <div class="aniBox4 fixed">
-                        <iframe src=""></iframe>
+                    <div class="aniBox4 fixed"
+                        data-40000="left: 50%; top: 20%;"
+                        data-41000="left: -50%; top: 20%;"
+                    >
+                        <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/cubeAnimation.html"></iframe>
                     </div>
-                    <div class="aniBox5 fixed">
-                        <iframe src=""></iframe>
+                    <div class="aniBox5 fixed"
+                        data-42000="left: 50%; top: 20%;"
+                        data-43000="left: -50%; top: 20%;"
+                    >
+                        <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/GSAPAnimation.html"></iframe>
                     </div>
-                    <div class="aniBox6 fixed">
-                        <iframe src=""></iframe>
+                    <div class="aniBox6 fixed"
+                        data-44000="left: 50%; top: 20%;"
+                        data-45000="left: -50%; top: 20%;"
+                    >
+                        <iframe src="https://seoyein0322.github.io/dothome1/effect/portfolio/watch-face.html"></iframe>
                     </div>
                 </div>
                 
