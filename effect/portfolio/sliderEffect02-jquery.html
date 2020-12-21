@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>silderEffect03-jQuery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'BMEULJIRO';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *, *::before, *::after {
+            box-sizing:  border-box;
+            margin: 0; padding: 0;
+        }
+        a {
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        img {
+            width: 100%;
+            vertical-align: top; /* 여백초기화 */
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            transition: all 0.2s
+        }
+
+
+        /* main */
+        body {
+            --color-h1 : #dc6e25;
+            --color-title : #fff;
+            --color-sub : #999;
+            --color-link : #000;
+            --color-bg : #111;
+            --font-cafe :  'BMEULJIRO';
+            --font-lato : 'Lato', sans-serif;
+
+            background-color: var(--color-bg);
+            color: var(--color-title);
+            font-family: var(--font-cafe);
+            font-size: 16px;
+            background: url(img/images02@.jpg) no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+        }
+        body::before {
+            content: '';
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(8,31,36,0.9);
+        }
+        /* slider */
+        .slider-wrap {
+            width: 800px; height: 480px;
+            overflow: hidden;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }
+        .slider-img {
+            overflow: hidden;
+            width: 4000px; height: 480px;
+            position: relative;
+        }
+        .slider-img .slider {
+            width: 800px; height: 480px;
+            float: left;
+            position: relative;
+        }
+        .slider-img .slider span {
+            position: absolute;
+            left: 5px; top: 5px;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="slider-wrap">
+            <div class="slider-img">
+                <div class="slider s1"><img src="img/images13.jpg" alt="이미지"><span>이미지1</span></div>
+                <div class="slider s2"><img src="img/images14.jpg" alt="이미지"><span>이미지2</span></div>
+                <div class="slider s3"><img src="img/images15.jpg" alt="이미지"><span>이미지3</span></div>
+                <div class="slider s4"><img src="img/images16.jpg" alt="이미지"><span>이미지4</span></div>
+                <div class="slider s5"><img src="img/images17.jpg" alt="이미지"><span>이미지5</span></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        const sliderWrap = $(".slider-wrap");
+                const sliderImg = $(".slider-img");
+                const slider = $(".slider");
+
+                setInterval(function(){
+                    sliderImg.animate({ left: "-800px"},400, function(){
+                        $(".slider:first-child").appendTo(sliderImg);
+                        sliderImg.css("left", "");
+                    });
+                },3000);
+    </script>
+</body>
+</html>
