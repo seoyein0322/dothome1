@@ -6,73 +6,167 @@
         {
             "type": "html",
             "id": "A",
+            "link": "https://webzz.tistory.com/229",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<address>",
-            "desc": "<address> 태그는 문서나 글의 저자 또는 회사와 연락할 수 있는 정보를 명시할 때 사용합니다."
+            "desc": "<address> 태그는 문서나 글의 저자 또는 회사와 연락할 수 있는 정보를 명시할 때 사용합니다.",
+            "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+            "element": "인라인 구조(Inline Element)",
+            "tag": "닫는 태그 사용(<a> ~ </a>)",
+            "version" : "HTML4",
+            "view" : "밑줄과 파란색으로 표시",
+            "definition" : [
+                "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다.",
+                "방문하지 않는 링크는 밑줄과 파란색으로 표시됩니다.",
+                "방문한 링크는 밑줄과 보라색으로 표시됩니다.",
+                "활성화된 링크는 밑줄과 빨간색으로 표시됩니다.",
+                "HTML5에서는 <a> 태그는 블록 요소를 포함할 수 있습니다."
+            ]
         },{
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<article>",
-            "desc": "<article> 태그는 웹 문서 내에 독립적인 컨텐츠를 정의합니다."
+            "desc": "<article> 태그는 웹 문서 내에 독립적인 컨텐츠를 정의합니다.",
+            "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+            "element": "인라인 구조(Inline Element)",
+            "tag": "닫는 태그 사용(<a> ~ </a>)",
+            "version" : "HTML4",
+            "view" : "밑줄과 파란색으로 표시",
+            "definition" : [
+                "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다.",
+                "방문하지 않는 링크는 밑줄과 파란색으로 표시됩니다.",
+                "방문한 링크는 밑줄과 보라색으로 표시됩니다.",
+                "활성화된 링크는 밑줄과 빨간색으로 표시됩니다.",
+                "HTML5에서는 <a> 태그는 블록 요소를 포함할 수 있습니다."
+            ]
+            
         },{
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<aside>",
-            "desc": "<aside> 태그는 웹 문서 내에 사이드 컨텐츠를 정의합니다."
+            "desc": "<aside> 태그는 웹 문서 내에 사이드 컨텐츠를 정의합니다.",
+            "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+            "element": "인라인 구조(Inline Element)",
+            "tag": "닫는 태그 사용(<a> ~ </a>)",
+            "version" : "HTML4",
+            "view" : "밑줄과 파란색으로 표시",
+            "definition" : [
+                "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다.",
+                "방문하지 않는 링크는 밑줄과 파란색으로 표시됩니다.",
+                "방문한 링크는 밑줄과 보라색으로 표시됩니다.",
+                "활성화된 링크는 밑줄과 빨간색으로 표시됩니다.",
+                "HTML5에서는 <a> 태그는 블록 요소를 포함할 수 있습니다."
+            ]
         },{
             "id": "B",
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<button>",
-            "desc": "<button>태그는 클릭 가능한 버튼을 나타냅니다. "
+            "desc": "<button>태그는 클릭 가능한 버튼을 나타냅니다. ",
+            "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+            "element": "인라인 구조(Inline Element)",
+            "tag": "닫는 태그 사용(<a> ~ </a>)",
+            "version" : "HTML4",
+            "view" : "밑줄과 파란색으로 표시",
+            "definition" : [
+                "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다.",
+                "방문하지 않는 링크는 밑줄과 파란색으로 표시됩니다.",
+                "방문한 링크는 밑줄과 보라색으로 표시됩니다.",
+                "활성화된 링크는 밑줄과 빨간색으로 표시됩니다.",
+                "HTML5에서는 <a> 태그는 블록 요소를 포함할 수 있습니다."
+            ]
         },{
             "id": "D",
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<div>",
-            "desc": "<div>태그는 문서의 영역의 나누거나 그룹화할 때 사용합니다."
+            "desc": "<div>태그는 문서의 영역의 나누거나 그룹화할 때 사용합니다.",
+            "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+            "element": "인라인 구조(Inline Element)",
+            "tag": "닫는 태그 사용(<a> ~ </a>)",
+            "version" : "HTML4",
+            "view" : "밑줄과 파란색으로 표시",
+            "definition" : [
+                "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다.",
+                "방문하지 않는 링크는 밑줄과 파란색으로 표시됩니다.",
+                "방문한 링크는 밑줄과 보라색으로 표시됩니다.",
+                "활성화된 링크는 밑줄과 빨간색으로 표시됩니다.",
+                "HTML5에서는 <a> 태그는 블록 요소를 포함할 수 있습니다."
+            ]
         },{
             "id": "F",
             "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<form>",
-            "desc": "<form>태그는 웹페이지에서의 입력 양식을 의미합니다."
+            "desc": "<form>태그는 웹페이지에서의 입력 양식을 의미합니다.",
+            "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+            "element": "인라인 구조(Inline Element)",
+            "tag": "닫는 태그 사용(<a> ~ </a>)",
+            "version" : "HTML4",
+            "view" : "밑줄과 파란색으로 표시",
+            "definition" : [
+                "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다.",
+                "방문하지 않는 링크는 밑줄과 파란색으로 표시됩니다.",
+                "방문한 링크는 밑줄과 보라색으로 표시됩니다.",
+                "활성화된 링크는 밑줄과 빨간색으로 표시됩니다.",
+                "HTML5에서는 <a> 태그는 블록 요소를 포함할 수 있습니다."
+            ]
         },{
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<fieldset>",
             "desc": "<fieldset> 태그는 <form> 요소에서 연관된 요소들을 하나의 그룹으로 묶을 때 사용합니다."
         },{
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<footer>",
             "desc": "<footer> 태그는 웹 문서의 바닥글 영역을 정의합니다."
         },{
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<figure>",
             "desc": "<figure> 태그는 독립적인 콘텐츠를 표현합니다. <figcaption> 요소를 사용해 설명을 붙일 수 있습니다. "
         },{
             "id": "H",
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<h1>~<h6>",
             "desc": "<h1>~<h6>태그는 제목 영역을 나타낼 때 사용합니다."
         },{
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<header>",
             "desc": "<header> 태그는 웹 문서의 소개 컨텐츠 및 네비게이션 링크를 정의합니다."
         },{
             "id": "I",
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<i>",
             "desc": "<i> 태그는 기본 텍스트와는 다른 분위기나 음성을 위한 텍스트 영역을 정의할 때 사용합니다."
         },{
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<img>",
             "desc": "<img>태그는 HTML 문서에 이미지를 삽입하는 태그입니다."
         },{
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<input>",
             "desc": "<input>태그는 실제로 사용자가 양식을 입력하기 위한 태그입니다."
         },{
             "id": "L",
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<li>",
             "desc": "<li>태그는 list의 약자로, 목록을 만드는 태그입니다."
         },{
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<label>",
             "desc": "<label>태그는 폼의 양식에 이름 붙이는 태그입니다. <input>태그를 도와주는 역합입니다."
@@ -82,47 +176,57 @@
             "desc": "<legend> 태그는 <fieldset> 요소의 캡션(caption)을 정의할 때 사용합니다."
         },{
             "id": "M",
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<meta>",
             "desc": "HTML 문서의 메타 정보를 나타내는 태그를 의미합니다.페이지에 대한 설명, 키워드, 제작자 및 각종 정보를 지정하고 표시하는 데 사용합니다."
         },{
             "id": "N",
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<nav>",
             "desc": "<nav> 태그는 현재 웹 사이트에서 주요한 지점으로 이동할 수 있는 네비게이션(NAVigation) 역할을 담당하고 있는 태그입니다."
         },{
             "id": "O",
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<ol>",
             "desc": "<ol>태그는번호를 메겨 순서가 있는 (ordered list) 목록을 만듭니다."
         },{
             "id": "P",
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<p>",
             "desc": "<p>태그는 paragraph, 즉 문단의 약자로, 하나의 문단을 만들 때 쓰입니다."
         },{
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<picture>",
             "desc": "<picture> 태그는 화면 크기에 따라 이미지를 정의합니다."
         },{
             "id": "S",
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<span>",
             "desc": "<span>태그는 아주 다방면으로 활용이 가능한 유용한 태그입니다. "
         },{
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<strong>",
             "desc": "<strong>는 해당 콘텐츠의 중요성이나 심각함, 긴급함 등을 강조할 때 사용합니다. "
         },{
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<source>",
             "desc": "<source> 태그는 <audio> 요소나 <video> 요소, <picture> 요소에서 사용할 수 있는 다중 미디어 자원을 정의할 때 사용합니다."
         },{
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<section>",
             "desc": "<section> 태그는 HTML 문서의 독립적인 구획을 나타내며, 더 적합한 의미를 가진 요소가 없을 때 사용합니다."
         },{
             "id": "T",
+            "link": "https://webzz.tistory.com/231",
             "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
             "title": "<table>",
             "desc": "<table>태그는 표를 만들어주는 HTML태그입니다."
