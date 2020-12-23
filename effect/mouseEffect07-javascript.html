@@ -19,10 +19,10 @@
         li {list-style: none;}
 
         body{ 
-            background: url(img/images01@.jpg) no-repeat center center; 
+            /* background: url(img/images01@.jpg) no-repeat center center; 
             background-size: cover;
             background-color: #959595;
-            background-blend-mode: luminosity;
+            background-blend-mode: luminosity; */
             height: 100vh;
             overflow: hidden;
             font-size: 16px;
@@ -60,43 +60,26 @@
         }
 
         /* main */
-        .contents {
-            display: flex;
+        .cover_wrap {
             position: relative;
-            flex-direction: column;
-            width: 100vw;
+            z-index: 1;
             height: 100vh;
-            position: relative;
-            justify-content: center;
-            align-items: center;
+            overflow: hidden;
+            background: url(img/images01@.jpg) center center;
         }
-        .contents p {
-            max-width: 70vw;
-            font-size: 3vw;
-            text-align: justify;
+        #svg-mask {
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            fill: blue;
+            mix-blend-mode: overlay;
         }
-        .contents p:first-child {
-            font-size: 2vw;
-            line-height: 2;
-        }
-        .contents p em {
-            color: orange;
-            border-bottom: 2px dashed orange;
-            font-style: normal;
-        }
-        .cursor {
-            position: absolute;
-            width: 200px; height: 200px;
-            border-radius: 50%;
-            border: 1px solid #fff;
-            user-select: none;
-            pointer-events: none;
-            background-image: url(img/images01@.jpg);
-            background-position: center center;
-            background-size: cover;
-            background-attachment: fixed;
-            background-color: #fff;
-        }
+        
+
+
     </style>
 </head>
 <body>
@@ -135,7 +118,7 @@
     <main>
         <div class="cover" id="cover">
             <div class="cover_wrap">
-                <img src="" alt="">
+                <!-- <img src="img/images01@.jpg" alt="이미지"> -->
             </div>
         </div>
         <svg id="svg-mask">
@@ -153,10 +136,64 @@
     </main>
 
     <!-- script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
-        
+        class MaskSVG {
+            constructor(obj){
+                this.el = document.body.querySelector('#svg-mask');
+                this.rect = document.body.querySelectorAll('.svg-mask--rect');
+                this.circle = document.body.querySelectorAll('.svg-mask--circle');
+                this.clicked = false;
+                this.init();
+            }
+            init(){
+                this.handleResize();
+                this.binds();
+                this.events();
+            }
+            binds(){
+                this.handleResize = this.handleResize.bind(this);
+                this.handleMouse = this.handleMouse.bind(this);
+                this.handleClick = this.handleClick.bind(this);
+            }
+            events(){
+                window.addEventListener('resize', this.handleResize);
+                window.addEventListener('mousemove', this.handleMouse);
+                window.addEventListener('touchmove', this.handleMouse);  //모바일용 
+                window.addEventListener('click', this.handleClick);
+            }
+            handleMouse(e){
+                gsap.to(this.circle, {
+                    duration: 0.7,
+                    cx: e.clientX || e.touches[0].clientX,
+                    cy: e.clientY || e.touches[0].clientY,
+                    ease: 'power2.out'
+                });
+            }
+            handleResize(){
+                this.minRadius = window.innerWidth * 0.1;
+                this.maxRadius = window.innerWidth * 1.1;
+
+                gsap.set([this.el, this.rect],{
+                    width: `${window.innerWidth}px`,
+                    height: `${window.innerHeight}px`
+                });
+                gsap.set(this.circle,{
+                    r: `${this.minRadius}px`
+                });
+            }
+
+            handleClick(){
+                this.clicked = !this.clicked;
+                gsap.to(this.circle,{
+                    duration: 1,
+                    r: this.clicked ? this.maxRadius : this.minRadius,
+                    ease: 'power3.inOut'
+                })
+            }
+        }
+        new MaskSVG();
     </script>
 </body>
 </html>
