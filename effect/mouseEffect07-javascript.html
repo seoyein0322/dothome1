@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect06 - jquery</title>
+    <title>Mouse Effect07 - javascript</title>
     <style>
         @font-face {
             font-family: 'Wemakeprice-Bold';
@@ -19,10 +19,10 @@
         li {list-style: none;}
 
         body{ 
-            background: url(img/images06@.jpg) no-repeat center center; 
+            background: url(img/images01@.jpg) no-repeat center center; 
             background-size: cover;
-            background-color: #9174d4;
-            background-blend-mode: multiply;
+            background-color: #959595;
+            background-blend-mode: luminosity;
             height: 100vh;
             overflow: hidden;
             font-size: 16px;
@@ -84,32 +84,26 @@
             border-bottom: 2px dashed orange;
             font-style: normal;
         }
-        .contents p .word {
-            color: orange;
-            font-size: 4vw;
-            /* text-shadow: 5px -10px 0px rgba(255, 165, 0, 0.4), 
-                        -5px 10px 0px rgba(255,35,251,0.4),
-                        10px -5px 0px rgba(255,255,73, 0.4),
-                        -10px 5px 0px rgba(102,249,255,0.4); */
-        }
         .cursor {
             position: absolute;
-            width: 20px; height: 20px;
-            background: #fff;
+            width: 200px; height: 200px;
             border-radius: 50%;
-            z-index: 1000;
+            border: 1px solid #fff;
             user-select: none;
             pointer-events: none;
-            transform: scale(.5);
-            transition: transform 0.3s ease-in-out;
+            background-image: url(img/images01@.jpg);
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-color: #fff;
         }
     </style>
 </head>
 <body>
     <!-- info -->
     <div class="info left">
-        <h1>Mouse Effect06 - jquery</h1>
-        <p>마우스 방향에 따라 움직이기</p>
+        <h1>Mouse Effect07 - javascript</h1>
+        <p>마스크 효과</p>
     </div>
     <div class="info right">
         <ul>
@@ -118,8 +112,8 @@
             <li><a href="mouseEffect01-jquery.html">3</a><a href="mouseEffect01-javascript.html">3</a></li>
             <li><a href="mouseEffect01-jquery.html">4</a><a href="mouseEffect01-javascript.html">4</a></li>
             <li><a href="mouseEffect01-jquery.html">5</a><a href="mouseEffect01-javascript.html">5</a></li>
-            <li><a href="mouseEffect01-jquery.html" class="active">6</a><a href="mouseEffect01-javascript.html">6</a></li>
-            <li><a href="mouseEffect01-jquery.html">7</a><a href="mouseEffect01-javascript.html">7</a></li>
+            <li><a href="mouseEffect01-jquery.html">6</a><a href="mouseEffect01-javascript.html">6</a></li>
+            <li><a href="mouseEffect01-jquery.html">7</a><a href="mouseEffect01-javascript.html" class="active">7</a></li>
             <li><a href="mouseEffect01-jquery.html">8</a><a href="mouseEffect01-javascript.html">8</a></li>
             <li><a href="mouseEffect01-jquery.html">9</a><a href="mouseEffect01-javascript.html">9</a></li>
             <li><a href="mouseEffect01-jquery.html">10</a><a href="mouseEffect01-javascript.html">10</a></li>
@@ -136,37 +130,33 @@
     </div>
     <!-- //info -->
 
-    <div class="cursor"></div>
+    
 
     <main>
-        <div class="contents">
-            <p>You will never know until you <em>try</em>.</p>
-            <p><em>시도</em>해보지 않고는 결코 알지 못한다.</p>
-            <p>
-                <strong class="word">★</strong>
-            </p>
+        <div class="cover" id="cover">
+            <div class="cover_wrap">
+                <img src="" alt="">
+            </div>
         </div>
+        <svg id="svg-mask">
+            <defs>
+                <filter id="svg-mask--blur" x="0" y="0">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+                </filter>
+                <mask id="svg-mask--mask">
+                    <rect class="svg-mask--rect" fill="white" />
+                    <circle class="svg-mask--circle" cx="100" cy="100" r="30" fill="black" fillter="url(#svg-mask--blur)"/>
+                </mask>
+            </defs>
+            <rect class="svg-mask--rect" mask="url(#svg-mask--mask)" />
+        </svg>
     </main>
 
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
-        $(window).mousemove(function(e){
-            let x = e.pageX;
-            let Y = e.pageY;
-            let mouseX = (x - $(".word").offset().left - $(".word").width()/2 ) / $(".word").width() * 5;
-            let mouseY = (x - $(".word").offset().top - $(".word").height()/2 ) / $(".word").height() * 5;
-
-            //$(".word").css({textShadow:"10px -20px 0px rgba(255, 165, 9, 0.4), -10px 20px 0px rgba(255, 35, 251, 0.4), 20px -10px 0px rgba(255, 255, 73, 0.4), -20px 10px 0px rgba(102, 249, 255, 0.4)"});
-            $(".word").css({textShadow:""+mouseX+"px -"+mouseY+"px 0px rgba(255, 165, 9, 0.4), -"+mouseX+"px "+mouseY+"px 0px rgba(255, 35, 251, 0.4)"});
-
-            //출력용
-            $(".mouseX").text(parseInt(mouseX));
-            $(".mouseY").text(parseInt(mouseY));
-            $(".mouseX2").text(parseInt(-mouseX));
-            $(".mouseY2").text(parseInt(-mouseY));
-        })
+        
     </script>
 </body>
 </html>
