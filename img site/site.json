@@ -1,0 +1,59 @@
+
+{
+    "status": "ok",
+    "status_message": "Query was successful",
+    "data": {
+      "count": 1,
+      "number": 1,
+      "ports": [
+        {
+          "id": 1,
+          "link": "https://seoyein0322.github.io/dothome1/webstandard/index.html",
+          "image": "../img/westandard.jpg",
+          "title": "WEBSTANDARD SITE",
+          "category": "웹표준을 준수한 사이트",
+          "rating": 5
+        },
+        {
+          "id": 2,
+          "link": "https://seoyein0322.github.io/dothome1/responsive/idex.html",
+          "image": "../img/responsive.jpg",
+          "title": "RESPONSIVE WEBSTANDARD",
+          "category": "반응형을 고려한 웹사이트",
+          "rating": 4.9
+        },
+        {
+          "id": 3,
+          "link": "https://seoyein0322.github.io/dothome1/Megabox/index.html",
+          "image": "../img/megabox.jpg",
+          "title": "MEGABOX",
+          "category": "반응형을 고려한 메가박스",
+          "rating": 5
+        },
+        {
+          "id": 4,
+          "link": "https://seoyein0322.github.io/dothome1/test/test14.html",
+          "image": "../img/naver01.jpg",
+          "title": "NAVER CLOVA",
+          "category": "네이버 클로바 웹사이트 ",
+          "rating": 5
+        },
+        {
+          "id": 5,
+          "link": "https://seoyein0322.github.io/dothome1/test/test15.html",
+          "image": "../img/naver02.jpg",
+          "title": "NAVER CLOVA",
+          "category": "네이버 클로바 웹사이트 ",
+          "rating": 4.9
+        },
+        {
+          "id": 6,
+          "link": "https://seoyein0322.github.io/dothome1/test/test16.html",
+          "image": "../img/naver03.jpg",
+          "title": "NAVER CLOVA",
+          "category": "네이버 클로바 웹사이트 ",
+          "rating": 4.9
+        }
+      ]
+    }
+  }

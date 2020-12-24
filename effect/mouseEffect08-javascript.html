@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect08 - jquery</title>
+    <title>Mouse Effect08 - javascript</title>
     <style>
         @font-face {
             font-family: 'Wemakeprice-Bold';
@@ -107,7 +107,7 @@
 <body>
     <!-- info -->
     <div class="info left">
-        <h1>Mouse Effect08 - jquery</h1>
+        <h1>Mouse Effect08 - javascript</h1>
         <p>마우스 방향에 따라 움직이기</p>
     </div>
     <div class="info right">
@@ -202,52 +202,80 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
 
-$(window).on("mousemove", mouseMove);
+        // const spanSlow = document.querySelectorAll(".spanSlow");
+        // const spanFast = document.querySelectorAll(".spanFast");
 
-function mouseMove(e){
-    let positionSlow = (e.pageX - ($(window).width()/2)) * 0.1
-    let positionFast = (e.pageX - ($(window).width()/2)) * 0.2
+        // window.addEventListener("mousemove", mouseMove);
+        // function mouseMove(e){
+        //     let postion = (e.pageX / (window.innerWidth / 2)) * 100
+        //     gsap.to(this.positionSlow, {
+        //             duration: 0.4,
+        //             x: `e.pageX - (${window.innerWidth} / 2) * 0.1`,
+        //             ease: 'power2.out'
+        //         });
+        //     gsap.to(this.positionFast, {
+        //             duration: 0.4,
+        //             x: -`e.pageX - (${window.innerWidth} / 2) * 1.1`,
+        //             ease: 'power2.out'
+        //         });
+        // }
 
-    gsap.to(".span-slow", {
-        duration: .4,
-        x: positionSlow
-    })
-    gsap.to(".span-fast", {
-        duration: .4,
-        x: -positionFast
-    })
-}
+        // window.addEventListener("mousemove", mouseMove);
+        // function mouseMove(e){
+        //     let positionSlow = (e.pageX - (window.innderWidth/2)) * 0.1
+        //     let positionFast = (e.pageX - (window.innderWidth/2)) * 0.2
 
-        class mouseMove {
-            constructor(obj){
-                this.positionSlow = document.body.querySelectorAll('.span-slow');
-                this.positionFast = document.body.querySelectorAll('.span-fast');
-                this.init();
-            }
-            init(){
-                this.mouseMove();
-                this.binds();
-                this.events();
-            }
-            binds(){
-                this.positionSlow = this.positionSlow.bind(this);
-                this.positionFast = this.positionFast.bind(this);
-            }
-            events(){
-                window.addEventListener('mouseMove', this.positionSlow);
-                window.addEventListener('mousemove', this.positionFast);
-            }
-            mouseMove(e){
-                gsap.to(this.circle, {
-                    duration: 0.4,
-                    cx: e.clientX || e.touches[0].clientX,
-                    cy: e.clientY || e.touches[0].clientY,
-                    ease: 'power2.out'
-                });
-            }
+        //     gsap.to(".span-slow", {
+        //         duration: .4,
+        //         x: positionSlow
+        //     })
+        //     gsap.to(".span-fast", {
+        //         duration: .4,
+        //         x: -positionFast
+        //     })
+        // }
 
-        }
-        new MaskSVG();
+        window.addEventListener("mousemove",mouseMove)
+        function mouseMove(e){
+            let positionSlow = (e.pageX - (window.innerWidth/2)) * 0.1;
+            let positionFast = (e.pageX - (window.innerWidth/2)) * 0.2;
+            gsap.to(".span-slow",{
+                duration: .4, 
+                x: positionSlow
+            });
+            gsap.to(".span-fast",{
+                duration: .4, 
+                x: -positionFast
+            });
+        };
+
+        // class mouseMove {
+        //     constructor(position){
+        //         this.positionSlow = document.body.querySelectorAll(".span-slow");
+        //         this.positionFast = document.body.querySelectorAll(".span-fast");
+        //         this.init();
+        //     }
+        //     init(){
+        //         this.mouseMove();
+        //     }
+        //     mouseMove(e){
+        //         this.postion = (e.pageX - (window.innerWidth / 2)) * 0.1;
+
+        //         gsap.set(this.positionSlow, {
+        //             duration: 0.4,
+        //             x: `e.pageX - (${window.innerWidth} / 2) * 0.1`,
+        //             ease: 'power2.out'
+        //         });
+        //         gsap.set(this.positionFast, {
+        //             duration: 0.4,
+        //             x: -`e.pageX - (${window.innerWidth} / 2) * 1.1`,
+        //             ease: 'power2.out'
+        //         });
+        //     }
+
+        // }
+        // new mouseMove();
+
     </script>
 </body>
 </html>
