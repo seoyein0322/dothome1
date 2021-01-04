@@ -205,19 +205,19 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: 'Abel',"나눔고딕", Nanum Gothic,"맑은고딕", Malgun Gothic, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'BMJUA';
   font-size: 16px;
   line-height: 22px;
   color: #666;
   background-color: #ffffff;
 }
 a {
-  color: #3fbf79;
+  color: #fa709a;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #2c8555;
+  color: #fe5196;
   text-decoration: none;
 }
 .img-rounded {
@@ -626,7 +626,7 @@ h4,
 h5,
 h6 {
   margin: 11px 0;
-  font-family: inherit;
+  font-family: 'BMJUA';
   font-weight: 300;
   line-height: 22px;
   color: inherit;
@@ -3696,8 +3696,8 @@ input[type="submit"].btn.btn-mini {
   font-size: 20px;
   font-weight: 200;
     font-size: 33px;
-  color: #000;
-    font-family: Abel;;
+  color: #fa709a;
+  font-family: 'BMJUA';
 }
 .navbar .brand:hover,
 .navbar .brand:focus {
