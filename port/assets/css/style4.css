@@ -1236,7 +1236,8 @@
 .cont9 > div:nth-child(odd) .text p {
     width: 495px; height: 217px; 
     margin-bottom: 36px; 
-    font-size: 22px; 
+    font-size: 18px; 
+    line-height: 1.5;
     color: #fff; 
     font-family: 'S-CoreDream-2ExtraLight';
 }
@@ -1248,7 +1249,7 @@
     align-items: center;
 }
 .cont9 > div:nth-child(odd) .text .quick h4 {
-    font-size: 25px; 
+    font-size: 24px; 
     color: #999797; 
     line-height: 1; 
     margin-bottom: 5px;
@@ -1265,6 +1266,7 @@
     box-sizing: border-box;  
     white-space: nowrap;
     display: inline-block;
+    font-size: 18px;
 }
 .cont9 > div:nth-child(odd) .text .quick .jquery {
     margin-top: 12px; 
@@ -1293,7 +1295,8 @@
     width: 495px; height: 217px; 
     display: inline-block;
     margin-bottom: 36px; 
-    font-size: 22px; 
+    font-size: 20px; 
+    line-height: 1.5;
     color: #fff; 
     font-family: 'S-CoreDream-2ExtraLight';
 }
@@ -1304,7 +1307,7 @@
     margin-top: 5px;
 }
 .cont9 > div:nth-child(even) .text .quick h4 {
-    font-size: 25px; 
+    font-size: 24px; 
     color: #999797; 
     line-height: 1; 
     margin-bottom: 5px;
@@ -1321,6 +1324,7 @@
     display: inline-block;
     white-space: nowrap;
     margin-right: 5px;
+    font-size: 18px;
 }
 .cont9 > div:nth-child(even) .text .quick > div a:hover {
     background: linear-gradient(to top, #ee4368, #f4c41a); 
