@@ -681,7 +681,7 @@
     font-size: 180px;
 } 
 .cont5 > div:nth-child(odd) h4 {
-    margin-left: 500px;
+    margin-left: 400px;
     width: 740px;  height: 974px; 
     border: 6px solid #000; 
     background: #DC516A; 
@@ -710,8 +710,8 @@
 }
 .cont5 > div:nth-child(odd) .box .text {
     flex: 0 0 30%; 
-    margin-top: 175px; 
-    width: 578px; height: 712px; 
+    margin-top: 220px; 
+    width: 578px; height: 665px; 
     border: 6px solid #000; 
     background: #fff;  
     padding: 70px 50px; 
@@ -727,7 +727,7 @@
     width: 434px; height: 306px; 
     line-height: 1.5;
     margin-top: 43px; 
-    margin-bottom: 49px; 
+    /* margin-bottom: 49px;  */
     font-family: 'S-CoreDream-3Light'; 
     font-size: 24px;
 }
@@ -760,7 +760,7 @@
     font-size: 180px;   
 }
 .cont5 > div:nth-child(even) h4 {
-    margin-left: 500px;
+    margin-left: 300px;
     width: 740px;  height: 974px; 
     background: #DC516A; 
     border: 6px solid #000; 
@@ -778,7 +778,7 @@
     justify-content: center;
     margin-top: -885px;
 }
-.cont5 > div:nth-child(even) .box .text {
+/* .cont5 > div:nth-child(even) .box .text {
     flex: 0 0 30%; 
     margin-top: 175px;
      width: 578px; height: 712px; 
@@ -787,6 +787,16 @@
      padding: 70px 50px; 
      box-sizing: border-box; 
      display: inline-block;
+} */
+.cont5 > div:nth-child(even) .box .text {
+    flex: 0 0 30%; 
+    margin-top: 220px; 
+    width: 578px; height: 665px; 
+    border: 6px solid #000; 
+    background: #fff;  
+    padding: 70px 50px; 
+    box-sizing: border-box; 
+    display: inline-block;
 }
 .cont5 > div:nth-child(even) .box .text h5 {
     font-family: 'S-CoreDream-6Bold'; 
@@ -798,7 +808,7 @@
     width: 434px; height: 306px; 
     line-height: 1.5;
     margin-top: 43px; 
-    margin-bottom: 49px; 
+    /* margin-bottom: 49px;  */
     font-family: 'S-CoreDream-3Light'; 
     font-size: 24px;
 }
@@ -988,11 +998,12 @@
     position: relative; 
     width: 700px; height: 115px; 
     font-weight: 200; 
-    line-height: 1; 
+    line-height: 1.5; 
     font-family: 'S-CoreDream-2ExtraLight'; 
     font-size: 22px; 
-    margin-top: 50px;
-    margin-left: 200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 135px;
 }
 .cont7 > div:nth-child(odd) .left a {
     position: relative; 
@@ -1059,10 +1070,11 @@
 .cont7 > div:nth-child(even) .right p {
     width: 700px; height: 115px; 
     font-weight: 200; 
-    line-height: 1; 
+    line-height: 1.5; 
     font-family: 'S-CoreDream-2ExtraLight'; 
     font-size: 22px;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     margin-left: 10px;
 
 }
