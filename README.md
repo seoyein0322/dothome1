@@ -10,7 +10,9 @@
 <a href="https://seoyein0322.github.io/dothome1/Megabox/index.html"> 바로가기 </a>
 
 #네이버 클로바 :
-<a href="https://seoyein0322.github.io/dothome1/Megabox/index.html"> 바로가기 </a>
+<a href="https://seoyein0322.github.io/dothome1/test/Naver clova1.html"> 바로가기 </a>
+<a href="https://seoyein0322.github.io/dothome1/test/Naver clova2.html"> 바로가기 </a>
+<a href="https://seoyein0322.github.io/dothome1/test/Naver clova3.html"> 바로가기 </a>
 
 #제이쿼리 예제<br>
 find(): <a href=https://seoyein0322.github.io/dothome1/jquery/jQuery04_find2.html>바로가기</a><br>
