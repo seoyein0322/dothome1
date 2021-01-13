@@ -687,7 +687,7 @@
     background: #DC516A; 
     color: #fff; 
     font-family: 'S-CoreDream-3Light'; 
-    font-size: 40px; font-weight: 300; 
+    font-size: 30px; font-weight: 300; 
     padding: 15px 0px;
     text-align: center;
     box-sizing: border-box; 
@@ -720,7 +720,7 @@
 }
 .cont5 > div:nth-child(odd) .box .text h5 {
     font-family: 'S-CoreDream-6Bold'; 
-    font-size: 40px; font-weight: bold; 
+    font-size: 30px; font-weight: bold; 
     line-height: 0.8; text-align: left; 
 }
 .cont5 > div:nth-child(odd) .box .text p {
@@ -766,7 +766,7 @@
     border: 6px solid #000; 
     color: #fff; 
     font-family: 'S-CoreDream-3Light'; 
-    font-size: 40px; font-weight: 300; 
+    font-size: 30px; font-weight: 300; 
     padding: 15px 0px; 
     box-sizing: border-box; 
     display: inline-block;
@@ -800,7 +800,7 @@
 }
 .cont5 > div:nth-child(even) .box .text h5 {
     font-family: 'S-CoreDream-6Bold'; 
-    font-size: 40px; font-weight: bold; 
+    font-size: 30px; font-weight: bold; 
     line-height: 0.8; 
     text-align: left; 
 }
@@ -1307,7 +1307,7 @@
     width: 495px; height: 217px; 
     display: inline-block;
     margin-bottom: 36px; 
-    font-size: 20px; 
+    font-size: 18px; 
     line-height: 1.5;
     color: #fff; 
     font-family: 'S-CoreDream-2ExtraLight';
@@ -1529,4 +1529,5 @@
 }
 .footer .fb_bom address {
     margin-top: 30px;
+    font-family: 'S-CoreDream-3Light';
 }
