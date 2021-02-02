@@ -2560,26 +2560,32 @@
 }
 
 @media (max-width: 320px){
-    #header h1 {font-size: 2px;}
-    #header nav li a {font-size: 4px; padding: 1px;}
+    #header h1 {font-size: 18px;}
+    #header nav li a {font-size: 15px; padding: 1px;}
     #header nav li:last-child {width: 50px;}
 
-    #content1 { position: relative; height: 350px;}
+    #content1 { position: relative; height: 280px;}
     #content1::after {height: 200px; bottom: -600px;}
-    .cont1_img {display: block; box-sizing: border-box; width: 100%; left: 0%; top: -740%;}
-    /* .cont1_img img:nth-child(1){width: 140%;top: 13.4%; left: -7.5%;}
+    .cont1_img {display: block; box-sizing: border-box; width: 100%; left: 0%; top: -920%;}
+    .cont1_img img:nth-child(1){width: 140%;top: 13.4%; left: -7.5%;}
     .cont1_img img:nth-child(2) {width: 180%;}
-    .cont1_img img:nth-child(3) {width: 140%; top: 1%;} */
-    .cont1 .cont1_text {left: 60%; top: 50%;}
-    .cont1 .cont1_text span {font-size: 20px;}
-    .cont1 .cont1_text span::before { top: -95px; left: -15px;}
-    .cont1 .cont1_text span::after {top: -15px; right: -10px;}
-    .cont1 .cont1_text img {width: 50px; height: 50px; left: 3%; top: 0%;}
+    .cont1_img img:nth-child(3) {width: 140%; top: 1%;}
+    .cont1 .cont1_text {left: 35%; top: 70%;}
+    .cont1 .cont1_text span {font-size: 90px;}
+    .cont1 .cont1_text span::before { top: -90px; left: -15px;}
+    .cont1 .cont1_text span::after {top: -45px; right: -10px;}
+    .cont1 .cont1_text img {width: 30px; height: 30px; left: -5%; top: 20%;}
 
-    .cont2 .cont2_text {left: 150%; top: 35%;}
-    .cont2_icon > img:nth-child(1) {top: 27%;}
-    .cont2 .cont2_text h2 {font-size: 20px;}
-    .cont2 .cont2_text span {font-size: 2px; right: 55%; padding: 2px 5px;}
+    #content2 {height: 500px;}
+    .cont2 .cont2_text {left: 200%;}
+    .cont2 .cont2_text h2 {font-size: 30px;}
+    .cont2 .cont2_text span {font-size: 0.000009px; right: 40%; padding: 2px 5px;}
+
+    
+    .cont2_icon > img:nth-child(1) {width: 25px; height: 25px; top: 30%; left: 68%;}
+    .cont2_icon > img:nth-child(2) {width: 25px; height: 25px; top: 15%;}
+    .cont2_icon > img:nth-child(3) {width: 25px; height: 25px; top: 50%;}
+    .cont2_icon > img:nth-child(4) {width: 25px; height: 25px; top: 25%;}
 
     /* 
     #content3::before {height: 200px; bottom: -20px;}
