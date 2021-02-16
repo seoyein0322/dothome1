@@ -1,7 +1,6 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
 @font-face {
     font-family: 'S-CoreDream-3Light';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
@@ -36,12 +35,6 @@
 @font-face {
     font-family: 'NEXON Lv2 Gothic Bold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'yg-jalnan';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

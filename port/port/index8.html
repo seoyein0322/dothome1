@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="skrollr-body">
     <div class="scroll">0</div>
 
     <header id="header">
@@ -347,7 +347,7 @@
     <script>
         var s = skrollr.init();
             $(window).scroll(function(){
-                let scrollTop = $(window).scrollTop();
+                let scrollTop = $(body).scrollTop();
                 $(".scroll").text(scrollTop);
             })
     </script>
